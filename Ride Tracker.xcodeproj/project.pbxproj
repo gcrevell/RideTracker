@@ -25,7 +25,6 @@
 		00498D04215D56030020FCA6 /* RideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D03215D56030020FCA6 /* RideDetailViewController.swift */; };
 		00498D06215D98BD0020FCA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D05215D98BD0020FCA6 /* Constants.swift */; };
 		00498D08215D9D590020FCA6 /* RecordRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D07215D9D590020FCA6 /* RecordRideViewController.swift */; };
-		00E2F91C215E85E9007F6177 /* MotionChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2F91B215E85E9007F6177 /* MotionChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,6 @@
 		00498D03215D56030020FCA6 /* RideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailViewController.swift; sourceTree = "<group>"; };
 		00498D05215D98BD0020FCA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00498D07215D9D590020FCA6 /* RecordRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRideViewController.swift; sourceTree = "<group>"; };
-		00E2F91B215E85E9007F6177 /* MotionChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +127,6 @@
 				00498CF7215D14EE0020FCA6 /* RideListViewController.swift */,
 				00498CFF215D32DD0020FCA6 /* RideTableViewCell.swift */,
 				00498D07215D9D590020FCA6 /* RecordRideViewController.swift */,
-				00E2F91B215E85E9007F6177 /* MotionChartView.swift */,
 				00E2F91A215E856E007F6177 /* Ride classes */,
 				00498CFB215D16F30020FCA6 /* Cedar-Point-rides.json */,
 				00498CCC215D0DD80020FCA6 /* Assets.xcassets */,
@@ -318,7 +315,6 @@
 				00498D08215D9D590020FCA6 /* RecordRideViewController.swift in Sources */,
 				00498CC3215D0DD60020FCA6 /* AppDelegate.swift in Sources */,
 				00498CFA215D16530020FCA6 /* Park.swift in Sources */,
-				00E2F91C215E85E9007F6177 /* MotionChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
