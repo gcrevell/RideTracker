@@ -80,26 +80,9 @@
                     <view key="view" contentMode="scaleToFill" id="KkX-0G-AAF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xze-nc-dro" customClass="MotionChartView" customModule="Ride_Tracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="519" width="375" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Xze-nc-dro" secondAttribute="height" multiplier="375:128" id="2tk-6F-pH5"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Xze-nc-dro" firstAttribute="trailing" secondItem="lnn-Cc-g0l" secondAttribute="trailing" id="K1i-Kb-5Jz"/>
-                            <constraint firstItem="lnn-Cc-g0l" firstAttribute="bottom" secondItem="Xze-nc-dro" secondAttribute="bottom" constant="20" id="UGT-Qp-vSs"/>
-                            <constraint firstItem="Xze-nc-dro" firstAttribute="leading" secondItem="lnn-Cc-g0l" secondAttribute="leading" id="fe1-cD-kD3"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lnn-Cc-g0l"/>
                     </view>
-                    <connections>
-                        <outlet property="accelerometerChart" destination="Xze-nc-dro" id="smN-lU-Ulo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXR-gC-BwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
