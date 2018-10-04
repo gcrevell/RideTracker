@@ -19,6 +19,14 @@ class RideListSplitViewController: UISplitViewController, UISplitViewControllerD
         let masterViewController = leftNavController.topViewController as! RideListViewController
         let detailViewController = self.viewControllers.last as! RideDetailViewController
 
+        let defaults = UserDefaults()
+        if let currentRideId = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int,
+            let currentRide = Park.shared.rides.first(where: { (ride) -> Bool in
+                return ride.id == currentRideId
+            }) {
+            detailViewController.ride = currentRide
+        }
+
         masterViewController.delegate = detailViewController
     }
 
