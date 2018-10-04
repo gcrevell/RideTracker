@@ -9,6 +9,7 @@
 import UIKit
 
 class Ride {
+    var id: Int
     var name: String
     var type: RideType
     var description: String
@@ -18,7 +19,9 @@ class Ride {
     var photo: UIImage
     var closed: Bool
     
-    init(name: String,
+    init(
+         id: Int,
+         name: String,
          type: String,
          description: String,
          minimumHeight: Int?,
@@ -28,6 +31,7 @@ class Ride {
         // Im a little unsure about using these force nil checks, but this data
         // is only fetched from a JSON file included in the project, so it
         // should be fine
+        self.id = id
         self.name = name
         self.type = RideType(rawValue: type)!
         self.description = description

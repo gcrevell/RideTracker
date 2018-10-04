@@ -35,7 +35,9 @@ class Park {
         let rides = park["rides"] as! [[String : Any]]
         
         for ride in rides {
-            self.rides.append(Ride(name: ride["name"] as! String,
+            self.rides.append(Ride(
+                                   id: ride["id"] as! Int,
+                                   name: ride["name"] as! String,
                                    type: ride["type"] as! String,
                                    description: ride["description"] as! String,
                                    minimumHeight: ride["minimumHeight"] as? Int,
