@@ -1,0 +1,96 @@
+{
+    "Cedar Point": {
+        "rides": [
+            {
+                "id": 1,
+                "name": "4x4's",
+                "type": "Family ride",
+                "description": "At Cedar Point, you don’t need a license to drive. You don’t even need to see over the steering wheel. All you need is the gusto to get behind the wheel of one of our powerful 4x4 trucks. To propel through the Kiddy Kingdom terrain, only the bravest of kids can thrust this truck into motion. After you buckle up, feel the growl of the engine and the kick of the accelerator. That is the sound that keeps kids wishing to grow up and get their license. Then, you whip around the track’s curves and experience what every growing kid craves: the freedom that comes with driving your first car. But until then, freedom can be cut short with parents riding in the back if they want. This rocky path is so treacherous you need all-wheel drive. 4x4’s is a ride so wild that we keep it focused on the kids.",
+                "minimumHeight": null,
+                "maximumHeight": 54,
+                "photoName": "4x4.jpg",
+                "closed": false
+            },
+            {
+                "id": 2,
+                "name": "Antique Cars",
+                "type": "Family ride",
+                "description": "It turns out that memory lane is a quarter mile long. When riders get behind the wheel of one of the ¾ scale replicas of a 1910 Cadillac Touring Car, they’ll be transported back to the beginning of a golden age for the automobile. The journey takes travelers through the dawn of the 20th Century. Take a joy ride through the back roads of FrontierTown, and enjoy the relaxation that comes with it. These cars don’t require a license, so they even offer under-age kids their very first taste of the joys of driving. If you are lucky enough, let the kids take over the wheel and enjoy what it’s like to be drove around for once. Don’t worry about gas and tolls, we’ve got you covered. There’s really no better way to do a road trip than taking in the freedom of the open road in an all-time classic car.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "antique-cars.jpg",
+                "closed": false
+            },
+            {
+                "id": 3,
+                "name": "Balloon Race",
+                "type": "Family ride",
+                "description": "There is no better way to get around Camp Snoopy with your family tagging along. Up, up and away you go on a colorful big balloon with Linus and Lucy by your side into the great big blue sky. Hop into the wicker basket gondola and take a joy ride that feels lighter than air. Dot the sky with marvelous colors as they put a smile on everyone’s faces down below. This ride will spin you around replicating what it felt like to fly in the first ever successful human-carrying flight transportation. If gliding through the air isn’t thrilling enough for you, take control of the wheel. Add extra spin to your spiral, and see how fast you can get the ride to go. Now that you are ready for departure, soar the skies like a pro. Check your gauges because I think your fun meter just broke the scale. Over and out.",
+                "minimumHeight": 42,
+                "maximumHeight": null,
+                "photoName": "balloon-race.jpg",
+                "closed": false
+            },
+            {
+                "id": 4,
+                "name": "Blue Streak",
+                "type": "Roller coaster",
+                "description": "Don’t call it a throwback. Blue Streak may be Cedar Point’s oldest and most classic coaster, but it still competes with some of the park’s heavy hitters. It’s one for the ages and has been a family favorite since it opened in 1964, when it reversed a decade long drought of coasters in the park. A gentle wooden coaster that is nestled between two steel powerhouses offers a 1 minute and 30 second ride most recognizable for its classic out and back layout. The 78-foot climb up the first hill takes riders on a thrill packed ride of hills to the front of the park at speeds up to 40 m.p.h. It then takes a 180-degree turnaround before heading back to the station, but not before going over some more hills before coming to a stop. Some roller coaster aficionados may even call it a bucket list coaster. So don’t count this one out, Blue Streak is packed with hills, thrills and history.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "blue-streak.jpg",
+                "closed": false
+            },
+            {
+                "id": 5,
+                "name": "Cadillac Cars",
+                "type": "Family ride",
+                "description": "There's nothing quite like a drive in the park on a beautiful day, especially when you're driving a scaled-down replica of a 1910 Cadillac touring car. The Model Thirty was one of the first of its kind to offer a closed body, but on this leisurely drive you will want the top down. Up to four people can take this track around the wooded land below Raptor and Valravn. You can’t miss the station along the Main Midway giving off the classic amusement park atmosphere. But as soon as you put your foot on the pedal, you’re transported into another time and place. Drive through what it was like back when the word “teenager” wasn’t used, and the fastest speed limit you could find was 15 mph. Today’s teenagers don’t have to worry while on Cadillac Cars because a license isn’t required. Anyone can take the wheel and enjoy a relaxing and scenic quarter-mile ride.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "cadillac-cars.jpg",
+                "closed": false
+            },
+            {
+                "id": 6,
+                "name": "Camp Bus",
+                "type": "Family ride",
+                "description": "Load up your gear and hitch a ride! America’s favorite beagle and the whole PEANUTS™ gang are boarding the Camp Bus for a great adventure at Camp Snoopy. No need to bring a ticket; simply take a seat alongside friends and family and prepare for a crazy roadtrip. On the Camp Bus, driven by Snoopy himself, there’s no telling where you’ll go or how you’ll get there! After the parking brake is released, you’ll be travelling way up, way down and all around. Hang on tight as you peek out to see the park from a Woodstock-eye view. Can you see Millennium Force, Maverick or Steel Vengeance from that high? Feel the wind in your hair and the smile on your face as Snoopy takes you on this fun trip. Here’s an idea for parents from Snoopy: Ask your children, if they could take a ride on the Camp Bus to anywhere, where would it be?",
+                "minimumHeight": 42,
+                "maximumHeight": null,
+                "photoName": "camp-bus.jpg",
+                "closed": false
+            },
+            {
+                "id": 7,
+                "name": "Cedar Creek Mine Ride",
+                "type": "Roller coaster",
+                "description": "Cedar Creek Mine Ride doesn’t just send riders soaring up hills, through tunnels and over water. No sir. It transports people back in time, all the way to the Wild West. Strap into this runaway mining cart straight out of the boomtowns of the 1800’s and make sure to hold onto your hat as we give new meaning to the term Gold Rush. When it opened in 1969, it was the centerpiece of FrontierTown. Riders start by going through the mine building before climbing up one of two hills that then sends the cart through turns and down the first drop over the lagoon. Before coming to an end the runaway cart goes through a double helix to bring the cart back to its humble home. Although it’s been recently joined by another hybrid coaster in FrontierTown, it remains a staple for families. You may not find the riches you seek here, but you just might find your new favorite coaster.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "cedar-creek-mine-ride.jpg",
+                "closed": false
+            },
+            {
+                "id": 8,
+                "name": "Cedar Downs Racing Derby",
+                "type": "Thrill ride",
+                "description": "And they’re off! Jockey for position in the most intense carousel race that you’ve ever been a part of, when you step foot on the Cedar Downs Racing Derby track. You’ve never rode a horse like this before. Guests will take turns galloping ahead of the pack on hand-carved horses in a ride that always keeps people on the edge of their saddles. Challenge your friends and family to experience the rush of a race, and choose your horse carefully because all 64 steeds are all sprinting neck-and-neck for victory. And as one of only two racing carousels in the United States, it’s an experience as rare as winning a Triple Crown. It’s a good thing this race is guaranteed to put smiles on faces because it always ends in a photo finish. Now get yourself to the starting gates and mount your steed because when the trumpet plays the race is on.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "cedar-downs-racing-derby.jpg",
+                "closed": false
+            },
+            {
+                "id": 9,
+                "name": "Cedar Point and Lake Erie Railroad",
+                "type": "Family ride",
+                "description": "All aboard! When this train departs the station, you’ll want to make sure you’ve got a seat. Why, you ask? Well, because the park is one of the few left in the world to operate authentic coal-fired steam locomotives. This railway excursion takes passengers on a two-mile trip over bridges and through the land of the “Wild West,” with a cast of silly characters reenacting life on the American frontier, including shootouts, classroom lessons, fire brigades and singing workers. When the conductor blows his whistle, just be ready for boarding and a great time.",
+                "minimumHeight": 46,
+                "maximumHeight": null,
+                "photoName": "cedar-point-and-lake-erie-railroad.jpg",
+                "closed": false
+            }
+        ]
+    }
+}

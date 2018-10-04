@@ -18,13 +18,13 @@
 		00498CF6215D117F0020FCA6 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CF5215D117F0020FCA6 /* RideType.swift */; };
 		00498CF8215D14EE0020FCA6 /* RideListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CF7215D14EE0020FCA6 /* RideListViewController.swift */; };
 		00498CFA215D16530020FCA6 /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CF9215D16530020FCA6 /* Park.swift */; };
-		00498CFC215D16F30020FCA6 /* Cedar-Point-rides.json in Resources */ = {isa = PBXBuildFile; fileRef = 00498CFB215D16F30020FCA6 /* Cedar-Point-rides.json */; };
 		00498CFE215D31490020FCA6 /* photos in Resources */ = {isa = PBXBuildFile; fileRef = 00498CFD215D31490020FCA6 /* photos */; };
 		00498D00215D32DD0020FCA6 /* RideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CFF215D32DD0020FCA6 /* RideTableViewCell.swift */; };
 		00498D02215D53B00020FCA6 /* RideListSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */; };
 		00498D04215D56030020FCA6 /* RideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D03215D56030020FCA6 /* RideDetailViewController.swift */; };
 		00498D06215D98BD0020FCA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D05215D98BD0020FCA6 /* Constants.swift */; };
 		00498D08215D9D590020FCA6 /* RecordRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D07215D9D590020FCA6 /* RecordRideViewController.swift */; };
+		0074914A216696050041BDCF /* Cedar-Point-rides.json in Resources */ = {isa = PBXBuildFile; fileRef = 002BAEF121669592000B73AA /* Cedar-Point-rides.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002BAEF121669592000B73AA /* Cedar-Point-rides.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "Cedar-Point-rides.json"; path = "/Users/gabe/source/Ride Tracker/Ride Tracker/Cedar-Point-rides.json"; sourceTree = "<absolute>"; };
 		00498CBF215D0DD60020FCA6 /* Ride Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ride Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00498CC2215D0DD60020FCA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00498CC7215D0DD60020FCA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		00498CF5215D117F0020FCA6 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		00498CF7215D14EE0020FCA6 /* RideListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListViewController.swift; sourceTree = "<group>"; };
 		00498CF9215D16530020FCA6 /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
-		00498CFB215D16F30020FCA6 /* Cedar-Point-rides.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Cedar-Point-rides.json"; path = "../../Cedar-Point-rides.json"; sourceTree = "<group>"; };
 		00498CFD215D31490020FCA6 /* photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = photos; sourceTree = "<group>"; };
 		00498CFF215D32DD0020FCA6 /* RideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTableViewCell.swift; sourceTree = "<group>"; };
 		00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListSplitViewController.swift; sourceTree = "<group>"; };
@@ -128,11 +128,11 @@
 				00498CFF215D32DD0020FCA6 /* RideTableViewCell.swift */,
 				00498D07215D9D590020FCA6 /* RecordRideViewController.swift */,
 				00E2F91A215E856E007F6177 /* Ride classes */,
-				00498CFB215D16F30020FCA6 /* Cedar-Point-rides.json */,
 				00498CCC215D0DD80020FCA6 /* Assets.xcassets */,
 				00498CCE215D0DD80020FCA6 /* LaunchScreen.storyboard */,
 				00498CD1215D0DD80020FCA6 /* Info.plist */,
 				00498CC9215D0DD60020FCA6 /* Ride_Tracker.xcdatamodeld */,
+				002BAEF121669592000B73AA /* Cedar-Point-rides.json */,
 				00498CFD215D31490020FCA6 /* photos */,
 			);
 			path = "Ride Tracker";
@@ -275,8 +275,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0074914A216696050041BDCF /* Cedar-Point-rides.json in Resources */,
 				00498CFE215D31490020FCA6 /* photos in Resources */,
-				00498CFC215D16F30020FCA6 /* Cedar-Point-rides.json in Resources */,
 				00498CD0215D0DD80020FCA6 /* LaunchScreen.storyboard in Resources */,
 				00498CCD215D0DD80020FCA6 /* Assets.xcassets in Resources */,
 				00498CC8215D0DD60020FCA6 /* Main.storyboard in Resources */,
