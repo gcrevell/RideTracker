@@ -16,7 +16,11 @@ class Ride {
     var minimumHeight: Int?
     var maximumHeight: Int?
     var photoName: String
-    var photo: UIImage
+    var photo: UIImage {
+        get {
+            return UIImage(named: "photos/" + self.photoName)!
+        }
+    }
     var closed: Bool
     
     init(
@@ -39,7 +43,8 @@ class Ride {
         self.maximumHeight = maximumHeight
         self.photoName = photoName
         self.closed = closed
-        
-        self.photo = UIImage(named: "photos/" + self.photoName)!
+
+        // Test the image exists
+        _ = UIImage(named: "photos/" + self.photoName)!
     }
 }
