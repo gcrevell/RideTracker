@@ -17,11 +17,13 @@ class RideDetailViewController: UIViewController {
             timer = nil
             let defaults = UserDefaults()
 
-            if let ride = ride, defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int != ride.id {
-                defaults.set(ride.id, forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID)
-                defaults.set(Date(), forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME)
+            if let ride = ride {
+                if defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int != ride.id {
+                    defaults.set(ride.id, forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID)
+                    defaults.set(Date(), forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME)
 
-                defaults.synchronize()
+                    defaults.synchronize()
+                }
 
                 timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
                     if let date = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME) as? Date {
@@ -33,13 +35,15 @@ class RideDetailViewController: UIViewController {
                         self.timerLabel.text = time
                     }
                 }
-            } else if ride == nil {
+
+                self.navigationItem.title = ride.name
+            } else {
                 defaults.removeObject(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID)
                 defaults.removeObject(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME)
                 timer?.invalidate()
                 timer = nil
                 defaults.synchronize()
-                self.timerLabel.text = "0:00"
+                self.timerLabel.text = "-:--"
             }
         }
     }
@@ -50,7 +54,7 @@ class RideDetailViewController: UIViewController {
         super.viewDidLoad()
 
         self.timerLabel.minimumScaleFactor = 40.0/self.timerLabel.font.pointSize
-        self.timerLabel.text = "0:00"
+        self.timerLabel.text = "-:--"
     }
 
     override func viewWillDisappear(_ animated: Bool) {
