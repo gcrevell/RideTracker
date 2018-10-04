@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 protocol RideSelectionDelegate: class {
     func rideSelected(_ ride: Ride)
@@ -16,11 +17,14 @@ class RideListViewController: UITableViewController {
     
     let park = "Cedar Point"
     weak var delegate: RideSelectionDelegate?
+    let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = park
+
+        self.locationManager.requestAlwaysAuthorization()
     }
 
     // MARK: - Table view data source
