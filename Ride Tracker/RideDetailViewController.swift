@@ -61,7 +61,7 @@ class RideDetailViewController: UIViewController {
         timer?.invalidate()
         if let dest = segue.destination as? RecordRideViewController {
             let startdate = UserDefaults().object(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME) as? Date ?? Date()
-            dest.waittime = startdate.timeIntervalSinceNow
+            dest.waittime = Date().timeIntervalSince(startdate)
         }
     }
 }
