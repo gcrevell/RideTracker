@@ -40,6 +40,7 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
         self.record.waitTime = self.waittime
         self.record.recorded = Date()
         self.record.ridden = Date()
+        self.record.rideId = Int64(self.rideId)
 
         var countdownTime = 5
 
