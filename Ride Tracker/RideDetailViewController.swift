@@ -53,6 +53,14 @@ class RideDetailViewController: UIViewController {
         self.timerLabel.text = "0:00"
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if self.isMovingFromParent {
+            self.ride = nil
+        }
+    }
+
     @IBAction func recordRidePressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: SHOW_RIDE_RECORDING, sender: self)
     }
@@ -63,6 +71,7 @@ class RideDetailViewController: UIViewController {
             let startdate = UserDefaults().object(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME) as? Date ?? Date()
             dest.waittime = Date().timeIntervalSince(startdate)
             dest.rideId = self.ride!.id
+            self.ride = nil
         }
     }
 }
