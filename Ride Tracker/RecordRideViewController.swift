@@ -15,10 +15,14 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
 
     var waittime: TimeInterval = 0
 
+    @IBOutlet weak var countdownLabel: UILabel!
+    @IBOutlet weak var finishRecordingButton: UIButton!
+
     let motionManager = CMMotionManager()
     let locationManager = CLLocationManager()
     var motionRecorderQueue: OperationQueue = OperationQueue()
     var referenceAttitude: CMAttitude?
+    var countdownTimer: Timer?
 
     lazy var record: RideRecord = {
         return RideRecord(context: self.context)
@@ -32,6 +36,30 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.record.waitTime = self.waittime
+        self.record.recorded = Date()
+        self.record.ridden = Date()
+
+        var countdownTime = 5
+
+        countdownLabel.text = "\(countdownTime)"
+
+        countdownTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            countdownTime -= 1
+
+            self.countdownLabel.text = "\(countdownTime)"
+
+            if countdownTime <= 0 {
+                self.countdownTimer?.invalidate()
+
+                self.countdownLabel.text = "Go!"
+
+                self.recordGyroscope(for: self.record)
+                self.recordAccelerometer(for: self.record)
+                self.recordLocation()
+            }
+        }
+
 //        recordGyroscope(for: self.record)
 //        recordAccelerometer(for: self.record)
 //        recordLocation()
@@ -39,6 +67,8 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
 
     func stopUpdates() {
         motionManager.stopDeviceMotionUpdates()
+        motionManager.stopAccelerometerUpdates()
+        locationManager.stopUpdatingLocation()
     }
 
     func recordGyroscope(for ride: RideRecord) {
@@ -46,7 +76,7 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
         motionManager.startDeviceMotionUpdates()
         self.referenceAttitude = motionManager.deviceMotion?.attitude
 
-        motionManager.startDeviceMotionUpdates(to: motionRecorderQueue) { (motionData, error) in
+        motionManager.startDeviceMotionUpdates(to: OperationQueue.main) { (motionData, error) in
             guard motionData != nil else { return }
 
             if self.referenceAttitude == nil {
@@ -69,7 +99,7 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
 
     func recordAccelerometer(for ride: RideRecord) {
         motionManager.accelerometerUpdateInterval = 1.0/100.0
-        motionManager.startAccelerometerUpdates(to: motionRecorderQueue) { (motionData, error) in
+        motionManager.startAccelerometerUpdates(to: OperationQueue.main) { (motionData, error) in
             guard motionData != nil else { return }
 
             let acceleration = AccelerometerData(context: self.context)
@@ -104,6 +134,14 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
             locationDataPoint.longitude = location.coordinate.longitude
             locationDataPoint.speed = location.speed
         }
+    }
+
+    @IBAction func finishRecording(_ sender: Any) {
+        countdownTimer?.invalidate()
+        stopUpdates()
+        self.motionRecorderQueue.waitUntilAllOperationsAreFinished()
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        print("All saved! I hope...")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
