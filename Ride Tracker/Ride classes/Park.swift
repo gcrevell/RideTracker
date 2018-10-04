@@ -45,5 +45,9 @@ class Park {
                                    photoName: ride["photoName"] as! String,
                                    closed: ride["closed"] as! Bool))
         }
+
+        self.rides.sort { (a, b) -> Bool in
+            return a.name < b.name
+        }
     }
 }
