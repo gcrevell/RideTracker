@@ -90,6 +90,618 @@
                 "maximumHeight": null,
                 "photoName": "cedar-point-and-lake-erie-railroad.jpg",
                 "closed": false
+            },
+            {
+                "id": 10,
+                "name": "Charlie Brown's Wind-Up",
+                "type": "Family ride",
+                "description": "Batter up! Charlie Brown’s Wind Up ride delivers major-league fun to minor-league baseball players, including Charlie himself and the whole PEANUTS™ gang. Kiddos climb on board the free-hanging swings and can pretend they’re in the batter’s box, ready for the pitch. As the swings start turning and lifting high in the air, little batters can send the ball flying to the moon, where they’ll join its path as they fly through the air -- with feet dangling free as a bird. And just like professional ball players run around the bases, pint-size players will speed around and around in their colorful swings, waving to their adoring fans all the while. What’s more, as riders pick up speed, the swings will tilt, offering a soaring experience the kiddos will never forget. Charlie Brown’s Wind Up is a classic amusement park ride that’s always a home run in fun.",
+                "minimumHeight": 42,
+                "maximumHeight": null,
+                "photoName": "charlie-browns-wind-up.jpg",
+                "closed": false
+            },
+            {
+                "id": 11,
+                "name": "Corkscrew",
+                "type": "Roller coaster",
+                "description": "This record-breaker’s a heartbreaker. You can’t miss its iconic blue track and white supports as you walk under it in the middle of the midway. Red trains create the all-American color scheme inspired by the U.S. Bicentennial in 1976, the year the ride opened. Looking through the eye of the inversions that gives it its name can give you a taste of the teeth-clenching courage needed to ride. Corkscrew was the first coaster in the world that featured three inversions and it hasn’t looked back since. Strap in and brace yourself, because this steel track show no mercy. It’ll turn you up, down, around, inside out and back again. After that first loop, it’ll take your nerves of steel and push them to the limit. Gravity has no bounds as you flip upside down going 38 m.p.h. and make eye contact with the park goers below. Once you’re in, you’ll never look at Cedar Point’s midway the same again.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "corkscrew.jpg",
+                "closed": false
+            },
+            {
+                "id": 12,
+                "name": "Dodgem",
+                "type": "Thrill ride",
+                "description": "Bumper-to-bumper traffic never been this fun – or bumpy! Grab all your friends and family for fantastic fun on our Dodgem classic bumper car ride. After choosing a car and strapping in, there’s no telling what will happen! Prepare to outrun your favorite frenemy and take the chance on getting spun out. Or, swerve, whip, bump and crash cars with anyone and everyone to your heart’s wild desire. But make sure to watch out for that guy behind you; he’s got a wild look in his eye! The thrills and zany adventures that only bumper cars can deliver have been at Cedar Point since way back in the 1970s, but the pure joy and adrenaline of bashing and bumping the competition all the way into next week has never grown old. (Just a word to the wise: make sure to shake hands and play nice after the ride is over.)",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "dodgem.jpg",
+                "closed": false
+            },
+            {
+                "id": 13,
+                "name": "Dune Buggies",
+                "type": "Kid ride",
+                "description": "Beep beep! Move over, parents, licenses aren’t required to drive these cars. This dune buggy ride in Kiddy Kingdom is just for kids. First they conquered the rocky terrain of 4x4s, now they need to take their turn on the hills of sand dunes. Let your kids go off the beaten path as they go off-roading in these dune buggy cars. Kids go around and around as they imagine driving up and over the desert sand dunes in this spinning adventure. It’s the perfect ride for your mini thrill seekers who want to drive their own way to the beach, under an umbrella and all. Don’t forget to call dibs on the front seat because these bright and shiny dune buggies come with a front and back seat for the little ones who don’t want to make the trip alone. But don’t be surprised when they put the pedal to metal, they’re just trying to catch the car in front of them!",
+                "minimumHeight": null,
+                "maximumHeight": 54,
+                "photoName": "dune-buggies.jpg",
+                "closed": false
+            },
+            {
+                "id": 14,
+                "name": "Flying Ace Balloon Ride",
+                "type": "Family ride",
+                "description": "Up, up and away! Adventurers worldwide love hot air balloons for their ability to let passengers soar and float high in the sky with the birds. At Cedar Point, we’ve got your ticket for a high-flying, hot air balloon adventure of your own! On our Flying Ace Balloon Race ride, young flyers can join Snoopy’s alter ego, the famous World War I Flying Ace, on a colorful, free-spirited chase across the sky. This adventurous ride is just about as close as you can get to the majestic feeling of riding in a hot air balloon, without actually stepping into a wicker basket and taking flight. Flying Ace Balloon Race will create fun memories for the whole family. Here’s a fun family idea from the World War I Flying Ace: Ask your children where they would want to go if they could take a real hot air balloon ride to anywhere!",
+                "minimumHeight": 42,
+                "maximumHeight": null,
+                "photoName": "flying-ace-balloon-ride.jpg",
+                "closed": false
+            },
+            {
+                "id": 15,
+                "name": "GateKeeper",
+                "type": "Roller coaster",
+                "description": "Talk about first impressions. That’s why we put a coaster that breaks seven world records at the very front of the park, giving a taste of what’s to be conquered. Riders will take flight on the wings of a powerful golden griffon, as it guards the entrance dive-bombing and threading its way through impossibly narrow obstacles. Feel the sensation of soaring through air as the winged coaster dives first into a wing-over drop maneuver at 67 m.p.h. This 180-degree rotation into a half loop starts at 170 feet in the air, giving it the record for the highest inversion of all roller coasters. Opened in 2013, the remodeled entrance plaza includes two 100-foot key holes on top of the gates that riders weave through while gliding in the air before they turn around in a true majestic fashion. It won’t take long to figure out why GateKeeper is inspired by the power of flight.",
+                "minimumHeight": 52,
+                "maximumHeight": 78,
+                "photoName": "gatekeeper.jpg",
+                "closed": false
+            },
+            {
+                "id": 16,
+                "name": "Gemini",
+                "type": "Roller coaster",
+                "description": "It’s fast vs. faster in this game of dueling coasters. No matter the day’s horoscope, riders will feel the twin cars energetic and quick-witted personalities thrive as they ride racing for the win. Gemini riders will choose between team red or team blue before racing side-by-side through all kinds of drops, twists and turns. The steel track + wood structure combo promises to bring relentless competition that guarantees 2 minutes and 40 seconds of a good time. Red and blue trains travel parallel next to one another – complete with smack talk coming from both competitors, and it all starts straight from the station and up the 125-foot climb before dropping into hills that prove whose fastest. These twins have been racing since 1978, and the record still isn’t settled. It always ends in a close call. It’s only when the twins come back together after helices that anyone can be crowned victorious. It’s a good thing that victory isn’t determined by who finished first, but who has more fun.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "gemini.jpg",
+                "closed": false
+            },
+            {
+                "id": 17,
+                "name": "Giant Wheel",
+                "type": "Family ride",
+                "description": "At Cedar Point, bigger is better, and nothing is quite as big as the Giant Wheel. As one of the tallest Ferris wheels in the United States, riders are taken up and above the Lake Erie shoreline with views as far as the eyes will take them. While those seeking out the ultimate thrill are next door at Wicked Twister, this ride has brought riders back for more since its opening in 1972. Travel 145 feet in the air, gripping at the sides of one of 36 cabins, each filled with travelers awed by the sights and sounds that only this vantage point can provide. You’ll be able to see the whole park, and the whole park will be able to see you, especially at night when Giant Wheel lights up. You can’t miss the illumination along the skyline. After all, it has more lights than any other ride at the park. See you up there.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "giant-wheel.jpg",
+                "closed": false
+            },
+            {
+                "id": 18,
+                "name": "Helicopters",
+                "type": "Kid ride",
+                "description": "From billionaires to action movie stars to rescue teams, everyone knows that there are few experiences more thrilling than a helicopter ride. And on Helicopters, you can now add kids to that list of believers. Not only do your little riders get to hop into their own personal chopper and take flight, they also get to pilot it themselves. Once secured in the cockpit, it’s up to them to grab the controls and guide the helicopter up and down on a tour of the sky. Will they weave the skies on a daring adventure? Will they stay low to the ground for an up-close flying experience? Or will the brave the limits as high as they can? Either way this joy ride in the sky will bring smiles on children of all ages. So make sure they’ve got their aviator helmet and goggles strapped on tight because they’re in for some high-flying fun.",
+                "minimumHeight": null,
+                "maximumHeight": 54,
+                "photoName": "helicopters.jpg",
+                "closed": false
+            },
+            {
+                "id": 19,
+                "name": "Joe Cool's Dodgem School",
+                "type": "Kid ride",
+                "description": "Fasten your seatbelts and rev up your engines! Joe Cool’s Dodgem School is where all the famous bumper car pros get their start on the track. Taking a lead from Mr. Joe Cool himself (Snoopy’s alter ego of a way-cool college student sporting way-cool shades) young guests learn how to “drive” – with a little bumping and bashing in the process – in brightly colored miniature bumper cars made just for them. A scaled-down, low-speed version of the amusement park classic bumper cars, Joe Cool’s Dodgem School offers thrills and giggles at every turn and consistently earns top grades among our pint-sized guests for supreme fun. Here’s a fun idea for parents from Joe Cool: take a photo of your kiddos “driving” at Joe Cool’s Dodgem School and save it for a side-by-side comparison with a photo of them when their get their real driver’s license in the future!",
+                "minimumHeight": 35,
+                "maximumHeight": 53,
+                "photoName": "joe-cools-dodgem-school.jpg",
+                "closed": false
+            },
+            {
+                "id": 20,
+                "name": "Kiddy Kingdom Carousel",
+                "type": "Family ride",
+                "description": "Lions and tigers and…ostriches? Oh my, indeed. This beautiful menagerie carousel features 52 animals including everything from bears to rabbits, donkeys and two grand chariots. Being just one of the three carousel’s featured at Cedar Point, it has been serving fun to riders of all ages since moving to Kiddy Kingdom in 1968. The craftsmanship put into designing this classic ride is undeniable, evidenced by the Armored Horse’s inclusion on a 1988 U.S. Postal stamp. Built by the legendary William H. Dentzel in 1924, it was listed on the National Register of Historic Places in 1990. Take a spin on your favorite animal, whether it is standing or jumping, and find that this carousel isn’t like any other. Though it is said to be one of Dentzel’s favorites, we know Kiddy Kingdom Carousel is a favorite for all ages. After all, riding a lion is sure to leave a lasting impression on anyone.",
+                "minimumHeight": 46,
+                "maximumHeight": null,
+                "photoName": "kiddy-kingdom-carousel.jpg",
+                "closed": false
+            },
+            {
+                "id": 21,
+                "name": "Kite Eating Tree",
+                "type": "Kid ride",
+                "description": "Good grief! Our buddy Charlie Brown just can’t get a break. Every time he tries to do something that sounds easy -- like flying a kite -- it gets tangled up in the same, pesky tree. Drat! This tree must be really hungry – and particularly hungry for kites. Poor Charlie Brown needs help! Can you climb up the kite eating tree and help him get it down? As soon as pint-sized kite-savers board our Kite-Eating Tree ride, they’ll start grinning as wide as the tree canopy. This miniature drop ride will lift kiddos up, up, up to tree-top levels of 20 feet and then, with unexpected jiggles that might just cause unexpected giggles, bounce them gently up and down until they return to the ground. Here’s a fun idea for parents from Charlie Brown: Ask your children if kites really eat trees and see what they might say!",
+                "minimumHeight": 36,
+                "maximumHeight": 54,
+                "photoName": "kite-eating-tree.jpg",
+                "closed": false
+            },
+            {
+                "id": 22,
+                "name": "Lake Erie Eagles",
+                "type": "Family ride",
+                "description": "It’s a rare skill to be able to command a wild bird such as the eagle. But now, anyone is capable of taming the ruler of the sky when they fly on Lake Erie Eagles. Riders take fight in one of the unique carriages that spin outward like a swing and then rise above the ground. Once in the air, riders can take matters into their own hands by operating the carriage’s paddle in order to control the eagle’s flight. Swing the way your heart desires, as all eight eagles have a unique route that only the rider can determine. Go for a wild ride at 28 feet in the air, weaving in and out of the clouds, maneuvering your way through the Gemini Midway. Whether you explore the high altitudes, as if soaring through a mountain range, or cruise at a lower elevation, as if chasing down prey, the choice is up to you.",
+                "minimumHeight": 44,
+                "maximumHeight": null,
+                "photoName": "lake-erie-eagles.jpg",
+                "closed": false
+            },
+            {
+                "id": 23,
+                "name": "Magnum XL-200",
+                "type": "Roller coaster",
+                "description": "Roller coasters are all about making a grand statement with even grander views. As the first hyper-coaster and first ever coaster to top 200 feet, Magnum XL-200 does exactly that. A Guinness Book of World Records holder for its leading edge height is enough to amaze anybody. But when it debuted in 1989, it was also the fastest and steepest complete-circuit coaster in the world. In fact, in 2004 it was awarded the ACE Roller Coaster Landmark award for its historical importance. While accelerating over hills and through tunnels, riders travel above Cedar Point Shores to the beach before completing its signature “pretzel turnaround”. You’ll be blown away by some unbelievable views of the Lake Erie shoreline before returning back to the Cedar Point skyline. And if it’s a clear day, you might be able to see the coast of Canada on the horizon. Make no mistake, this isn’t just a roller coaster ride, it’s a roller coaster spectacle.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "magnum-xl-200.jpg",
+                "closed": false
+            },
+            {
+                "id": 24,
+                "name": "Matterhorn",
+                "type": "Thrill ride",
+                "description": "The Matterhorn is a legendary mountain in the Swiss Alps summited by some of history’s greatest climbers ever. It’s a grueling and dangerous ascent over 14,000 feet high that isn’t welcoming to amateurs. But why should the world be denied that kind of thrill? They shouldn’t. That’s where the park’s tribute to the fabled mountain comes in. Brace yourself to be pulled in all sorts of direction on an unforgiving trip around Matterhorn. Riders are locked into place inside a two-person cabin and then whipped up and down by centrifugal forces that recreate the feeling of spiraling down the mountain, much like a skier. It may not be a 10-day tour around the ancient trails of the Alps, but a ride of speed and thrill to match it. It’s alpine excitement for those with the utmost sense of adventure. You may not be a master explorer or climber, but when you get off you will definitely feel like one. ",
+                "minimumHeight": 46,
+                "maximumHeight": null,
+                "photoName": "matterhorn.jpg",
+                "closed": false
+            },
+            {
+                "id": 25,
+                "name": "Maverick",
+                "type": "Roller coaster",
+                "description": "Maverick acts more like a bucking bronco than a coaster. It’s a ride for the daring who want one of a kind thrills beyond the big hills. This terra coaster is packed with twists, corkscrews, launches, tunnels, and plenty of airtime, so saddle up for a ride wilder than the rodeo. The first launch of two gets you to the top of the first hill, which travels down and under at the steepest angle at Cedar Point 95 degrees. Only one airtime hill comes before the first ever Twisted Horseshoe Roll, two 360-degree corkscrew rolls of opposite direction separated by only a 180-degree banked curve. Next thing you know riders are in a pitch black tunnel getting launched 400 feet at 70 m.p.h. in 3 seconds. It still manages to catch riders by surprise at every bank and turn, even after being awarded the Golden Ticket Award for “Best New Ride in 2007”. There’s nothing wilder in the West than Maverick.",
+                "minimumHeight": 52,
+                "maximumHeight": 78,
+                "photoName": "maverick.jpg",
+                "closed": false
+            },
+            {
+                "id": 26,
+                "name": "Midway Carousel",
+                "type": "Family ride",
+                "description": "Come one, come all! The Midway Carousel is an attraction for every generation. Built in 1912 and operating at the park since 1946, it’s Cedar Point’s oldest operating ride and one of the few Daniel Muller carousels left in existence today. In October of 1982 it was added to the National Register of Historic Places, its history is almost as amazing as it’s craftsmanship. You can’t miss it, as it’s the first attraction you’ll run into as you enter the park. A classic amusement park mainstay in the middle of modern thrill rides that is sure to catch the eye before you even scan your ticket. Step aboard and pick your favorite horse to whirl up, down, around the park and back again. As you enjoy your leisurely ride, make sure you take in the ornate scroll work and artistry that went into making all 60 horses and four chariots while you listen to the hypnotic sounds of the band organ.",
+                "minimumHeight": 46,
+                "maximumHeight": null,
+                "photoName": "midway-carousel.jpg",
+                "closed": false
+            },
+            {
+                "id": 27,
+                "name": "Millennium Force",
+                "type": "Roller coaster",
+                "description": "A looming giant amongst a park full of them, Millennium Force was designed for the purpose of proving bigger is better. What better way to ring in the new Millennium than with a brand new record-breaking coaster that would change coaster history forever. In fact, Millennium Force’s creation demanded an all-new category just to classify its one of a kind nature – thus was born the giga-coaster. Being the tallest roller coaster and the first to top 300 feet wasn’t the only records broken when it opened in 2000. It debuted having the longest drop and the fastest speed topping out at 93 m.p.h. Ranking as one of the world’s best steel coasters year after year since its opening, this behemoth shoots riders over hills, past lagoons and through tunnels, all at unthinkable speeds. With its silhouette illuminated in the night sky, it’s hard miss the iconic coaster on the Cedar Point skyline. ",
+                "minimumHeight": 48,
+                "maximumHeight": 78,
+                "photoName": "millennium-force.jpg",
+                "closed": false
+            },
+            {
+                "id": 28,
+                "name": "Monster",
+                "type": "Thrill ride",
+                "description": "Throughout the ages, legends have been told of dark, dastardly creatures roaming the depths of the underworld -- sporting countless, gripping tentacles and harboring even more evil intentions. But they’ve never made it to land. Until now. Cedar Point’s Monster ride envelops guests in pods of fear and tosses them about on a wild, wicked course. Six tentacles each contain four pods of hapless riders that spin independently, spin together and spin along the base of the Monster -- all while tilting sideways and jostling its victims up and down. You might even catch a bit of weightlessness along the way, adding to the feeling of utter helplessness. The speed of this ride may seem a bit slow when you witness it from the ground, but don’t let that fool you; once you experience this beast, you’ll see that it’s packed with thrills and chills that will keep you coming back for more.",
+                "minimumHeight": 46,
+                "maximumHeight": null,
+                "photoName": "monster.jpg",
+                "closed": false
+            },
+            {
+                "id": 29,
+                "name": "Motorcycles",
+                "type": "Kid ride",
+                "description": "It’s nothing but vroom vroom as your kids embrace their wild side. Encourage them to grab life by the handlebars and watch as they ditch the training wheels. Their balance skills need not matter on these motorcycles. Once these little riders feel the thrill of the open road, there’s no turning back. Soon they will think they are the big dogs on the roads, even if they are years from getting a license. These motorcycles speed up and have no intention of slowing down. Taking daring turns at every possible second, these shiny single seaters are perfect for the bold and independent. Send the whole group on the road, and you may have the youngest biker crew ever on your hands. There’s nothing but fun in store for our little adventure seekers. Your kids will have the ride of their life. After all, everyone loves that feeling of wind in their hair!",
+                "minimumHeight": 39,
+                "maximumHeight": 54,
+                "photoName": "motorcycles.jpg",
+                "closed": false
+            },
+            {
+                "id": 30,
+                "name": "Mustangs",
+                "type": "Kid ride",
+                "description": "It’s never too early to get your future driving enthusiasts into classic muscle cars. Put them behind the wheel of these iconic Mustang convertibles and allow them to get a taste of the adrenaline-fueled fun of driving with the top down on open roads. There isn’t any other feeling in the world like driving on the coast with the wind blowing through your hair. Make sure all hats and glasses are secure for this wild ride. Mustangs have been giving daring rides to adults since their creation in 1964. Only six years later, our replicas started giving speedy and thrill packed rides through the land of Kiddy Kingdom. Through the turns, drivers are always trying to catch the car in front of them. This taste of speed is going keep bringing them back for more. After a couple of spins around the track, the kids might know exactly what kind of car they want to drive when they get older.",
+                "minimumHeight": null,
+                "maximumHeight": 54,
+                "photoName": "mustangs.jpg",
+                "closed": false
+            },
+            {
+                "id": 31,
+                "name": "Ocean Motion",
+                "type": "Thrill ride",
+                "description": "Bring your sea legs…and your wings while you’re at it. Because where most ships sail, this one flies 65 feet into the air. Grab a first mate and board this maritime ship at port just inside the front gate. You won’t find a swaying ship like this on the waves of Lake Erie. As it rocks into its own wave of energy, you’re left gazing at the ground and staring at the sky in equal measure.  No other seafaring journey compares to the lurch and lean of this magnificent voyage. And only one ship could handle such a treacherous passage between the sea and the sky. No matter the seat waves and air will be caught from stem to stern. Let’s hope that you, the sailor, can manage the insane thrills that can only be found on Ocean Motion. Now do you know the ropes enough to take charge of the only voyage meant to be high and dry?",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "ocean-motion.jpg",
+                "closed": false
+            },
+            {
+                "id": 32,
+                "name": "Peanuts 500",
+                "type": "Family ride",
+                "description": "Get your motors runnin’ and head out on the speedway with Charlie Brown, Snoopy and the rest of the PEANUTS™ gang to compete in one of the hottest races around -- the PEANUTS™ 500. After choosing their own colorful, pint-sized stock car, young race car drivers will zoom down the straightaways and prove their mettle in the tight, hair-pin curves. Never mind the fixed order of the cars or the fixed speed of the PEANUTS™ 500; this stock car race still demands a hefty amount strategy to get the glory of a win. Lap after lap, kiddos are sure to have a blast during their entire time on Snoopy’s oval speedway, all the way to the checkered flag. If your young racers have a need for speed, get them to the track so they can take their marks and go for gusto at the PEANUTS™ 500.",
+                "minimumHeight": 42,
+                "maximumHeight": null,
+                "photoName": "peanuts-500.jpg",
+                "closed": false
+            },
+            {
+                "id": 33,
+                "name": "Peanuts Road Rally",
+                "type": "Family ride",
+                "description": "Who needs a driver’s license when you have the PEANUTS™ Road Rally? Let your under-age cruisers get behind the wheel of a revved-up, souped-up 4x4 monster truck. In this family-friendly attraction at Camp Snoopy, kid drivers command a mega-mover through crazy twists and turns on a closed track. But your kiddos aren’t driving any old truck and this isn’t any old track. These mini- 4x4s come in bright PEANUTS-themed colors with fun décor to match. Watch the intense concentration on your drivers’ faces as they maneuver through technical obstacles, including a tight turn to the left and insane whip to the right. See the sweat start to pour off their little faces as they go full-throttle on the straightaways. Never mind that all trucks are going at the same speed and the steering wheels don’t really work. This road rally is the real deal to tiny drivers, delivering big-rig fun.",
+                "minimumHeight": 42,
+                "maximumHeight": null,
+                "photoName": "peanuts-road-rally.jpg",
+                "closed": false
+            },
+            {
+                "id": 34,
+                "name": "Pipe Scream",
+                "type": "Family ride",
+                "description": "Pipe Scream is the coaster that provides all the feels. The one that dreams are made of. It has something for everyone, so no surprise that it has cemented itself as a Cedar Point family favorite since its opening in 2014. Over 300 feet of track brings thrills for those who dare to take it on, big or small. This ride puts the coast in coaster as you ride the skateboard up and down the track. At the top of the peaks the immediate turn gives the feeling of doing a backslide off the top of the pipe at 43 feet in the air. And you can’t beat its location as it’s right in the middle of the Gemini Midway. This coaster takes you up and won’t slow down (or bring you down) until after you’ve witnessed the dazzling midway views, which get even better once the sun goes down. ",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "pipe-scream.jpg",
+                "closed": false
+            },
+            {
+                "id": 35,
+                "name": "Police Cars",
+                "type": "Kid ride",
+                "description": "Turn up the sirens! Law enforcement is on the loose in Kiddy Kingdom. Little park goers will get the ride of their life and experience what driving a real police car is like. No police academy or badge required. There’s no holding back when the rulers of the road are on patrol. Kids are in control when they get behind the wheel and cruise around the park in their very own squad car. Spectators should be on their best behavior. There are new sheriffs in town.",
+                "minimumHeight": null,
+                "maximumHeight": 54,
+                "photoName": "police-cars.jpg",
+                "closed": false
+            },
+            {
+                "id": 36,
+                "name": "Power Tower",
+                "type": "Thrill ride",
+                "description": "Some say that power is one of the best feelings in the world. If that’s the case, then you’ll want to ride Power Tower over and over and over. Located in the middle of the park, it’s hard to miss the thrill giant in the sky. This state-of-the-art adrenaline factory features two towers that rockets riders 240 feet into the air and two towers that blast riders back down to earth from the same height. It is the only ride of its type with a square footprint, equaling four towers of pure fun. No matter the direction you will experience speeds up to 60 mph, but the choice of which direction you’re launched is left in your hands. Either one is going to provide incredible views like no other ride can provide. If you can’t feel the power now, you will when it’s time to choose your own fate. So what’ll it be? Shot or drop?",
+                "minimumHeight": 52,
+                "maximumHeight": null,
+                "photoName": "power-tower.jpg",
+                "closed": false
+            },
+            {
+                "id": 37,
+                "name": "Professor Delbert's Frontier Fling",
+                "type": "Thrill ride",
+                "description": "Professor Delbert made many attempts to fly with his hand-made, pedal-powered machine. Day in and day out, he tried his very best to soar above the old river boats of the now retired Paddlewheel Excursions ride. He never succeeded. You can still spot him peddling on Frontier Trial. He may not have mastered his wings yet, but you can. Don’t let him down. Get secured into a special harness, then hoisted up almost 15 stories for a dramatic pause. Then it's, \"3-2-1 FLY!\" as you pull your release cord and soar high over the Frontier Trail at 65 mph! It’s not a bird, or a plane, but you that everyone will be awestruck at above them. That high in the sky is the only place to get the best views of Cedar Point. And YOU can make it a reality. It's what Professor Delbert dreamed of. Extra charge attraction not included with admission.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "professor-delberts-frontier-fling.jpg",
+                "closed": false,
+                "upchargeAttraction": true
+            },
+            {
+                "id": 38,
+                "name": "Raptor",
+                "type": "Roller coaster",
+                "description": "Picture this: You’re walking through a field when a bird of prey dives from the heavens, snatches you up and then proceeds to take you on a terrifying journey to wherever it pleases. That’s how riders will feel while on Raptor, as their feet dangle through 3,790 feet of track filled with a 100-foot vertical loop, two inverted corkscrews, a zero gravity roll and the world’s first ever cobra roll. We’re out of breath just listing it all off. Flying at speeds of 57 m.p.h., riders bob and weave through the sky and are never ready for what’s coming next. Although it’s been joined by other high flying birds since its opening in 1994, it’s still staking claim in the air and protecting its hunting grounds down below. The 2 minute and 16 second flight will remind anyone why it’s the top of the food chain. This is one unforgiving apex predator, so be ready to catch some serious air when Raptor catches you.",
+                "minimumHeight": 54,
+                "maximumHeight": null,
+                "photoName": "raptor.jpg",
+                "closed": false
+            },
+            {
+                "id": 39,
+                "name": "Red Baron",
+                "type": "Kid ride",
+                "description": "Pilot to Base. What’s that flurry of bright red flying overhead? Over. It’s an army of WWI bi-planes, led by world-renowned commander Snoopy that’s swarming the skies. These mini-aviators jet through the sky by manually moving their aircraft up or down, defending their territory since 1999. Strap on your helmet and secure you goggles for this wild ride. Hop aboard your very own plane to join in the fight. As soon as you leave the hanger it’s up to you to create the perfect flight plan. Fly high to monitor the skies and dive down to warn passerby’s. Bob and weave in and out of clouds to distract the enemy. The adrenaline rush will make any kid feel like a hero. With each doing his or her part to help sniff out and bring down any enemies who dare enter the hallowed air space of Camp Snoopy. Over and out.",
+                "minimumHeight": 36,
+                "maximumHeight": 54,
+                "photoName": "red-baron.jpg",
+                "closed": false
+            },
+            {
+                "id": 40,
+                "name": "Rock, Spin & Turn",
+                "type": "Kid ride",
+                "description": "This isn’t a game of Rock, Paper, Scissors - it’s something way better. The name says it all. Rock, Spin, and Turn is a surprising thrill for little thrill seekers. Don’t let the bright colors distract you, this children’s ride will make you spin in directions never felt before. Riders go up, down and around the tracks as it goes over gradual hills. Unlike other rides, this is one ride the little ones can take into their own hands. A ride of their own creation, they can experience a thrill as unique as them. Start spinning the wheel in the middle and they’ll add another element of fun and excitement to the adventure. Kids will sail back and forth beneath a colorful and festive umbrella. In the middle of other children’s rides, these cars will stand out in Kiddy Kingdom thanks to their wild patterns. There are always winners on this ride!",
+                "minimumHeight": null,
+                "maximumHeight": 54,
+                "photoName": "rock-spin-turn.jpg",
+                "closed": false
+            },
+            {
+                "id": 41,
+                "name": "Roto Whip",
+                "type": "Kid ride",
+                "description": "Beware the crack of the whip! Because while this ride swings you around, it also subjects you to insane amounts of inertia. Brace yourself with both hands on the metal bar while it slides you to the far end of your cart. And, give thanks for the tall walls holding you in. Not just once, or twice, but again and again it will whip you around corners. After all, on Roto Whip you’re at the mercy of three thin wheels and a fast-spinning arm. And, that makes for some serious thrills. First opened in 1970, this ride has spun permanent smiles onto faces for almost 50 years. The colorful cars among all the bright colored umbrellas can be deceiving to the eye, but this ride takes the thrill level and raises the bar. Few other rides in Kiddy Kingdom are this intense, so take on the challenge and get whipped into shape.",
+                "minimumHeight": null,
+                "maximumHeight": 54,
+                "photoName": "roto-whip.jpg",
+                "closed": false
+            },
+            {
+                "id": 42,
+                "name": "Rougarou",
+                "type": "Roller coaster",
+                "description": "As soon as you’re strapped in, the floor drops out. Completely. The first floorless coaster at Cedar Point, Rougarou isn’t just a fable of the imagination. Its twists and turns prove its fear-inducing story is larger than life. After the initial shock, this coaster roars to life as your feet dangle in mid-air. Watch your feet as you travel at top speeds being chased through the swamp it has habituated since 2015. The mythic legend climbs a staggering first hill, but this is definitely not the time to catch your breath because this coaster’s nowhere near done yet. It drops you 137 feet at 60 miles per hour before hurling you through a 119-foot vertical loop. Scream all you want; it just makes this predator stronger. It’s no wonder that between the daring drops and dives, riders are left wondering if they’ll ever catch their breath. Its howls will follow you around all day.",
+                "minimumHeight": 54,
+                "maximumHeight": 78,
+                "photoName": "rougarou.jpg",
+                "closed": false
+            },
+            {
+                "id": 43,
+                "name": "Scrambler",
+                "type": "Thrill ride",
+                "description": "Have you ever made scrambled eggs? If so, you’ll know that success depends on stirring the eggs this way and that, for the entire time you’re cooking. Now imagine you’re the eggs. That’s what it’s like on the Scrambler. On this classic amusement park ride, you’ll spin around this way and that, never seeing the same thing twice. In fact, you won’t know quite what you’re looking at as you rotate clockwise and counterclockwise at the exact same time. Are you going to crash into other spinning cars? Will the intense, centrifugal force propel you into the next state? The only thing that will make sense is your extreme urge to hold on tight while the ride’s colorful arms swirl into a rainbow around you. By the time you experience all the twists, turns and gyrations and then get off, your brain is totally scrambled up! And it’s pure awesome!",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "scrambler.jpg",
+                "closed": false
+            },
+            {
+                "id": 44,
+                "name": "Sky Fighters",
+                "type": "Kid ride",
+                "description": "Who says you can’t fly? Just strap on your pilot goggles, check your wings and rudder and give your propeller a spin. Brave the flight with a co-pilot or brave it alone as you soar through the blue skies above. Next thing you know, you’ll be steering through the clouds as your plane bobs up, down and all around. You may not reach cruising altitude, but why would you want to? A true Sky Fighter enjoys the thrills of dipping and climbing, diving and rising, soaring over and under birds, trees and everything in between. These red and yellow planes will dot the sky above Kiddy Kingdom when you and your friends pilot the whole fleet. Keep an eye on the gauges as you fly, because it seems thrill and fun are about to break the charts. If you’re looking to prove your pilot skills, Sky Fighters is the ride for you.",
+                "minimumHeight": null,
+                "maximumHeight": 54,
+                "photoName": "sky-fighters.jpg",
+                "closed": false
+            },
+            {
+                "id": 45,
+                "name": "Sky Ride",
+                "type": "Family ride",
+                "description": "Whoever came up with the saying, “whatever you do, don’t look down,” obviously never had the pleasure of being carried into the clouds on Sky Ride. On this epic gondola journey, riders are leisurely lifted 92 feet in the air over a half mile and treated to 360-degree views of Cedar Point, Lake Erie and the magnificently landscaped gardens below. This ride could be considered more scenic than walking from Corkscrew to Midway Carousel or vice-versa. Along its journey over the Main Midway, you are brought eye-level with the daring Raptor. The bright colors of the gondola will keep guests below looking up at the sky as you pass by. There is no better way to get from point A to point B than a ride giving a vantage point of the whole park. So it’s safe to say that while making your way up, you’ll want to look left, right, backwards, forwards and without a doubt…down.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "sky-ride.jpg",
+                "closed": false
+            },
+            {
+                "id": 46,
+                "name": "Skyhawk",
+                "type": "Thrill ride",
+                "description": "Take your definition of “swing set” and throw it away because towering at 103 feet tall, Skyhawk is going to completely change the way you think of the backyard staple. It has been rewriting the playground rules since its opening in 2006. With two massive swinging arms that stretch 84 feet in length and hold up to 20 passengers on each side, you’ll soon realize that playtime just got a whole lot more intense. Grab a seat and prepare to feel the air rush against your face like never before. Riders are rocked forward and backward, each time flinging higher and higher. Ultimately, Skyhawk’s unique pneumatic technology allows for a strong push going 65 mph that carries riders more than 12 stories into the air. No backyard swing set will ever get you as high or as fast as this. One ride on this thing and you’ll never be able to look at an ordinary swing set the same way again.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "skyhawk.jpg",
+                "closed": false
+            },
+            {
+                "id": 47,
+                "name": "SlingShot",
+                "type": "Thrill ride",
+                "description": "Who cares about gravity? Defy the force with a once-in-a-lifetime, supernatural experience on the Slingshot. Once you’ve convinced (or bribed) a friend to join you on this absolutely insane ride, you’re both safely secured in a capsule and – 3…2…1! – catapulted (yes, exactly like a slingshot) straight up to the sky to heights up to 360 feet in the air at speeds up to 62 miles per hour. At the very top, you’ll find that extraordinary sense of weightlessness, and then, as quickly as you rocketed up, you’ll zoom back toward the ground, often rotating head-over-heels and bouncing up and down until you come to rest at the launch point. Whew! Did that just happen? It sure did, and once you try Slingshot once, trust us when we say you’ll be back for more. Slingshot is not included with admission; a separate fee is required for this heart-thumping attraction.",
+                "minimumHeight": 48,
+                "maximumHeight": 79,
+                "photoName": "slingshot.jpg",
+                "closed": false,
+                "upchargeAttraction": true
+            },
+            {
+                "id": 48,
+                "name": "Snake River Falls",
+                "type": "Thrill ride",
+                "description": "Snake River Falls packs one serious splash! This isn’t a boat ride for the gentle passerby. You must be willing to face the ride on this wild ride. When this attraction hit the scene at Cedar Point in 1993, it was the tallest, fastest and steepest water flume ride in the world. Hop aboard one of our 20-passenger boats and get lifted 82 feet above the river below. A U-turn around the river brings you to the top of the drop. And before you know it, you’re plunging back down a 50 degree drop at 40 mph. Expect to get soaked by the tidal wave created by the boat during the splashdown. If that wasn’t enough, grab the perfect viewing spot on the observation bridge. A front row angle and it’s a guarantee the splash will cover you from head to toe. This ride’s sure to give a thrill for those who dare the dive!",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "snake-river-falls.jpg",
+                "closed": false
+            },
+            {
+                "id": 49,
+                "name": "Snoopy Bounce",
+                "type": "Kid ride",
+                "description": "One walk down the Gemini Midway and you can’t miss this giant inflatable Snoopy attraction towering at the entrance to Camp Snoopy. He may be waving you in but it’s not all for looks, though. Step inside and our little park goers can enjoy the thrills of a bouncy wonderland. With its massive jump area, multiple park goers can safely bounce and tumble to their hearts’ desire. The rise and fall brings on that special tickle in the tummy that only a few things can produce. As they bounce up, down and all around there is only one sound that comes out, a joyful collection of giggles. The thrill of weightlessness never gets old as it has our mini park goers coming back for seconds and even thirds. It’s a great last stop to burn off any extra energy before the ride home. Make sure to wave goodbye on your way out.",
+                "minimumHeight": 36,
+                "maximumHeight": 54,
+                "photoName": "snoopy-bounce.jpg",
+                "closed": false
+            },
+            {
+                "id": 50,
+                "name": "Snoopy's Deep Sea Divers",
+                "type": "Family ride",
+                "description": "Take the whole family under the sea in Snoopy’s Deep Sea Divers. Strap on your goggles, snorkel and flippers to get ready for all the waves the water has ready for you. Step onto this bright yellow submarine with your little thrill-seekers for an underwater adventure of a lifetime. This pendulum ride never fails to put a smile on your face. It’s a family favorite season after season. This isn’t just any regular submarine ride. Once you’re strapped in with your little ones, the submarine goes up, up and away. That’s right, look out the portal windows and you’ll be in the middle of the sky, surrounded by soaring views of Planet Snoopy. There are no waves up here, only remarkable climbs and dips in the air. Take off your flippers and enjoy the ride that has been serving giggles since 2008. Bring the whole family aboard, there’s no splash zone here!",
+                "minimumHeight": 42,
+                "maximumHeight": null,
+                "photoName": "snoopys-deep-sea-divers.jpg",
+                "closed": false
+            },
+            {
+                "id": 51,
+                "name": "Snoopy's Express Railroad",
+                "type": "Family ride",
+                "description": "Planet Snoopy is a massive part of Cedar Point. In fact, it’s so large that you can barely travel it by foot. So, take the train instead, hop aboard Snoopy’s Express Railroad and experience all of the old-timey charms of traveling by rail. Make sure to look out the windows and wave as you pass by. Along the journey you can plan your ride schedule and take guesses at what is going to be your favorite before even riding them. Get a taste of what thrills are in-store for the little thrill-seekers of the family. Feel the lead engine’s pull, hear the train’s whistle, and enjoy all of it with your entire family, as there’s plenty of room onboard. Choose your car and watch as Woodstock chugs the train along. There’s no better ride at Cedar Point for an aspiring conductor. So, sit back and relax, this train is pulling out of the station.",
+                "minimumHeight": 36,
+                "maximumHeight": null,
+                "photoName": "snoopys-express-railroad.jpg",
+                "closed": false
+            },
+            {
+                "id": 52,
+                "name": "Snoopy's Space Race",
+                "type": "Kid ride",
+                "description": "“Three…two…one… Cedar Point, we have lift off.” Have you ever dreamed of being an astronaut? Young flyers can get a crash course on space flight from Captain Snoopy and his trusty assistant Woodstock on Snoopy’s Space Race ride. After choosing their own colorful spaceship, the newest fleet of astronauts will take cues from America’s favorite beagle as they practice leaving the earth’s atmosphere and rocketing straight through space to the moon. But, there’s a glitch in this mission: once riders return to the earth’s orbit, there’s no control room to guide them along. Cedar Point, we have a problem! Instead, the novice astronauts will have to navigate outer space manually, floating up and down and spinning around without any concern for gravity. But, rest assured, while this crazy lunar mission provides one of the most out-of-this-world experiences imaginable, it also serves up some galactic-sized smiles and belly laughs.",
+                "minimumHeight": 36,
+                "maximumHeight": 54,
+                "photoName": "snoopys-space-race.jpg",
+                "closed": false
+            },
+            {
+                "id": 53,
+                "name": "Space Age",
+                "type": "Kid ride",
+                "description": "What do you want to be when you grow up? An astronaut, of course! Well look no further because every child’s dream is about to turn into a reality. Space Age is a necessity for every future astronaut. This ride will train the most adventurous kids to be ready for space. Get ready for lift off as little park goers climb aboard and start their countdown for space arrival. 3…2…1…Blastoff! Watch as the rockets launch your kids into the sky and fly high above as they orbit earth. The look on their face when they see the stars and the moon will be one you’ll never forget. These special ships will keep them safe as they experience all the Milky Way has to offer. Their laughs and screams will break the sound barrier as they make their way back to earth. Once their mission is complete, the rockets safely land back home. ",
+                "minimumHeight": null,
+                "maximumHeight": 54,
+                "photoName": "space-age.jpg",
+                "closed": false
+            },
+            {
+                "id": 54,
+                "name": "Steel Vengeance",
+                "type": "Roller coaster",
+                "description": "They’re back. And they’re back with a VENGEANCE! Once intimidated and disrespected by the musings of Maverick, outcasts Jackson “Blackjack” Chamberlain, Chess “Wild One” Watkins and Wyatt “Digger” Dempsey have returned to FrontierTown to right the wrongs done to them and their fellow FrontierTown Folk. The three are bringing with them a roller coaster forged so big and so bold, an entirely new category of thrill ride has been branded: the hyper-hybrid – the world’s first steel-on-wood hybrid roller coaster to stand over 200 feet tall. Mirroring Blackjack’s impressive height, Chess’ unconventional and wild personality and Digger’s blazing speed of the draw, this new machine is now the force to be reckoned with. The law-abidin’ folk of FrontierTown have a new leader – Steel Vengeance. This Wild West thrill comes action-packed with a height of 205 feet above the prairie, a 90-degree initial drop down to the earth, almost 30 seconds of airtime (the most on any roller coaster on Earth), 4 head-over-boots inversions, ricocheting movements left-to-right, up-to-down and side to side…it’s a roller coaster only Cedar Point could build – and you have the chance to saddle up and take the ride of your life beginning in 2018!",
+                "minimumHeight": 52,
+                "maximumHeight": null,
+                "photoName": "steel-vengeance.jpg",
+                "closed": false
+            },
+            {
+                "id": 55,
+                "name": "Super Himalaya",
+                "type": "Thrill ride",
+                "description": "When you’re spinning, you feel it. It grips at you and pulls you closer and closer to its source. There’s no escaping its grip and slowly but surely your strength and resolve crumble to its will. That pull is called centrifugal force, and nowhere is it stronger than on the Super Himalaya. It has been bringing people to its core since 1970. It’s peaks and dips wants to make you move like never before. Even the bravest can’t break free from its hold. Up and Down and around to the point that everything around you becomes a blur. So, buckle in with a couple of friends and slowly feel yourselves sliding towards the center of your cart. But you better be close because this ride will bring you tighter than ever. It’s not the togetherness you expected, but on this ride it’s always nice to have something extra to hold onto.",
+                "minimumHeight": 52,
+                "maximumHeight": null,
+                "photoName": "super-himalaya.jpg",
+                "closed": false
+            },
+            {
+                "id": 56,
+                "name": "Thunder Canyon",
+                "type": "Thrill ride",
+                "description": "Whitewater rapids can be one of the most unpredictable forces of nature on our planet. And when you ride down Thunder Canyon, you’ll find yourself at the mercy of one seriously erratic river. Riders that sit in this large family-size raft shouldn’t even try to maneuver their way through. These fast moving waters have their own plan for its path. It’s driven goal: Get as many people wet as possible. It’ll push you up against a rock hoping the wave will overcome the side of the raft. It will send you through rapids, making the raft bob and weave. It will slide you under waterfalls, drenching the lucky ones who find themselves under its never-ending flow. Every turn made will create splashes and waves meant to drench you and everyone on the raft with you. This isn’t like any river you’ll find feeding Lake Erie. This is a river for those willing to take a splash. There’s no avoiding getting drenched!",
+                "minimumHeight": 46,
+                "maximumHeight": null,
+                "photoName": "thunder-canyon.jpg",
+                "closed": false
+            },
+            {
+                "id": 57,
+                "name": "Tiki Twirl",
+                "type": "Thrill ride",
+                "description": "Looks can be deceiving, and these cars are deceptively thrilling. Once seated, don’t get too comfortable because pretty soon you’ll be whipping around, spun in two degrees of motion that will leave you wondering when you left your balance behind. Don’t look down because your direction and the platforms direction are going to be the exact opposite. Through it all, you’ll be held in your car, swinging in and out from the ride’s center. So, keep your hands on the wheel and hold on for dear life. This is a ride meant to share the fun with everyone. Bring the whole family and grab cars next to one another. Or, bring all your friends and see how many times you cross paths in and out of the center. No matter who you’re with, these thrills will bring laughs to everyone around. But don’t be fooled, you will always need to hang on to your seat.",
+                "minimumHeight": 46,
+                "maximumHeight": null,
+                "photoName": "tiki-twirl.jpg",
+                "closed": false
+            },
+            {
+                "id": 58,
+                "name": "Tilt-A-Whirl",
+                "type": "Family ride",
+                "description": "Around and around and around we go! Step into Camp Snoopy and take a spin on the Tilt-A-Whirl. It may be located in an area dedicated to kids, but don’t underestimate the amount of fun this ride can dish out. Since 1999, when it opened, it has been a full-sized fun machine bringing families and friends closer than ever. Expect to be slid very close to each other, because this spin is relentless. This fan favorite is an amusement park classic and gives smiles to everyone, no matter your age. Grab your family or friends and sit three or four across as your freely-spinning car whirls around the gradual hills of the platform. Up down and round, what could be more fun? Will your car spin fast or slow? No one knows! Every ride on the Tilt-A-Whirl offers a different thrill, which is why our park goers are always coming back for more!",
+                "minimumHeight": 46,
+                "maximumHeight": null,
+                "photoName": "tilt-a-whirl.jpg",
+                "closed": false
+            },
+            {
+                "id": 59,
+                "name": "Top Thrill Dragster",
+                "type": "Roller coaster",
+                "description": "Put the pedal to the metal because no speeding tickets are cited to Top Thrill Dragster. Three point eight….that’s 3.8… seconds. That is all it takes to go from a complete standstill to 120 miles per hour. You’ve never experienced speed like this. Even with a true drag strip “Christmas tree” light counting down the launch, you’ll never be ready for the pure adrenaline rush packed into a 17 second race. Riders are launched in the blink of an eye before sprinting straight up at a 90-degree incline. If you dare to open your eyes at the top you will see spectacular views only viewed by the bravest 420 feet in the air. But look quick, before you know it, you’re hurdling back to the ground in a 270- degree twist before crossing the finish line. We aren’t kidding when we say that this high-octane sprint to the checkered flag knows a thing or twenty about horsepower.",
+                "minimumHeight": 52,
+                "maximumHeight": 78,
+                "photoName": "top-thrill-dragster.jpg",
+                "closed": false
+            },
+            {
+                "id": 60,
+                "name": "Troika",
+                "type": "Thrill ride",
+                "description": "It’s official: three is no longer a crowd…it’s a crowd-pleaser. Rising 25-feet off the ground and bringing more scramble than the park ever thought imaginable, Troika is fun to the third power for everyone. Named after the Russian word meaning “group of three”, this ride is sure to ramp up anyone’s thrill level, especially those that enjoy it together. Grab friends and family to experience this whirl wind of a ride guaranteed to put smiles on faces. It’s three arms each hold seven gondolas for people to be whipped around in. Will you dare to take on the rising circulation? Not only with the ride take you in one direction of rotation, but your car will take you in another. Whipping you back and forth from its core. It’s a dizzying cycle meant to scramble you both physically and psychologically. But, maybe just one ride isn’t enough. Maybe the third times the charm. ",
+                "minimumHeight": 54,
+                "maximumHeight": null,
+                "photoName": "troika.jpg",
+                "closed": false
+            },
+            {
+                "id": 61,
+                "name": "Valravan",
+                "type": "Roller coaster",
+                "description": "Do you dare try and conquer Valravn? You better come prepared to have your plans squandered. This coaster elevates riders 223 feet up into the skies and then dangles them over the edge for what feels like an eternity before dropping them at a 90-degree angle. If that doesn’t show a rider who’s in charge around here, then the multiple inversions, including a 270-degree roll and a legendary Immelmann maneuver will make it obvious that it’s Valravn who rules the throne. But don’t be fooled into thinking it is over. It picks you back up before dropping riders again from 131 feet diving and weaving to prove it was rightfully crowned as king of dive coasters in 2016. This warrior didn’t just climb its way to the top, it plotted and seized the records for tallest, fastest and longest dive coaster. And the airtime at the end of the flight? Well, that simply proves that it’s Valravn’s kingdom and you’re just riding in it.",
+                "minimumHeight": 52,
+                "maximumHeight": 78,
+                "photoName": "valravan.jpg",
+                "closed": false
+            },
+            {
+                "id": 62,
+                "name": "Wave Swinger",
+                "type": "Thrill ride",
+                "description": "A memorable ride that you and your family can enjoy together, our Wave Swinger is a classic swing ride that delivers a mellow -- yet incredibly exhilarating -- experience, as you glide through the air in swings suspended 16 feet above the ground. Under a high canopy of intricate, elaborate murals resembling those on a carousel of ages past, you’ll rotate 360 degrees in a circular, wavelike motion. Arcing upwards and accelerating downwards, you’ll certainly feel each and every element of this time-honored amusement park experience all the way down to your free-floating toes. Enjoy breathtaking views of the park and wave to those below, but make sure to still hold on tight, because you’ll be zipping right along! At night, the Wave Swinger delivers an entirely new experience when its tower and canopy are illuminated with thousands of shimmering lights. You’ll feel like you’re swinging on a star!",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "wave-swinger.jpg",
+                "closed": false
+            },
+            {
+                "id": 63,
+                "name": "Wicked Twister",
+                "type": "Roller coaster",
+                "description": "Hold on to your hats. Actually, scratch that. Don’t even wear one. Because to say you launch out of the station is an injustice. This coaster catapults you forward so quickly, you’re not even sure if there’s track in front of you. Seventy-two miles per hour feels more like one hundred. Soaring towards the sky won’t last long because before you know it you’re flying back to the station. But not to stop you, to propel you faster as you ascend up again in the opposite direction never knowing when you’re going to start falling again. Traveling back and forth builds momentum to reach a max height of 206 feet. But with a name like Wicked Twister, are you really that surprised? Short as it may seem, one trip on the Wicked Twister is enough to make you come back for seconds, thirds, and tenths. Strap in, and get ready to stop, drop and roar.",
+                "minimumHeight": 52,
+                "maximumHeight": 78,
+                "photoName": "wicked-twister.jpg",
+                "closed": false
+            },
+            {
+                "id": 64,
+                "name": "Wilderness Run",
+                "type": "Roller coaster",
+                "description": "Before you can walk, you need to crawl. Before you drop from unheard of heights at blistering speeds, you need to ride a coaster built just for beginners. Giving child-sized thrills for over 35 years, Wilderness Run gives a glimpse of what else can be conquered in the future at Cedar Point. The 19-foot first hill and turns will keep riders coming back for more. With kid-friendly hills and speeds up to 6 miles per hour, this is like riding with roller coaster training wheels for those young thrill seekers out there. As riders are taken for an exciting adventure through the backwoods of Camp Snoopy, they’ll earn their stripes for when they’re ready to move onto the bigger coasters. Just one ride and they’ll be ready to see what taller and faster ride is next. Before you know it, they’ll be a few inches taller and ready to take on the wildest rides around. ",
+                "minimumHeight": 36,
+                "maximumHeight": 54,
+                "photoName": "wilderness-run.jpg",
+                "closed": false
+            },
+            {
+                "id": 65,
+                "name": "WindSeeker",
+                "type": "Thrill ride",
+                "description": "Who said swings are for kids? Strap in for some big-kid fun because this ride was designed with thrill seekers in mind. It’s part nostalgia, part traditional swing, and all flying high. Feel the exhilaration of a bird in flight as the ride’s mighty arms extend outward at a 45-degree angle. Windseeker’s dizzying height of 301 feet (yes, that’s over 30 stories) promises views of almost the entire park and beyond on a clear day. What’s more, Windseeker is two rides in one, offering a totally different experience at night! When the sun goes down, the fun lights up with Windseeker’s elaborate light show. As the swings ascend to the top of the tower, a supernatural light display comes to life with a kaleidoscope of colorful patterns and shapes.",
+                "minimumHeight": 52,
+                "maximumHeight": null,
+                "photoName": "windseeker.jpg",
+                "closed": false
+            },
+            {
+                "id": 66,
+                "name": "Woodstock Express",
+                "type": "Roller coaster",
+                "description": "Say hello to lovable Woodstock, Snoopy’s best bud. This little yellow bird is the ultimate trusty, feathered friend – always ready to lend a wing to Snoopy’s zany adventures. Sadly, though, Woodstock’s flying skills aren’t quite as strong as his loyalty. While in flight, he’s up, down and all around! Woodstock Express Roller Coaster in the heart of Camp Snoopy will take you on a wild and crazy trip just like Woodstock’s flights – up, down and all around. And that’s just the beginning. Even though this coaster might be pint-sized just like our buddy Woodstock, it has all the heart, soul and exhilarating speed of a soaring eagle, offering fantastic thrills for everyone in the family to enjoy together. Climb aboard and hold on tight, because one trip aboard this classic ride will turn all kiddos into roller coaster enthusiasts for life.",
+                "minimumHeight": null,
+                "maximumHeight": null,
+                "photoName": "woodstock-express.jpg",
+                "closed": false
+            },
+            {
+                "id": 67,
+                "name": "Woodstock's Airmail",
+                "type": "Kid ride",
+                "description": "Calling all adventure seekers in training! Test out your thrill-power on Woodstock’s Airmail before you head on over to the big kid rides. This ride is a great beginner for little park goers. Located in Camp Snoopy, it has all of the ups, downs and thrills of Power Tower, but on a much smaller scale; not as high, not as fast and totally suitable for little ones. Stamped and ready to go, this ride is ready to take riders on a long journey to Woodstock’s mailbox. Kick start your ride with a liftoff. As riders bounce several times on their way up to Woodstock’s mail box, they feel the weightlessness only this ride can provide. But don’t worry, we won’t lose any precious packages on the journey back to the loading pad. As Woodstock’s Airmail lifts you into the sky, you’ll see awesome views of Camp Snoopy right before bringing you safely back to earth.",
+                "minimumHeight": 36,
+                "maximumHeight": 54,
+                "photoName": "woodstocks-airmail.jpg",
+                "closed": false
+            },
+            {
+                "id": 68,
+                "name": "Woodstock's Whirlybirds",
+                "type": "Family ride",
+                "description": "This big world has all types of bird nests. Nests that float on water, nests that are burrowed deep in the ground and nests that rest high up on cliffs or in trees. But none of them can compare to a particular type of zany nest that spins around and around in a circle until you can barely see straight. That’s exactly what all our feathered friends get with Woodstock Whirlybirds, a classic tea cup ride. Grab everyone in the family and hop into your own little nest built by Snoopy’s best bud Woodstock himself. Take hold of the rotating wheel and spin as fast or slow as you want; that determines just how mild or wild your ride is. While typical nests might be meant to nurture the young with food and shelter, the nests of Woodstock’s Whirlybirds are meant to nurture the young and young at heart with pure fun.",
+                "minimumHeight": 42,
+                "maximumHeight": null,
+                "photoName": "woodstocks-whirlybirds.jpg",
+                "closed": false
+            },
+            {
+                "id": 69,
+                "name": "maXair",
+                "type": "Thrill ride",
+                "description": "Can someone be nowhere and everywhere at the same time? That’s what people will be wondering on one of the most disorienting rides ever created - maXair. Being one of only two built of its kind in the United States, this ride will provide more than just one unique feeling. There is no countdown to this 70 mph pendulum, and your guaranteed not to be hypnotized as it swings and rotates. Anyone watching from the sidelines may not be so lucky as the ride swings in a 120-degree path. First, riders sit on outward facing ring of suspended seats. Then they’re swung back and forth on a rampant pendulum while spinning counterclockwise. When peak velocity is reached while upside down 140 feet in the air, riders will experience the rare feeling of total weightlessness. And that’s when they’ll realize the answer to the question of “where am I?” isn’t a physical destination, but a state of mind.",
+                "minimumHeight": 52,
+                "maximumHeight": null,
+                "photoName": "maxair.jpg",
+                "closed": false
+            },
+            {
+                "id": 70,
+                "name": "Iron Dragon",
+                "type": "Roller coaster",
+                "description": "This fiery beast leaves nothing to the imagination. It gives you everything you love in a coaster and still has you begging for more. Better yet, the Iron Dragon will literally leave you hanging over the Cedar Point Lagoon. Will you swing across or will you dive in? This coaster leaves you second-guessing as it swings side to side over the park and across the water at adrenaline-inducing speeds. And when you’re traveling that fast, with nothing but water and forests beneath you, there’s nothing you can do but scream and hold on tight.",
+                "minimumHeight": 48,
+                "maximumHeight": null,
+                "photoName": "iron-dragon.jpg",
+                "closed": false
             }
         ]
     }
