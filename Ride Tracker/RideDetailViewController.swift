@@ -17,8 +17,8 @@ class RideDetailViewController: UIViewController {
             timer = nil
             let defaults = UserDefaults()
 
-            if let ride = ride, defaults.string(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_NAME) != ride.name {
-                defaults.set(ride.name, forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_NAME)
+            if let ride = ride, defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int != ride.id {
+                defaults.set(ride.id, forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID)
                 defaults.set(Date(), forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME)
 
                 defaults.synchronize()
@@ -34,7 +34,7 @@ class RideDetailViewController: UIViewController {
                     }
                 }
             } else if ride == nil {
-                defaults.removeObject(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_NAME)
+                defaults.removeObject(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID)
                 defaults.removeObject(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME)
                 timer?.invalidate()
                 timer = nil
