@@ -26,9 +26,9 @@
         <attribute name="recorded" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="ridden" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="waitTime" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="accelerometerData" toMany="YES" deletionRule="Cascade" destinationEntity="AccelerometerData" inverseName="ride" inverseEntity="AccelerometerData" syncable="YES"/>
-        <relationship name="gyroscopeData" toMany="YES" deletionRule="Cascade" destinationEntity="GyroscopeData" inverseName="ride" inverseEntity="GyroscopeData" syncable="YES"/>
-        <relationship name="locationData" toMany="YES" deletionRule="Cascade" destinationEntity="LocationData" inverseName="ride" inverseEntity="LocationData" syncable="YES"/>
+        <relationship name="accelerometerData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AccelerometerData" inverseName="ride" inverseEntity="AccelerometerData" syncable="YES"/>
+        <relationship name="gyroscopeData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GyroscopeData" inverseName="ride" inverseEntity="GyroscopeData" syncable="YES"/>
+        <relationship name="locationData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LocationData" inverseName="ride" inverseEntity="LocationData" syncable="YES"/>
     </entity>
     <elements>
         <element name="AccelerometerData" positionX="-198.0390625" positionY="20.48046875" width="128" height="118"/>
