@@ -144,6 +144,7 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
         self.motionRecorderQueue.waitUntilAllOperationsAreFinished()
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
         print("All saved! I hope...")
+        performSegue(withIdentifier: UNWIND_TO_RIDE_LIST_VIEW, sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

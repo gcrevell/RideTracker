@@ -112,9 +112,11 @@
                     <connections>
                         <outlet property="countdownLabel" destination="uHq-dr-yE2" id="Xng-zp-zh3"/>
                         <outlet property="finishRecordingButton" destination="U48-Ml-KiN" id="JiI-v7-ve7"/>
+                        <segue destination="s9i-KT-qXq" kind="unwind" identifier="UNWIND_TO_RIDE_LIST_VIEW" unwindAction="unwindToRideListViewWithSegue:" id="mPf-sb-CmU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXR-gC-BwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="s9i-KT-qXq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1600.8" y="300"/>
         </scene>
