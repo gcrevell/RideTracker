@@ -17,20 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        let managedContext = persistentContainer.viewContext
+//        let context = persistentContainer.viewContext
 //        let fetchRequest = NSFetchRequest<RideRecord>(entityName: "RideRecord")
 //        do {
-//            let result = try managedContext.fetch(fetchRequest)
+//            let result = try context.fetch(fetchRequest)
 //            for data in result {
 //                print(data.waitTime as! TimeInterval)
-//                if let accData = data.accelerometerData {
-//                    for point in accData {
-//                        print("Theres a point!")
-//                        if let pointa = point as? AccelerometerData {
-//                            print("\(pointa.x), \(pointa.y), \(pointa.z)")
-//                        }
-//                    }
-//                }
+////                context.delete(data)
+////                self.saveContext()
+//////                if let accData = data.accelerometerData {
+//////                    for point in accData {
+//////                        print("Theres a point!")
+//////                        if let pointa = point as? AccelerometerData {
+//////                            print("\(pointa.x), \(pointa.y), \(pointa.z)")
+//////                        }
+//////                    }
+//////                }
 //            }
 //        } catch {
 //            print("Failure!!!")
