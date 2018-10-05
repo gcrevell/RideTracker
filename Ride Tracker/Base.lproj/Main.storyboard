@@ -11,6 +11,24 @@
     </dependencies>
     <scenes>
         <!--Ride Detail View Controller-->
+        <scene sceneID="XAA-zV-ZYC">
+            <objects>
+                <viewController id="TU5-38-MuP" customClass="RideDetailViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IDd-cv-lLX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aod-Fb-YmH"/>
+                    </view>
+                    <connections>
+                        <segue destination="TA6-k5-G2I" kind="show" identifier="SHOW_RIDE_WAIT_TIME_COUNTER" id="yKr-yV-mnt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsz-zx-a0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="304"/>
+        </scene>
+        <!--Ride Wait Time Counter View Controller-->
         <scene sceneID="nOs-vg-0hJ">
             <objects>
                 <viewController id="TA6-k5-G2I" customClass="RideWaitTimeCounterViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoO-sg-eDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="648.79999999999995" y="300"/>
+            <point key="canvasLocation" x="1601" y="304"/>
         </scene>
         <!--Record Ride View Controller-->
         <scene sceneID="yhG-hJ-gic">
@@ -118,7 +136,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXR-gC-BwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="s9i-KT-qXq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1600.8" y="300"/>
+            <point key="canvasLocation" x="2553" y="304"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="xLm-Hp-efm">
@@ -200,7 +218,7 @@
                 <splitViewController id="cba-pD-cqU" customClass="RideListSplitViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="J9V-yB-Q6a" kind="relationship" relationship="masterViewController" id="k0N-T2-ycL"/>
-                        <segue destination="TA6-k5-G2I" kind="relationship" relationship="detailViewController" id="QHv-Kt-9tc"/>
+                        <segue destination="TU5-38-MuP" kind="relationship" relationship="detailViewController" id="GEa-HT-2aA"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Uy-UC-3iy" userLabel="First Responder" sceneMemberID="firstResponder"/>

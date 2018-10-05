@@ -79,9 +79,3 @@ class RideWaitTimeCounterViewController: UIViewController {
         }
     }
 }
-
-extension RideWaitTimeCounterViewController: RideSelectionDelegate {
-    func rideSelected(_ ride: Ride) {
-        self.ride = ride
-    }
-}

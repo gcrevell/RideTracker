@@ -51,7 +51,7 @@ class RideListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.rideSelected(Park.shared.rides[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
-        if let detailViewController = delegate as? RideWaitTimeCounterViewController {
+        if let detailViewController = delegate as? RideDetailViewController {
             splitViewController?.showDetailViewController(detailViewController, sender: nil)
         }
     }

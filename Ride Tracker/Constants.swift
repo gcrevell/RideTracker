@@ -10,6 +10,7 @@ import Foundation
 
 // Segue names
 let SHOW_RIDE_RECORDING = "SHOW_RIDE_RECORDING"
+let SHOW_RIDE_WAIT_TIME_COUNTER = "SHOW_RIDE_WAIT_TIME_COUNTER"
 let UNWIND_TO_RIDE_LIST_VIEW = "UNWIND_TO_RIDE_LIST_VIEW"
 
 // Table view cell identifiers

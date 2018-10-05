@@ -17,7 +17,7 @@ class RideListSplitViewController: UISplitViewController, UISplitViewControllerD
 
         let leftNavController = self.viewControllers.first as! UINavigationController
         let masterViewController = leftNavController.topViewController as! RideListViewController
-        let detailViewController = self.viewControllers.last as! RideWaitTimeCounterViewController
+        let detailViewController = self.viewControllers.last as! RideDetailViewController
 
         let defaults = UserDefaults()
         if let currentRideId = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int,
@@ -31,7 +31,7 @@ class RideListSplitViewController: UISplitViewController, UISplitViewControllerD
     }
 
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        if let detailController = secondaryViewController as? RideWaitTimeCounterViewController {
+        if let detailController = secondaryViewController as? RideDetailViewController {
             if detailController.ride == nil {
                 return true
             }
