@@ -62,9 +62,7 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
 
-//        recordGyroscope(for: self.record)
-//        recordAccelerometer(for: self.record)
-//        recordLocation()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelRecord))
     }
 
     func stopUpdates() {
@@ -136,6 +134,16 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
             locationDataPoint.longitude = location.coordinate.longitude
             locationDataPoint.speed = location.speed
         }
+    }
+
+    @objc func cancelRecord() {
+        countdownTimer?.invalidate()
+        stopUpdates()
+        self.motionRecorderQueue.cancelAllOperations()
+        self.context.delete(self.record)
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+
+        performSegue(withIdentifier: UNWIND_TO_RIDE_LIST_VIEW, sender: self)
     }
 
     @IBAction func finishRecording(_ sender: Any) {
