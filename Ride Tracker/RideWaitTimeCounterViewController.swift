@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RideDetailViewController: UIViewController {
+class RideWaitTimeCounterViewController: UIViewController {
 
     var timer: Timer?
     var ride: Ride? = nil {
@@ -80,7 +80,7 @@ class RideDetailViewController: UIViewController {
     }
 }
 
-extension RideDetailViewController: RideSelectionDelegate {
+extension RideWaitTimeCounterViewController: RideSelectionDelegate {
     func rideSelected(_ ride: Ride) {
         self.ride = ride
     }

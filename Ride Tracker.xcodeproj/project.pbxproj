@@ -21,7 +21,7 @@
 		00498CFE215D31490020FCA6 /* photos in Resources */ = {isa = PBXBuildFile; fileRef = 00498CFD215D31490020FCA6 /* photos */; };
 		00498D00215D32DD0020FCA6 /* RideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CFF215D32DD0020FCA6 /* RideTableViewCell.swift */; };
 		00498D02215D53B00020FCA6 /* RideListSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */; };
-		00498D04215D56030020FCA6 /* RideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D03215D56030020FCA6 /* RideDetailViewController.swift */; };
+		00498D04215D56030020FCA6 /* RideWaitTimeCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */; };
 		00498D06215D98BD0020FCA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D05215D98BD0020FCA6 /* Constants.swift */; };
 		00498D08215D9D590020FCA6 /* RecordRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D07215D9D590020FCA6 /* RecordRideViewController.swift */; };
 		0074914A216696050041BDCF /* Cedar-Point-rides.json in Resources */ = {isa = PBXBuildFile; fileRef = 002BAEF121669592000B73AA /* Cedar-Point-rides.json */; };
@@ -66,7 +66,7 @@
 		00498CFD215D31490020FCA6 /* photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = photos; sourceTree = "<group>"; };
 		00498CFF215D32DD0020FCA6 /* RideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTableViewCell.swift; sourceTree = "<group>"; };
 		00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListSplitViewController.swift; sourceTree = "<group>"; };
-		00498D03215D56030020FCA6 /* RideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailViewController.swift; sourceTree = "<group>"; };
+		00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideWaitTimeCounterViewController.swift; sourceTree = "<group>"; };
 		00498D05215D98BD0020FCA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00498D07215D9D590020FCA6 /* RecordRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,7 +122,7 @@
 				00498CC2215D0DD60020FCA6 /* AppDelegate.swift */,
 				00498CC6215D0DD60020FCA6 /* Main.storyboard */,
 				00498D05215D98BD0020FCA6 /* Constants.swift */,
-				00498D03215D56030020FCA6 /* RideDetailViewController.swift */,
+				00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */,
 				00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */,
 				00498CF7215D14EE0020FCA6 /* RideListViewController.swift */,
 				00498CFF215D32DD0020FCA6 /* RideTableViewCell.swift */,
@@ -305,7 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00498CF6215D117F0020FCA6 /* RideType.swift in Sources */,
-				00498D04215D56030020FCA6 /* RideDetailViewController.swift in Sources */,
+				00498D04215D56030020FCA6 /* RideWaitTimeCounterViewController.swift in Sources */,
 				00498CF4215D10BF0020FCA6 /* Ride.swift in Sources */,
 				00498CCB215D0DD60020FCA6 /* Ride_Tracker.xcdatamodeld in Sources */,
 				00498CF8215D14EE0020FCA6 /* RideListViewController.swift in Sources */,

@@ -13,7 +13,7 @@
         <!--Ride Detail View Controller-->
         <scene sceneID="nOs-vg-0hJ">
             <objects>
-                <viewController id="TA6-k5-G2I" customClass="RideDetailViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TA6-k5-G2I" customClass="RideWaitTimeCounterViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dh8-aB-MBn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
