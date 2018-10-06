@@ -48,6 +48,12 @@ class RideDetailViewController: UITableViewController {
             headerRect.size.height = -tableView.contentOffset.y
         }
 
+        // Adjust the origin y value to keep the name label on screen
+        let heightNeededForLabel = headerView.labelContainer.frame.height + self.view.safeAreaInsets.top
+        if tableView.contentOffset.y > -heightNeededForLabel {
+            headerRect.origin.y = -(TABLE_VIEW_HEADER_HEIGHT - (tableView.contentOffset.y + heightNeededForLabel))
+        }
+
         headerView.frame = headerRect
     }
 
