@@ -11,22 +11,40 @@
     </dependencies>
     <scenes>
         <!--Ride Detail View Controller-->
-        <scene sceneID="XAA-zV-ZYC">
+        <scene sceneID="84C-Lf-5QF">
             <objects>
-                <viewController id="TU5-38-MuP" customClass="RideDetailViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IDd-cv-lLX">
+                <tableViewController id="YQt-1f-xAk" customClass="RideDetailViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ymI-p2-Iia">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="aod-Fb-YmH"/>
-                    </view>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="OWu-J7-ZnH">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jes-6O-UXs">
+                                <rect key="frame" x="0.0" y="215.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jes-6O-UXs" id="oc0-Z2-geg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YQt-1f-xAk" id="zvr-Kf-Sih"/>
+                            <outlet property="delegate" destination="YQt-1f-xAk" id="qhi-m5-SyZ"/>
+                        </connections>
+                    </tableView>
                     <connections>
-                        <segue destination="TA6-k5-G2I" kind="show" identifier="SHOW_RIDE_WAIT_TIME_COUNTER" id="yKr-yV-mnt"/>
+                        <segue destination="TA6-k5-G2I" kind="show" identifier="SHOW_RIDE_WAIT_TIME_COUNTER" id="HiW-Nh-ZZI"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsz-zx-a0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awf-aN-9p5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649" y="304"/>
+            <point key="canvasLocation" x="648.79999999999995" y="303.59820089955025"/>
         </scene>
         <!--Ride Wait Time Counter View Controller-->
         <scene sceneID="nOs-vg-0hJ">
@@ -218,7 +236,7 @@
                 <splitViewController id="cba-pD-cqU" customClass="RideListSplitViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="J9V-yB-Q6a" kind="relationship" relationship="masterViewController" id="k0N-T2-ycL"/>
-                        <segue destination="TU5-38-MuP" kind="relationship" relationship="detailViewController" id="GEa-HT-2aA"/>
+                        <segue destination="YQt-1f-xAk" kind="relationship" relationship="detailViewController" id="suZ-Nd-XSg"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Uy-UC-3iy" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RideDetailViewController: UIViewController {
+class RideDetailViewController: UITableViewController {
 
     var ride: Ride? = nil
 
