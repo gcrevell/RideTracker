@@ -54,6 +54,23 @@ class RideDetailViewController: UITableViewController {
             headerRect.origin.y = -(TABLE_VIEW_HEADER_HEIGHT - (tableView.contentOffset.y + heightNeededForLabel))
         }
 
+        let alpha = { () -> CGFloat in
+            if tableView.contentOffset.y > -TABLE_VIEW_HEADER_HEIGHT {
+                let progress = { () -> CGFloat in
+                    let currentScrollPosition = (-self.tableView.contentOffset.y) - heightNeededForLabel
+                    let maxScrollPosition = TABLE_VIEW_HEADER_HEIGHT - heightNeededForLabel
+                    let rawProgress = currentScrollPosition / maxScrollPosition
+                    return 1 - min(max(rawProgress, 0), 1)
+                }()
+                return progress * 0.25 + 0.75
+            } else {
+                return 0.75
+            }
+        }()
+
+        let color = headerView.labelContainer.backgroundColor?.withAlphaComponent(alpha)
+        headerView.labelContainer.backgroundColor = color
+
         headerView.frame = headerRect
     }
 
