@@ -42,6 +42,7 @@ class RideDetailViewController: UITableViewController {
 
     func updateHeaderView() {
         var headerRect = CGRect(x: 0, y: -TABLE_VIEW_HEADER_HEIGHT, width: tableView.bounds.width, height: TABLE_VIEW_HEADER_HEIGHT)
+        // If scrolling past the defined height, stretch the header
         if tableView.contentOffset.y < -TABLE_VIEW_HEADER_HEIGHT {
             headerRect.origin.y = tableView.contentOffset.y
             headerRect.size.height = -tableView.contentOffset.y
