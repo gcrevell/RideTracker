@@ -26,6 +26,8 @@
 		00498D08215D9D590020FCA6 /* RecordRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D07215D9D590020FCA6 /* RecordRideViewController.swift */; };
 		0074914A216696050041BDCF /* Cedar-Point-rides.json in Resources */ = {isa = PBXBuildFile; fileRef = 002BAEF121669592000B73AA /* Cedar-Point-rides.json */; };
 		0074914C2167C7330041BDCF /* RideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074914B2167C7330041BDCF /* RideDetailViewController.swift */; };
+		00F2FC6E216957C8003E52D7 /* RideDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2FC6D216957C8003E52D7 /* RideDetailHeaderView.swift */; };
+		00F2FC70216959EA003E52D7 /* RideDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F2FC6F216959EA003E52D7 /* RideDetailHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		00498D05215D98BD0020FCA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00498D07215D9D590020FCA6 /* RecordRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRideViewController.swift; sourceTree = "<group>"; };
 		0074914B2167C7330041BDCF /* RideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailViewController.swift; sourceTree = "<group>"; };
+		00F2FC6D216957C8003E52D7 /* RideDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailHeaderView.swift; sourceTree = "<group>"; };
+		00F2FC6F216959EA003E52D7 /* RideDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RideDetailHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +127,9 @@
 			children = (
 				00498CC2215D0DD60020FCA6 /* AppDelegate.swift */,
 				00498CC6215D0DD60020FCA6 /* Main.storyboard */,
+				00F2FC6D216957C8003E52D7 /* RideDetailHeaderView.swift */,
 				0074914B2167C7330041BDCF /* RideDetailViewController.swift */,
+				00F2FC6F216959EA003E52D7 /* RideDetailHeaderView.xib */,
 				00498D05215D98BD0020FCA6 /* Constants.swift */,
 				00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */,
 				00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */,
@@ -282,6 +288,7 @@
 				00498CFE215D31490020FCA6 /* photos in Resources */,
 				00498CD0215D0DD80020FCA6 /* LaunchScreen.storyboard in Resources */,
 				00498CCD215D0DD80020FCA6 /* Assets.xcassets in Resources */,
+				00F2FC70216959EA003E52D7 /* RideDetailHeaderView.xib in Resources */,
 				00498CC8215D0DD60020FCA6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F2FC6E216957C8003E52D7 /* RideDetailHeaderView.swift in Sources */,
 				00498CF6215D117F0020FCA6 /* RideType.swift in Sources */,
 				00498D04215D56030020FCA6 /* RideWaitTimeCounterViewController.swift in Sources */,
 				00498CF4215D10BF0020FCA6 /* Ride.swift in Sources */,

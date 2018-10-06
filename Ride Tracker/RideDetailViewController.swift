@@ -8,14 +8,63 @@
 
 import UIKit
 
+let TABLE_VIEW_HEADER_HEIGHT: CGFloat = 300
+
 class RideDetailViewController: UITableViewController {
 
-    var ride: Ride? = nil
+    var ride: Ride? = nil {
+        didSet {
+            headerView.imageView.image = ride?.photo
+        }
+    }
+    var headerView: RideDetailHeaderView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.headerView = (Bundle.main.loadNibNamed("RideDetailHeaderView", owner: self, options: nil)!.first as! RideDetailHeaderView)
+        tableView.tableHeaderView = nil
+
+        tableView.addSubview(headerView)
+
+        tableView.contentInset = UIEdgeInsets(top: TABLE_VIEW_HEADER_HEIGHT, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset = CGPoint(x: 0, y: TABLE_VIEW_HEADER_HEIGHT)
+
+        updateHeaderView()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: false)
+    }
+
+    func updateHeaderView() {
+        var headerRect = CGRect(x: 0, y: -TABLE_VIEW_HEADER_HEIGHT, width: tableView.bounds.width, height: TABLE_VIEW_HEADER_HEIGHT)
+        if tableView.contentOffset.y < -TABLE_VIEW_HEADER_HEIGHT {
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y
+        }
+
+        headerView.frame = headerRect
+    }
+
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateHeaderView()
+    }
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 50
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        cell.textLabel?.text = "\(indexPath.row)"
+        return cell
     }
     
 

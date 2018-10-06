@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Wlg-XL-hy6" customClass="RideDetailHeaderView" customModule="Ride_Tracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cadillac-cars.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uLk-x9-Blf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uLk-x9-Blf" firstAttribute="leading" secondItem="7C8-Yw-jOI" secondAttribute="leading" id="3xl-Lr-0Tv"/>
+                <constraint firstItem="uLk-x9-Blf" firstAttribute="trailing" secondItem="7C8-Yw-jOI" secondAttribute="trailing" id="Ol3-QC-3Px"/>
+                <constraint firstItem="uLk-x9-Blf" firstAttribute="top" secondItem="7C8-Yw-jOI" secondAttribute="top" id="mGA-I5-ag5"/>
+                <constraint firstItem="uLk-x9-Blf" firstAttribute="bottom" secondItem="7C8-Yw-jOI" secondAttribute="bottom" id="olj-Ig-cLi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="7C8-Yw-jOI"/>
+            <connections>
+                <outlet property="imageView" destination="uLk-x9-Blf" id="j4p-Ad-BsB"/>
+            </connections>
+            <point key="canvasLocation" x="168.80000000000001" y="15.292353823088456"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cadillac-cars.jpg" width="1400" height="700"/>
+    </resources>
+</document>
