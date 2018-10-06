@@ -11,7 +11,9 @@ import UIKit
 class RideDetailHeaderView: UIView {
 
     @IBOutlet weak var imageView: UIImageView!
-
+    @IBOutlet weak var labelContainer: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

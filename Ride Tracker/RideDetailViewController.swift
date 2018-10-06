@@ -15,6 +15,7 @@ class RideDetailViewController: UITableViewController {
     var ride: Ride? = nil {
         didSet {
             headerView.imageView.image = ride?.photo
+            headerView.nameLabel.text = ride?.name
         }
     }
     var headerView: RideDetailHeaderView!
