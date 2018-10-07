@@ -15,7 +15,15 @@ class RideDetailViewController: UITableViewController {
     var ride: Ride? = nil {
         didSet {
             headerView.imageView.image = ride?.photo
-            headerView.nameLabel.text = ride?.name
+            headerView.nameLabel.text = ride?.name ?? " "
+
+            headerView.colors = nil
+            ride?.photo.getColors({ (colors) in
+                self.headerView.colors = colors
+                self.updateHeaderView()
+            })
+
+            updateHeaderView()
         }
     }
     var headerView: RideDetailHeaderView!
@@ -43,6 +51,14 @@ class RideDetailViewController: UITableViewController {
         updateHeaderView()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if self.isMovingFromParent {
+            self.ride = nil
+        }
+    }
+
     func updateHeaderView() {
         var headerRect = CGRect(x: 0, y: -TABLE_VIEW_HEADER_HEIGHT, width: tableView.bounds.width, height: TABLE_VIEW_HEADER_HEIGHT)
         // If scrolling past the defined height, stretch the header
@@ -66,10 +82,11 @@ class RideDetailViewController: UITableViewController {
 
         let alpha = tableView.contentOffset.y > -TABLE_VIEW_HEADER_HEIGHT ? progress * 0.25 + 0.75 : 0.75
         let gradientAlpha = tableView.contentOffset.y > -TABLE_VIEW_HEADER_HEIGHT ? progress : 0.0
-        let color = UIColor(white: 0.25, alpha: 1.0)
+        let color = headerView.colors?.background ?? UIColor(white: 0.25, alpha: 1.0)
         let colors = [color.withAlphaComponent(gradientAlpha).cgColor, color.withAlphaComponent(alpha).cgColor]
 
         headerView.layoutTitleContainerGradient(colors: colors)
+        headerView.nameLabel.textColor = headerView.colors?.primary ?? .white
 
         headerView.frame = headerRect
     }
@@ -91,18 +108,6 @@ class RideDetailViewController: UITableViewController {
         cell.textLabel?.text = "\(indexPath.row)"
         return cell
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension RideDetailViewController: RideSelectionDelegate {

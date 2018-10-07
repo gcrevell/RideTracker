@@ -14,6 +14,8 @@ class RideDetailHeaderView: UIView {
     @IBOutlet weak var labelContainer: UIView!
     @IBOutlet weak var nameLabel: UILabel!
 
+    var colors: UIImageColors?
+
     let gradient = CAGradientLayer()
 
     func viewDidLoad() {
