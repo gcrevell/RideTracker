@@ -10,10 +10,35 @@ import UIKit
 
 let TABLE_VIEW_HEADER_HEIGHT: CGFloat = 300
 
+let SECTION_TITLES_WITH_HEIGHT_REQUIREMENTS: [(String, [String])] = [("About", ["Description"]),
+                                                                     ("New ride", ["Record ride", "Log ride"]),
+                                                                     ("Height requirements", []),
+                                                                     ("Rides", [])]
+let SECTION_TITLES_NO_HEIGHT_REQUIREMENTS: [(String, [String])] = [("About", ["Description"]),
+                                                                   ("New ride", ["Record ride", "Log ride"]),
+                                                                   ("Rides", [])]
+
 class RideDetailViewController: UITableViewController {
 
+    var sectionTitles = SECTION_TITLES_WITH_HEIGHT_REQUIREMENTS
     var ride: Ride? = nil {
         didSet {
+            if ride?.minimumHeight != nil || ride?.maximumHeight != nil {
+                sectionTitles = SECTION_TITLES_WITH_HEIGHT_REQUIREMENTS
+                // Reset height requirement array
+                sectionTitles[2].1 = []
+                if ride?.minimumHeight != nil {
+                    sectionTitles[2].1.append("Minimum height of \(ride!.minimumHeight!)“")
+                }
+                if ride?.maximumHeight != nil {
+                    sectionTitles[2].1.append("Maximum height of \(ride!.maximumHeight!)“")
+                }
+            } else {
+                sectionTitles = SECTION_TITLES_NO_HEIGHT_REQUIREMENTS
+            }
+
+            sectionTitles[0].1 = [ride?.description ?? "Description"]
+
             headerView.imageView.image = ride?.photo
             headerView.nameLabel.text = ride?.name ?? " "
 
@@ -24,6 +49,8 @@ class RideDetailViewController: UITableViewController {
             })
 
             updateHeaderView()
+
+            tableView.reloadData()
         }
     }
     var headerView: RideDetailHeaderView!
@@ -97,53 +124,31 @@ class RideDetailViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return sectionTitles.count
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return nil
-        } else if section == 1 {
-            return "New ride"
-        } else if section == 2 {
-            return "Rides"
-        }
-
-        return nil
+        return sectionTitles[section].0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
+        if section == sectionTitles.count - 1 {
+            // Rides list, which we won't store in the array
+            return 50
         }
-        if section == 1 {
-            return 2
-        }
-        return 50
+        return sectionTitles[section].1.count
     }
 
     var descriptionNumberOfLines = 4
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        if indexPath.section != sectionTitles.count - 1 {
             let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-            cell.textLabel?.text = self.ride?.description
+            cell.textLabel?.text = sectionTitles[indexPath.section].1[indexPath.row]
             cell.textLabel?.numberOfLines = descriptionNumberOfLines
             return cell
         }
 
-        if indexPath.section == 1 {
-            if indexPath.row == 0 {
-                let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-                cell.textLabel?.text = "Record ride"
-                return cell
-            }
-            if indexPath.row == 1 {
-                let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-                cell.textLabel?.text = "Log ride"
-                return cell
-            }
-        }
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = "\(indexPath.row)"
         return cell
