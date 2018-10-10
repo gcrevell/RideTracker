@@ -45,6 +45,6 @@ class Ride {
         self.closed = closed
 
         // Test the image exists
-        _ = UIImage(named: "photos/" + self.photoName)!
+//        _ = UIImage(named: "photos/" + self.photoName)!
     }
 }
