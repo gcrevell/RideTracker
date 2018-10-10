@@ -32,6 +32,7 @@ class RideDetailViewController: UITableViewController {
         super.viewDidLoad()
 
         self.headerView = (Bundle.main.loadNibNamed("RideDetailHeaderView", owner: self, options: nil)!.first as! RideDetailHeaderView)
+        headerView.layer.zPosition = 2
         tableView.tableHeaderView = nil
 
         tableView.addSubview(headerView)
@@ -96,17 +97,64 @@ class RideDetailViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return nil
+        } else if section == 1 {
+            return "New ride"
+        } else if section == 2 {
+            return "Rides"
+        }
+
+        return nil
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
+        if section == 1 {
+            return 2
+        }
         return 50
     }
 
+    var descriptionNumberOfLines = 4
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+            cell.textLabel?.text = self.ride?.description
+            cell.textLabel?.numberOfLines = descriptionNumberOfLines
+            return cell
+        }
+
+        if indexPath.section == 1 {
+            if indexPath.row == 0 {
+                let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+                cell.textLabel?.text = "Record ride"
+                return cell
+            }
+            if indexPath.row == 1 {
+                let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+                cell.textLabel?.text = "Log ride"
+                return cell
+            }
+        }
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = "\(indexPath.row)"
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            tableView.deselectRow(at: indexPath, animated: false)
+            descriptionNumberOfLines = descriptionNumberOfLines == 0 ? 4 : 0
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
     }
 }
 
