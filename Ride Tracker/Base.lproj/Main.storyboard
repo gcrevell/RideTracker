@@ -25,7 +25,7 @@
                     </tableView>
                     <connections>
                         <segue destination="TA6-k5-G2I" kind="show" identifier="SHOW_RIDE_WAIT_TIME_COUNTER" id="HiW-Nh-ZZI"/>
-                        <segue destination="JHB-35-3Kl" kind="show" identifier="SHOW_TO_CREATE_RIDE_LOG" id="d8d-zx-J7N"/>
+                        <segue destination="JHB-35-3Kl" kind="show" identifier="SHOW_EDIT_RIDE_LOG" id="d8d-zx-J7N"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awf-aN-9p5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,7 +135,7 @@
                         <outlet property="countdownLabel" destination="uHq-dr-yE2" id="Xng-zp-zh3"/>
                         <outlet property="finishRecordingButton" destination="U48-Ml-KiN" id="JiI-v7-ve7"/>
                         <segue destination="s9i-KT-qXq" kind="unwind" identifier="UNWIND_TO_RIDE_LIST_VIEW" unwindAction="unwindToRideListViewWithSegue:" id="mPf-sb-CmU"/>
-                        <segue destination="JHB-35-3Kl" kind="show" identifier="SHOW_TO_CREATE_RIDE_LOG" id="ank-hC-qdi"/>
+                        <segue destination="JHB-35-3Kl" kind="show" identifier="SHOW_EDIT_RIDE_LOG" id="ank-hC-qdi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXR-gC-BwD" userLabel="First Responder" sceneMemberID="firstResponder"/>

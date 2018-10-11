@@ -23,6 +23,8 @@
         <relationship name="ride" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RideRecord" inverseName="locationData" inverseEntity="RideRecord" syncable="YES"/>
     </entity>
     <entity name="RideRecord" representedClassName="RideRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 16" minValueString="1" maxValueString="5" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="recorded" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="ridden" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="rideId" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -35,6 +37,6 @@
         <element name="AccelerometerData" positionX="-198.0390625" positionY="20.48046875" width="128" height="118"/>
         <element name="GyroscopeData" positionX="-223.69921875" positionY="166.57421875" width="128" height="118"/>
         <element name="LocationData" positionX="-392.53515625" positionY="106.5" width="128" height="133"/>
-        <element name="RideRecord" positionX="-419.0625" positionY="-61.171875" width="155.2890625" height="148"/>
+        <element name="RideRecord" positionX="-419.359375" positionY="-107.421875" width="155.2890625" height="178"/>
     </elements>
 </model>
