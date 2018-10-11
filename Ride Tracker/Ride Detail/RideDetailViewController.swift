@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 let TABLE_VIEW_HEADER_HEIGHT: CGFloat = 300
 
@@ -20,6 +21,7 @@ let SECTION_TITLES_NO_HEIGHT_REQUIREMENTS: [(String, [String])] = [("About", ["D
 
 class RideDetailViewController: UITableViewController {
 
+    var fetch: NSFetchedResultsController<RideRecord>? = nil
     var sectionTitles = SECTION_TITLES_WITH_HEIGHT_REQUIREMENTS
     var ride: Ride? = nil {
         didSet {
@@ -50,6 +52,7 @@ class RideDetailViewController: UITableViewController {
             })
 
             updateHeaderView()
+            updateFetch()
 
             tableView.reloadData()
         }
@@ -86,6 +89,27 @@ class RideDetailViewController: UITableViewController {
         if self.isMovingFromParent {
             self.ride = nil
         }
+    }
+
+    func updateFetch() {
+        guard let ride = self.ride else {
+            self.fetch = nil
+            return
+        }
+
+        let request = NSFetchRequest<RideRecord>(entityName: "RideRecord")
+        request.sortDescriptors = [NSSortDescriptor(key: "ridden", ascending: true)]
+        let id = ride.id
+        request.predicate = NSPredicate(format: "rideId == %@", "\(id)")
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        let fetch = NSFetchedResultsController<RideRecord>(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+
+        try! fetch.performFetch()
+        self.fetch = fetch
+
+        tableView.reloadData()
+        print(fetch.sections![0].numberOfObjects)
     }
 
     func updateHeaderView() {
@@ -136,7 +160,8 @@ class RideDetailViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == sectionTitles.count - 1 {
             // Rides list, which we won't store in the array
-            return 50
+            let count = fetch?.sections?[0].numberOfObjects ?? 0
+            return count == 0 ? 1 : count
         }
         return sectionTitles[section].1.count
     }
@@ -151,8 +176,22 @@ class RideDetailViewController: UITableViewController {
             return cell
         }
 
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = "\(indexPath.row)"
+
+        if let fetch = self.fetch {
+            if fetch.sections?[0].numberOfObjects != 0 {
+                cell.textLabel?.text = formatter.string(from: fetch.object(at: IndexPath(row: indexPath.row, section: 0)).ridden!)
+            } else {
+                cell.textLabel?.text = "You haven't ridden this yet"
+            }
+        } else {
+            cell.textLabel?.text = "Couldn't load your rides!"
+        }
+
         return cell
     }
 
