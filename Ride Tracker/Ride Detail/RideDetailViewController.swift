@@ -173,6 +173,21 @@ class RideDetailViewController: UITableViewController {
         }
 
         tableView.deselectRow(at: indexPath, animated: true)
+
+        if indexPath.section == 1 {
+            // New ride section
+            if indexPath.row == 0 {
+                // Record wait time
+                self.performSegue(withIdentifier: SHOW_RIDE_WAIT_TIME_COUNTER, sender: self)
+            }
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SHOW_RIDE_WAIT_TIME_COUNTER,
+            let dest = segue.destination as? RideWaitTimeCounterViewController {
+            dest.ride = self.ride
+        }
     }
 }
 
