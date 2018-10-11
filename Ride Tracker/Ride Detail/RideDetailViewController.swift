@@ -169,7 +169,10 @@ class RideDetailViewController: UITableViewController {
             tableView.deselectRow(at: indexPath, animated: false)
             descriptionNumberOfLines = descriptionNumberOfLines == 0 ? 4 : 0
             tableView.reloadRows(at: [indexPath], with: .automatic)
+            return
         }
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
