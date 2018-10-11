@@ -11,11 +11,11 @@ import UIKit
 let TABLE_VIEW_HEADER_HEIGHT: CGFloat = 300
 
 let SECTION_TITLES_WITH_HEIGHT_REQUIREMENTS: [(String, [String])] = [("About", ["Description"]),
-                                                                     ("New ride", ["Time wait", "Log ride"]),
+                                                                     ("New ride", ["Time your wait", "Log a ride"]),
                                                                      ("Height requirements", []),
                                                                      ("Rides", [])]
 let SECTION_TITLES_NO_HEIGHT_REQUIREMENTS: [(String, [String])] = [("About", ["Description"]),
-                                                                   ("New ride", ["Time wait", "Log ride"]),
+                                                                   ("New ride", ["Time your wait", "Log a ride"]),
                                                                    ("Rides", [])]
 
 class RideDetailViewController: UITableViewController {
