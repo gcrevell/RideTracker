@@ -156,6 +156,14 @@ class RideDetailViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.section == 2 && sectionTitles.count == 4 {
+            return false
+        }
+
+        return true
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             tableView.deselectRow(at: indexPath, animated: false)
