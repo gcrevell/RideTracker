@@ -26,14 +26,7 @@ class RideWaitTimeCounterViewController: UIViewController {
                 }
 
                 timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
-                    if let date = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME) as? Date {
-                        let formatter = DateComponentsFormatter()
-                        formatter.allowedUnits = [.minute, .second]
-                        formatter.unitsStyle = .positional
-                        formatter.zeroFormattingBehavior = .pad
-                        let time = formatter.string(from: date, to: Date())
-                        self.timerLabel.text = time
-                    }
+                    self.timerLabel.text = self.time()
                 }
 
                 self.navigationItem.title = ride.name
@@ -43,7 +36,7 @@ class RideWaitTimeCounterViewController: UIViewController {
                 timer?.invalidate()
                 timer = nil
                 defaults.synchronize()
-                self.timerLabel.text = "-:--"
+                self.timerLabel.text = time()
             }
         }
     }
@@ -54,7 +47,7 @@ class RideWaitTimeCounterViewController: UIViewController {
         super.viewDidLoad()
 
         self.timerLabel.minimumScaleFactor = 40.0/self.timerLabel.font.pointSize
-        self.timerLabel.text = "-:--"
+        self.timerLabel.text = time()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -77,5 +70,21 @@ class RideWaitTimeCounterViewController: UIViewController {
             dest.rideId = self.ride!.id
             self.ride = nil
         }
+    }
+
+    func time() -> String {
+        let defaults = UserDefaults()
+        let defaultTime = "0:00"
+
+        if let date = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME) as? Date {
+            let formatter = DateComponentsFormatter()
+            formatter.allowedUnits = [.minute, .second]
+            formatter.unitsStyle = .positional
+            formatter.zeroFormattingBehavior = .pad
+            let time = formatter.string(from: date, to: Date())
+            return time ?? defaultTime
+        }
+
+        return defaultTime
     }
 }
