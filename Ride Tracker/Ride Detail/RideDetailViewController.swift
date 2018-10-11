@@ -218,6 +218,11 @@ class RideDetailViewController: UITableViewController {
             if indexPath.row == 0 {
                 // Record wait time
                 self.performSegue(withIdentifier: SHOW_RIDE_WAIT_TIME_COUNTER, sender: self)
+                return
+            }
+            if indexPath.row == 1 {
+                self.performSegue(withIdentifier: SHOW_EDIT_RIDE_LOG, sender: self)
+                return
             }
         }
     }
