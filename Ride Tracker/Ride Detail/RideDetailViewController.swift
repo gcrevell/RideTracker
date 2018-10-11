@@ -41,6 +41,7 @@ class RideDetailViewController: UITableViewController {
 
             headerView.imageView.image = ride?.photo
             headerView.nameLabel.text = ride?.name ?? " "
+            headerView.rideTypeLabel.text = ride?.type.rawValue ?? " "
 
             headerView.colors = nil
             ride?.photo.getColors({ (colors) in
@@ -115,6 +116,7 @@ class RideDetailViewController: UITableViewController {
 
         headerView.layoutTitleContainerGradient(colors: colors)
         headerView.nameLabel.textColor = headerView.colors?.primary ?? .white
+        headerView.rideTypeLabel.textColor = headerView.colors?.secondary ?? .white
 
         headerView.frame = headerRect
     }

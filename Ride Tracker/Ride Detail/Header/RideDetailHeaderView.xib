@@ -20,21 +20,30 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFU-ur-ZQH">
-                    <rect key="frame" x="0.0" y="250.5" width="375" height="49.5"/>
+                    <rect key="frame" x="0.0" y="235.5" width="375" height="64.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNY-GB-wJB">
-                            <rect key="frame" x="309.5" y="8" width="57.5" height="33.5"/>
+                            <rect key="frame" x="309.5" y="6" width="57.5" height="33.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gII-Hw-duh">
+                            <rect key="frame" x="331.5" y="41.5" width="35.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.24772735044989788" alpha="0.75484154929577463" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="gII-Hw-duh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KFU-ur-ZQH" secondAttribute="leading" constant="48" id="58d-6F-zA6"/>
+                        <constraint firstItem="gII-Hw-duh" firstAttribute="top" secondItem="bNY-GB-wJB" secondAttribute="bottom" constant="2" id="9DU-UF-Ud2"/>
                         <constraint firstItem="bNY-GB-wJB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KFU-ur-ZQH" secondAttribute="leading" constant="48" id="ETh-3H-sR6"/>
                         <constraint firstAttribute="trailing" secondItem="bNY-GB-wJB" secondAttribute="trailing" constant="8" id="Lp9-2l-QO6"/>
-                        <constraint firstItem="bNY-GB-wJB" firstAttribute="top" secondItem="KFU-ur-ZQH" secondAttribute="top" constant="8" id="XFe-Pk-cn2"/>
-                        <constraint firstAttribute="bottom" secondItem="bNY-GB-wJB" secondAttribute="bottom" constant="8" id="Ysd-fM-B8Y"/>
+                        <constraint firstItem="bNY-GB-wJB" firstAttribute="top" secondItem="KFU-ur-ZQH" secondAttribute="top" constant="6" id="XFe-Pk-cn2"/>
+                        <constraint firstAttribute="trailing" secondItem="gII-Hw-duh" secondAttribute="trailing" constant="8" id="Xpe-85-ReG"/>
+                        <constraint firstAttribute="bottom" secondItem="gII-Hw-duh" secondAttribute="bottom" constant="6" id="fVq-zS-bgR"/>
                     </constraints>
                 </view>
             </subviews>
@@ -54,6 +63,7 @@
                 <outlet property="imageView" destination="uLk-x9-Blf" id="j4p-Ad-BsB"/>
                 <outlet property="labelContainer" destination="KFU-ur-ZQH" id="Mgc-at-PIB"/>
                 <outlet property="nameLabel" destination="bNY-GB-wJB" id="d6o-IF-DhP"/>
+                <outlet property="rideTypeLabel" destination="gII-Hw-duh" id="FPg-LO-rSa"/>
             </connections>
             <point key="canvasLocation" x="168.80000000000001" y="15.292353823088456"/>
         </view>

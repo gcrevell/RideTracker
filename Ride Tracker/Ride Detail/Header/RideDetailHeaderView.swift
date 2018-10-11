@@ -13,6 +13,7 @@ class RideDetailHeaderView: UIView {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelContainer: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var rideTypeLabel: UILabel!
 
     var colors: UIImageColors?
 
