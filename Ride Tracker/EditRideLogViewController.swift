@@ -53,6 +53,9 @@ class EditRideLogViewController: UITableViewController, UITextViewDelegate {
         notesTextView.text = rideRecord?.notes
 
         notesTextView.delegate = self
+
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonPressed))
     }
 
     @IBAction func riddenDateTimePickerUpdated() {
@@ -159,6 +162,13 @@ class EditRideLogViewController: UITableViewController, UITextViewDelegate {
         wait = max(wait, 0)
         rideRecord?.waitTime = wait
         waitTimeLabel.text = rideRecord?.waitTime.description
+    }
+
+    @objc func cancelButtonPressed() {
+        if let rideRecord = self.rideRecord {
+            (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext.delete(rideRecord)
+            performSegue(withIdentifier: UNWIND_TO_RIDE_DETAIL_VIEW, sender: self)
+        }
     }
 
     @IBAction func saveButtonPressed(_ sender: Any) {
