@@ -231,6 +231,14 @@ class RideDetailViewController: UITableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.section == sectionTitles.count - 1 && (fetch?.sections?[0].numberOfObjects ?? 0) != 0 {
+            return true
+        }
+
+        return false
+    }
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let rideRecord = fetch?.object(at: IndexPath(row: indexPath.row, section: 0)) {
