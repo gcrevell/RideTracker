@@ -144,8 +144,8 @@
                     <connections>
                         <outlet property="countdownLabel" destination="uHq-dr-yE2" id="Xng-zp-zh3"/>
                         <outlet property="finishRecordingButton" destination="U48-Ml-KiN" id="JiI-v7-ve7"/>
-                        <segue destination="s9i-KT-qXq" kind="unwind" identifier="UNWIND_TO_RIDE_LIST_VIEW" unwindAction="unwindToRideListViewWithSegue:" id="mPf-sb-CmU"/>
                         <segue destination="JHB-35-3Kl" kind="show" identifier="SHOW_EDIT_RIDE_LOG" id="ank-hC-qdi"/>
+                        <segue destination="s9i-KT-qXq" kind="unwind" identifier="UNWIND_TO_RIDE_DETAIL_VIEW" unwindAction="unwindToRideDetailViewWithSegue:" id="HFA-MJ-Ouk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXR-gC-BwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -522,6 +522,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d8d-zx-J7N"/>
+        <segue reference="ank-hC-qdi"/>
     </inferredMetricsTieBreakers>
 </document>

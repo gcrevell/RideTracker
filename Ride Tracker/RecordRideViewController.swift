@@ -143,7 +143,7 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
         self.context.delete(self.record)
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 
-        performSegue(withIdentifier: UNWIND_TO_RIDE_LIST_VIEW, sender: self)
+        performSegue(withIdentifier: UNWIND_TO_RIDE_DETAIL_VIEW, sender: self)
     }
 
     @IBAction func finishRecording(_ sender: Any) {
