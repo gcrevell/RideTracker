@@ -79,6 +79,8 @@ class RideDetailViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        updateFetch()
+        tableView.reloadData()
         tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: false)
         updateHeaderView()
     }
@@ -179,6 +181,7 @@ class RideDetailViewController: UITableViewController {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .medium
+        formatter.doesRelativeDateFormatting = true
 
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
 
@@ -227,12 +230,43 @@ class RideDetailViewController: UITableViewController {
         }
     }
 
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == SHOW_EDIT_RIDE_LOG {
+            return self.ride != nil
+        }
+
+        return true
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SHOW_RIDE_WAIT_TIME_COUNTER,
             let dest = segue.destination as? RideWaitTimeCounterViewController {
             dest.ride = self.ride
+
+            return
+        }
+
+        if segue.identifier == SHOW_EDIT_RIDE_LOG,
+            let dest = segue.destination as? EditRideLogViewController {
+            guard let ride = self.ride else { return }
+            dest.ride = self.ride
+
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let record = RideRecord(context: context)
+
+            record.ridden = Date()
+            record.recorded = Date()
+            record.waitTime = 0
+            record.rideId = Int64(ride.id)
+
+            dest.rideRecord = record
+
+            return
         }
     }
+
+    @IBAction func unwindToRideDetailView(segue:UIStoryboardSegue) { }
 }
 
 extension RideDetailViewController: RideSelectionDelegate {

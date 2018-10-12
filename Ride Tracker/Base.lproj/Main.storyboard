@@ -241,21 +241,22 @@
                         <sections>
                             <tableViewSection id="V3k-FG-dEd">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="116" id="do8-zR-i2r">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="116"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="118" id="do8-zR-i2r">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="do8-zR-i2r" id="u96-yj-WfN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="117.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ph-hF-N3r">
-                                                    <rect key="frame" x="16" y="11" width="94" height="94"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ph-hF-N3r">
+                                                    <rect key="frame" x="16" y="11" width="96" height="96"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="6Ph-hF-N3r" secondAttribute="height" multiplier="1:1" id="8bW-Fx-jSa"/>
+                                                        <constraint firstAttribute="width" constant="96" id="BNi-rV-QDh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT8-aK-xct">
-                                                    <rect key="frame" x="118" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="120" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -276,7 +277,7 @@
                             <tableViewSection id="rhP-9O-HCE">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Xqv-JW-aTz">
-                                        <rect key="frame" x="0.0" y="187" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="189" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xqv-JW-aTz" id="3ba-rk-fIQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -305,7 +306,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JRz-U0-1dA">
-                                        <rect key="frame" x="0.0" y="231" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="233" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JRz-U0-1dA" id="9Nl-GM-02a">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -314,26 +315,44 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sv2-Te-LLF">
                                                     <rect key="frame" x="0.0" y="7" width="62.5" height="30"/>
                                                     <state key="normal" title="-15 min"/>
+                                                    <connections>
+                                                        <action selector="waitTimeSubtract15Min:" destination="JHB-35-3Kl" eventType="touchUpInside" id="0jm-dr-clr"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2p-G0-FTy">
                                                     <rect key="frame" x="62.5" y="7" width="62.5" height="30"/>
                                                     <state key="normal" title="-1 min"/>
+                                                    <connections>
+                                                        <action selector="waitTimeSubtract1Min:" destination="JHB-35-3Kl" eventType="touchUpInside" id="omX-JX-4XT"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvP-Mt-Plo">
                                                     <rect key="frame" x="125" y="7" width="62.5" height="30"/>
                                                     <state key="normal" title="-15 sec"/>
+                                                    <connections>
+                                                        <action selector="waitTimeSubtract15Sec:" destination="JHB-35-3Kl" eventType="touchUpInside" id="bVW-bz-I9o"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9p-fP-dt1">
                                                     <rect key="frame" x="187.5" y="7" width="62.5" height="30"/>
                                                     <state key="normal" title="+15 sec"/>
+                                                    <connections>
+                                                        <action selector="waitTimeAdd15Sec:" destination="JHB-35-3Kl" eventType="touchUpInside" id="aWy-IF-o8X"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouL-sg-Qvf">
                                                     <rect key="frame" x="312.5" y="7" width="62.5" height="30"/>
                                                     <state key="normal" title="+15 min"/>
+                                                    <connections>
+                                                        <action selector="waitTimeAdd15Min:" destination="JHB-35-3Kl" eventType="touchUpInside" id="or5-iY-vwC"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rip-b9-tdA">
                                                     <rect key="frame" x="250" y="7" width="62.5" height="30"/>
                                                     <state key="normal" title="+1 min"/>
+                                                    <connections>
+                                                        <action selector="waitTimeAdd1Min:" destination="JHB-35-3Kl" eventType="touchUpInside" id="s2N-pi-aLh"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -363,7 +382,7 @@
                             <tableViewSection id="NSl-E7-47t">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Osl-kk-f5u">
-                                        <rect key="frame" x="0.0" y="311" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="313" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Osl-kk-f5u" id="cy5-Jn-hua">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -392,32 +411,51 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="216" id="0VX-SZ-cRQ">
-                                        <rect key="frame" x="0.0" y="355" width="375" height="216"/>
+                                        <rect key="frame" x="0.0" y="357" width="375" height="216"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0VX-SZ-cRQ" id="Oav-EU-FC5">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0VX-SZ-cRQ" id="Oav-EU-FC5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a4L-55-FTc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
-                                                    <date key="date" timeIntervalSinceReferenceDate="560977332.04555404">
-                                                        <!--2018-10-11 19:02:12 +0000-->
-                                                    </date>
-                                                </datePicker>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRZ-EA-5CN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="216.5"/>
+                                                    <subviews>
+                                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a4L-55-FTc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="216.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="216" id="xYx-jT-MCJ"/>
+                                                            </constraints>
+                                                            <date key="date" timeIntervalSinceReferenceDate="560977332.04555404">
+                                                                <!--2018-10-11 19:02:12 +0000-->
+                                                            </date>
+                                                            <connections>
+                                                                <action selector="riddenDateTimePickerUpdated" destination="JHB-35-3Kl" eventType="valueChanged" id="BYk-Yh-PHP"/>
+                                                            </connections>
+                                                        </datePicker>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="a4L-55-FTc" firstAttribute="leading" secondItem="qRZ-EA-5CN" secondAttribute="leading" id="0M9-np-sai"/>
+                                                        <constraint firstAttribute="trailing" secondItem="a4L-55-FTc" secondAttribute="trailing" id="MeF-O8-zjM"/>
+                                                        <constraint firstItem="a4L-55-FTc" firstAttribute="top" secondItem="qRZ-EA-5CN" secondAttribute="top" id="bmm-xX-Dew"/>
+                                                        <constraint firstAttribute="height" constant="216" id="wI5-25-ZwM"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="a4L-55-FTc" firstAttribute="top" secondItem="Oav-EU-FC5" secondAttribute="top" id="FlS-Yf-lwZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="a4L-55-FTc" secondAttribute="trailing" id="gib-Y2-ZUG"/>
-                                                <constraint firstItem="a4L-55-FTc" firstAttribute="leading" secondItem="Oav-EU-FC5" secondAttribute="leading" id="sUV-Cg-ij0"/>
+                                                <constraint firstItem="qRZ-EA-5CN" firstAttribute="top" secondItem="Oav-EU-FC5" secondAttribute="top" id="CIb-JM-NnX"/>
+                                                <constraint firstAttribute="bottom" secondItem="qRZ-EA-5CN" secondAttribute="bottom" id="Tgl-yE-AaX"/>
+                                                <constraint firstItem="qRZ-EA-5CN" firstAttribute="leading" secondItem="Oav-EU-FC5" secondAttribute="leading" id="ihx-xM-VVn"/>
+                                                <constraint firstAttribute="trailing" secondItem="qRZ-EA-5CN" secondAttribute="trailing" id="wRy-bw-xyI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="XZK-KQ-fOb">
+                            <tableViewSection headerTitle="Notes" id="XZK-KQ-fOb">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="87" id="x6P-SR-r8e">
-                                        <rect key="frame" x="0.0" y="607" width="375" height="87"/>
+                                        <rect key="frame" x="0.0" y="629" width="375" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x6P-SR-r8e" id="lTr-Ec-jIn">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
@@ -426,6 +464,9 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CBr-Y0-7ny">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="86.5" id="kSN-gT-hqb"/>
+                                                    </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -448,12 +489,26 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="NtA-IL-ahX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gzy-4I-c0j"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gzy-4I-c0j">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="JHB-35-3Kl" id="tpY-Fb-1em"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="notesTextView" destination="CBr-Y0-7ny" id="cqf-Gq-ZmY"/>
+                        <outlet property="riddenDateTimeLabel" destination="Ide-pI-xYm" id="BNC-Tl-ZRz"/>
+                        <outlet property="riddenDateTimePicker" destination="a4L-55-FTc" id="wWN-do-kNc"/>
+                        <outlet property="rideImageView" destination="6Ph-hF-N3r" id="YLb-Lj-Vci"/>
+                        <outlet property="rideNameLabel" destination="XT8-aK-xct" id="NQL-IW-eSG"/>
+                        <outlet property="waitTimeLabel" destination="2pM-q4-oOo" id="rqw-3Y-blT"/>
+                        <segue destination="xuG-nm-BJY" kind="unwind" identifier="UNWIND_TO_RIDE_DETAIL_VIEW" unwindAction="unwindToRideDetailViewWithSegue:" id="IV8-ht-12y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bvn-Wz-g3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xuG-nm-BJY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="1107"/>
+            <point key="canvasLocation" x="1600.8" y="1105.9970014992505"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
