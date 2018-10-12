@@ -69,15 +69,14 @@ class RideWaitTimeCounterViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         timer?.invalidate()
 
-        let startdate = UserDefaults().object(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME) as? Date ?? Date()
+        let defaults = UserDefaults()
+        let startdate = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME) as? Date ?? Date()
         let elapsedTime = Date().timeIntervalSince(startdate)
 
         if let dest = segue.destination as? RecordRideViewController {
             dest.waittime = elapsedTime
             dest.ride = self.ride
             self.ride = nil
-
-            return
         }
 
         if segue.identifier == SHOW_EDIT_RIDE_LOG,
@@ -96,6 +95,10 @@ class RideWaitTimeCounterViewController: UIViewController {
 
             dest.rideRecord = record
         }
+
+        defaults.removeObject(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID)
+        defaults.removeObject(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_NAME)
+        defaults.removeObject(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME)
     }
 
     func time() -> String {
