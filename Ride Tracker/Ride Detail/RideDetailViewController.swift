@@ -204,6 +204,10 @@ class RideDetailViewController: UITableViewController {
             return false
         }
 
+        if indexPath.section == sectionTitles.count - 1 && (fetch?.sections?[0].numberOfObjects ?? 0) == 0 {
+            return false
+        }
+
         return true
     }
 
