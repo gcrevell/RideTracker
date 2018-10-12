@@ -62,13 +62,39 @@ class RideWaitTimeCounterViewController: UIViewController {
         self.performSegue(withIdentifier: SHOW_RIDE_RECORDING, sender: self)
     }
 
+    @IBAction func logRidePressed(_ sender: Any) {
+        self.performSegue(withIdentifier: SHOW_EDIT_RIDE_LOG, sender: self)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         timer?.invalidate()
+
+        let startdate = UserDefaults().object(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME) as? Date ?? Date()
+        let elapsedTime = Date().timeIntervalSince(startdate)
+
         if let dest = segue.destination as? RecordRideViewController {
-            let startdate = UserDefaults().object(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME) as? Date ?? Date()
-            dest.waittime = Date().timeIntervalSince(startdate)
+            dest.waittime = elapsedTime
             dest.rideId = self.ride!.id
             self.ride = nil
+
+            return
+        }
+
+        if segue.identifier == SHOW_EDIT_RIDE_LOG,
+            let dest = segue.destination as? EditRideLogViewController {
+            guard let ride = self.ride else { return }
+            dest.ride = self.ride
+
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let record = RideRecord(context: context)
+
+            record.ridden = Date()
+            record.recorded = Date()
+            record.waitTime = elapsedTime
+            record.rideId = Int64(ride.id)
+
+            dest.rideRecord = record
         }
     }
 

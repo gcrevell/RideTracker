@@ -75,13 +75,22 @@
                                     <action selector="recordRidePressed:" destination="TA6-k5-G2I" eventType="touchUpInside" id="NPG-id-7Ru"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaH-ys-mfh">
+                                <rect key="frame" x="159.5" y="275" width="56" height="30"/>
+                                <state key="normal" title="Log ride"/>
+                                <connections>
+                                    <action selector="logRidePressed:" destination="TA6-k5-G2I" eventType="touchUpInside" id="pA8-dO-ibu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="xaH-ys-mfh" firstAttribute="centerX" secondItem="Dh8-aB-MBn" secondAttribute="centerX" id="BND-1S-WM4"/>
                             <constraint firstItem="XZh-Tq-Zab" firstAttribute="leading" secondItem="sQv-Cc-m0w" secondAttribute="leading" id="IFd-te-ljK"/>
                             <constraint firstItem="XZh-Tq-Zab" firstAttribute="top" secondItem="sQv-Cc-m0w" secondAttribute="top" id="Mv1-XM-Ces"/>
                             <constraint firstItem="7xP-sz-Z5D" firstAttribute="top" secondItem="XZh-Tq-Zab" secondAttribute="bottom" constant="8" id="Vnf-RP-aQj"/>
                             <constraint firstItem="7xP-sz-Z5D" firstAttribute="centerX" secondItem="Dh8-aB-MBn" secondAttribute="centerX" id="aDf-RS-zDQ"/>
+                            <constraint firstItem="xaH-ys-mfh" firstAttribute="top" secondItem="7xP-sz-Z5D" secondAttribute="bottom" constant="8" id="tB4-3h-k8p"/>
                             <constraint firstItem="XZh-Tq-Zab" firstAttribute="trailing" secondItem="sQv-Cc-m0w" secondAttribute="trailing" id="ten-3R-Gij"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sQv-Cc-m0w"/>
@@ -89,6 +98,7 @@
                     <connections>
                         <outlet property="timerLabel" destination="k1l-N4-4iz" id="0bx-SK-2K0"/>
                         <segue destination="uNL-Gp-kMk" kind="show" identifier="SHOW_RIDE_RECORDING" id="ffF-ZD-yZ5"/>
+                        <segue destination="JHB-35-3Kl" kind="show" identifier="SHOW_EDIT_RIDE_LOG" id="h2A-eZ-q9c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoO-sg-eDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -512,6 +522,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ank-hC-qdi"/>
+        <segue reference="h2A-eZ-q9c"/>
     </inferredMetricsTieBreakers>
 </document>
