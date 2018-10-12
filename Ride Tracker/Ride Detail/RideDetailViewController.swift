@@ -100,7 +100,7 @@ class RideDetailViewController: UITableViewController {
         }
 
         let request = NSFetchRequest<RideRecord>(entityName: "RideRecord")
-        request.sortDescriptors = [NSSortDescriptor(key: "ridden", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "ridden", ascending: false)]
         let id = ride.id
         request.predicate = NSPredicate(format: "rideId == %@", "\(id)")
         let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
