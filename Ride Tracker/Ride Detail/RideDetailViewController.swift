@@ -93,7 +93,7 @@ class RideDetailViewController: UITableViewController {
         }
     }
 
-    func updateFetch() {
+    func updateFetch(reload: Bool = true) {
         guard let ride = self.ride else {
             self.fetch = nil
             return
@@ -110,8 +110,9 @@ class RideDetailViewController: UITableViewController {
         try! fetch.performFetch()
         self.fetch = fetch
 
-        tableView.reloadData()
-        print(fetch.sections![0].numberOfObjects)
+        if reload {
+            tableView.reloadData()
+        }
     }
 
     func updateHeaderView() {
@@ -226,6 +227,24 @@ class RideDetailViewController: UITableViewController {
             if indexPath.row == 1 {
                 self.performSegue(withIdentifier: SHOW_EDIT_RIDE_LOG, sender: self)
                 return
+            }
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if let rideRecord = fetch?.object(at: IndexPath(row: indexPath.row, section: 0)) {
+                let delegate = UIApplication.shared.delegate as? AppDelegate
+                delegate?.persistentContainer.viewContext.delete(rideRecord)
+                delegate?.saveContext()
+                updateFetch(reload: false)
+
+                tableView.beginUpdates()
+                tableView.deleteRows(at: [indexPath], with: .left)
+                if indexPath.row == 0 {
+                    tableView.insertRows(at: [indexPath], with: .right)
+                }
+                tableView.endUpdates()
             }
         }
     }
