@@ -14,7 +14,7 @@ import CoreLocation
 class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
 
     var waittime: TimeInterval = 0
-    var rideId: Int = 0
+    var ride: Ride?
 
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var finishRecordingButton: UIButton!
@@ -40,7 +40,7 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
         self.record.waitTime = self.waittime
         self.record.recorded = Date()
         self.record.ridden = Date()
-        self.record.rideId = Int64(self.rideId)
+        self.record.rideId = Int64(self.ride!.id)
 
         var countdownTime = 5
 
@@ -150,13 +150,15 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
         countdownTimer?.invalidate()
         stopUpdates()
         self.motionRecorderQueue.waitUntilAllOperationsAreFinished()
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-        print("All saved! I hope...")
-        performSegue(withIdentifier: UNWIND_TO_RIDE_LIST_VIEW, sender: self)
+        performSegue(withIdentifier: SHOW_EDIT_RIDE_LOG, sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == SHOW_EDIT_RIDE_LOG,
+            let dest = segue.destination as? EditRideLogViewController {
+            dest.ride = self.ride
+            dest.rideRecord = self.record
+        }
     }
     
 

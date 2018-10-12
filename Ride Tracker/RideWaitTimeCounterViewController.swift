@@ -74,7 +74,7 @@ class RideWaitTimeCounterViewController: UIViewController {
 
         if let dest = segue.destination as? RecordRideViewController {
             dest.waittime = elapsedTime
-            dest.rideId = self.ride!.id
+            dest.ride = self.ride
             self.ride = nil
 
             return
