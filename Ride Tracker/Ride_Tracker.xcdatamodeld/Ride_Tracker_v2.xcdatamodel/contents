@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.22" systemVersion="18B57c" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccelerometerData" representedClassName="AccelerometerData" syncable="YES" codeGenerationType="class">
+        <attribute name="timestamp" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="x" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="y" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="z" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="ride" maxCount="1" deletionRule="Nullify" destinationEntity="RideRecord" inverseName="accelerometerData" inverseEntity="RideRecord" syncable="YES"/>
+    </entity>
+    <entity name="GeoLocated" representedClassName="GeoLocated" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="GyroscopeData" representedClassName="GyroscopeData" syncable="YES" codeGenerationType="class">
+        <attribute name="pitch" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="roll" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timestamp" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="yaw" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="ride" maxCount="1" deletionRule="Nullify" destinationEntity="RideRecord" inverseName="gyroscopeData" inverseEntity="RideRecord" syncable="YES"/>
+    </entity>
+    <entity name="LocationData" representedClassName="LocationData" syncable="YES" codeGenerationType="class">
+        <attribute name="altitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="speed" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="ride" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RideRecord" inverseName="locationData" inverseEntity="RideRecord" syncable="YES"/>
+    </entity>
+    <entity name="Park" representedClassName="Park" parentEntity="GeoLocated" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="rides" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Ride" inverseName="park" inverseEntity="Ride" syncable="YES"/>
+    </entity>
+    <entity name="Ride" representedClassName="Ride" parentEntity="GeoLocated" syncable="YES" codeGenerationType="class">
+        <attribute name="closed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maximumHeight" optional="YES" attributeType="Integer 16" minValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minimumHeight" optional="YES" attributeType="Integer 16" minValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="photoUrl" attributeType="URI" syncable="YES"/>
+        <attribute name="rideDescription" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="park" maxCount="1" deletionRule="Deny" destinationEntity="Park" inverseName="rides" inverseEntity="Park" syncable="YES"/>
+        <relationship name="records" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="RideRecord" inverseName="ride" inverseEntity="RideRecord" syncable="YES"/>
+    </entity>
+    <entity name="RideRecord" representedClassName="RideRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 16" minValueString="1" maxValueString="5" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="recorded" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="ridden" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="waitTime" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="accelerometerData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AccelerometerData" inverseName="ride" inverseEntity="AccelerometerData" syncable="YES"/>
+        <relationship name="gyroscopeData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GyroscopeData" inverseName="ride" inverseEntity="GyroscopeData" syncable="YES"/>
+        <relationship name="locationData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LocationData" inverseName="ride" inverseEntity="LocationData" syncable="YES"/>
+        <relationship name="ride" maxCount="1" deletionRule="Nullify" destinationEntity="Ride" inverseName="records" inverseEntity="Ride" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AccelerometerData" positionX="-198.0390625" positionY="20.48046875" width="128" height="118"/>
+        <element name="GyroscopeData" positionX="-223.69921875" positionY="166.57421875" width="128" height="118"/>
+        <element name="LocationData" positionX="-392.53515625" positionY="106.5" width="128" height="133"/>
+        <element name="RideRecord" positionX="-419.359375" positionY="-107.421875" width="155.2890625" height="178"/>
+        <element name="Park" positionX="-813.53125" positionY="40.40625" width="128" height="88"/>
+        <element name="GeoLocated" positionX="-734.76953125" positionY="-212.69140625" width="128" height="73"/>
+        <element name="Ride" positionX="-605.91796875" positionY="-8.36328125" width="128" height="193"/>
+    </elements>
+</model>

@@ -76,6 +76,7 @@
 		00498D07215D9D590020FCA6 /* RecordRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRideViewController.swift; sourceTree = "<group>"; };
 		004B1AB3216FDAC5002D7847 /* EditRideLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRideLogViewController.swift; sourceTree = "<group>"; };
 		0074914B2167C7330041BDCF /* RideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailViewController.swift; sourceTree = "<group>"; };
+		00C13D5A217646D400AC712C /* Ride_Tracker_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ride_Tracker_v2.xcdatamodel; sourceTree = "<group>"; };
 		00F2FC6D216957C8003E52D7 /* RideDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailHeaderView.swift; sourceTree = "<group>"; };
 		00F2FC6F216959EA003E52D7 /* RideDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RideDetailHeaderView.xib; sourceTree = "<group>"; };
 		00F2FC7221698FE1003E52D7 /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
@@ -684,6 +685,7 @@
 		00498CC9215D0DD60020FCA6 /* Ride_Tracker.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				00C13D5A217646D400AC712C /* Ride_Tracker_v2.xcdatamodel */,
 				00498CCA215D0DD60020FCA6 /* Ride_Tracker.xcdatamodel */,
 			);
 			currentVersion = 00498CCA215D0DD60020FCA6 /* Ride_Tracker.xcdatamodel */;
