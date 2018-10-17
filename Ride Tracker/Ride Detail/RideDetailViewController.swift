@@ -23,7 +23,7 @@ class RideDetailViewController: UITableViewController {
 
     var fetch: NSFetchedResultsController<RideRecord>? = nil
     var sectionTitles = SECTION_TITLES_WITH_HEIGHT_REQUIREMENTS
-    var ride: Ride? = nil {
+    var ride: RideOld? = nil {
         didSet {
             if ride?.minimumHeight != nil || ride?.maximumHeight != nil {
                 sectionTitles = SECTION_TITLES_WITH_HEIGHT_REQUIREMENTS
@@ -301,7 +301,7 @@ class RideDetailViewController: UITableViewController {
 }
 
 extension RideDetailViewController: RideSelectionDelegate {
-    func rideSelected(_ ride: Ride) {
+    func rideSelected(_ ride: RideOld) {
         self.ride = ride
     }
 }

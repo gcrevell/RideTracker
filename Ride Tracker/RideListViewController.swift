@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 protocol RideSelectionDelegate: class {
-    func rideSelected(_ ride: Ride)
+    func rideSelected(_ ride: RideOld)
 }
 
 class RideListViewController: UITableViewController {
@@ -36,20 +36,20 @@ class RideListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Park.shared.rides.count
+        return ParkOld.shared.rides.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RIDE_TABLE_VIEW_CELL, for: indexPath) as! RideTableViewCell
 
         // Configure the cell...
-        cell.ride = Park.shared.rides[indexPath.row]
+        cell.ride = ParkOld.shared.rides[indexPath.row]
 
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.rideSelected(Park.shared.rides[indexPath.row])
+        delegate?.rideSelected(ParkOld.shared.rides[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
         if let detailViewController = delegate as? RideDetailViewController {
             splitViewController?.showDetailViewController(detailViewController, sender: nil)

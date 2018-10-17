@@ -1,5 +1,5 @@
 //
-//  Ride.swift
+//  RideOld.swift
 //  Ride Tracker
 //
 //  Created by Gabriel Revells on 9/27/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Ride {
+class RideOld {
     var id: Int
     var name: String
     var type: RideType

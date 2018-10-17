@@ -34,7 +34,7 @@ class EditRideLogViewController: UITableViewController, UITextViewDelegate {
     @IBOutlet weak var riddenDateTimePicker: UIDatePicker!
     @IBOutlet weak var notesTextView: UITextView!
 
-    var ride: Ride?
+    var ride: RideOld?
     var rideRecord: RideRecord?
 
     var selectedSection: SelectedSection? = nil

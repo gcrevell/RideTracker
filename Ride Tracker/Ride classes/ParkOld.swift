@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Park {
-    static let shared = Park(for: UserDefaults().string(forKey: USER_DEFAULTS_SELECTED_PARK) ?? "Cedar Point")
+class ParkOld {
+    static let shared = ParkOld(for: UserDefaults().string(forKey: USER_DEFAULTS_SELECTED_PARK) ?? "Cedar Point")
     
-    private(set) var rides: [Ride] = []
+    private(set) var rides: [RideOld] = []
     
     private init(for park: String) {
         self.load(park)
@@ -35,7 +35,7 @@ class Park {
         let rides = park["rides"] as! [[String : Any]]
         
         for ride in rides {
-            self.rides.append(Ride(
+            self.rides.append(RideOld(
                                    id: ride["id"] as! Int,
                                    name: ride["name"] as! String,
                                    type: ride["type"] as! String,

@@ -10,7 +10,7 @@ import UIKit
 
 class RideTableViewCell: UITableViewCell {
 
-    var ride: Ride! {
+    var ride: RideOld! {
         didSet {
             self.icon.image = ride.photo
             self.icon.clipsToBounds = true

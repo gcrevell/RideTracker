@@ -11,7 +11,7 @@ import UIKit
 class RideWaitTimeCounterViewController: UIViewController {
 
     var timer: Timer?
-    var ride: Ride? = nil {
+    var ride: RideOld? = nil {
         didSet {
             timer?.invalidate()
             timer = nil
