@@ -91,7 +91,7 @@ class RideWaitTimeCounterViewController: UIViewController {
             record.ridden = Date()
             record.recorded = Date()
             record.waitTime = elapsedTime
-            record.rideId = Int64(ride.id)
+//            record.rideId = Int64(ride.id)
 
             dest.rideRecord = record
         }

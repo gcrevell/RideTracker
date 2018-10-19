@@ -289,7 +289,7 @@ class RideDetailViewController: UITableViewController {
             record.ridden = Date()
             record.recorded = Date()
             record.waitTime = 0
-            record.rideId = Int64(ride.id)
+//            record.rideId = Int64(ride.id)
 
             dest.rideRecord = record
 

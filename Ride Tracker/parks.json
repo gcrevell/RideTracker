@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "name": "Cedar Point",
+        "location": {
+            "latitude": 41.478348,
+            "longitude": -82.679120
+        }
+    }
+]

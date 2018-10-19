@@ -206,6 +206,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="pMc-vj-H7J"/>
+                    <connections>
+                        <segue destination="DkG-47-drN" kind="show" identifier="SHOW_PARK_LIST_VIEW" animates="NO" id="gjz-U2-AgJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MlG-qg-0HN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,6 +522,38 @@
                 <exit id="xuG-nm-BJY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1600.8" y="1105.9970014992505"/>
+        </scene>
+        <!--Park Table View Controller-->
+        <scene sceneID="Lyv-0V-Wem">
+            <objects>
+                <tableViewController id="DkG-47-drN" customClass="ParkTableViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FIm-Eh-Hh7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uoY-3E-FIw">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uoY-3E-FIw" id="l3h-lM-GKz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DkG-47-drN" id="o5d-u2-6s9"/>
+                            <outlet property="delegate" destination="DkG-47-drN" id="Ogt-LQ-qGW"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="sFe-6T-j3L" kind="unwind" identifier="UNWIND_TO_RIDE_LIST_VIEW" unwindAction="unwindToRideListViewWithSegue:" id="AMd-SW-Yey"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRM-qM-qfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sFe-6T-j3L" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2553" y="-366"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
