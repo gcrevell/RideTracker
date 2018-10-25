@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RideListSplitViewController: UISplitViewController, UISplitViewControllerDelegate {
 
@@ -21,11 +22,23 @@ class RideListSplitViewController: UISplitViewController, UISplitViewControllerD
         let defaults = UserDefaults()
 
         masterViewController.delegate = detailViewController
+        let id = defaults.object(forKey: USER_DEFAULTS_SELECTED_PARK_ID) as? Int
 
-        if defaults.object(forKey: USER_DEFAULTS_SELECTED_PARK_ID) == nil {
+        if id == nil {
             masterViewController.performSegue(withIdentifier: SHOW_PARK_LIST_VIEW, sender: masterViewController)
             return
         }
+
+        let request = NSFetchRequest<Park>(entityName: "Park")
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        request.predicate = NSPredicate(format: "id = %@", argumentArray: [id!])
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        let fetch = NSFetchedResultsController<Park>(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+
+        try! fetch.performFetch()
+        let park = fetch.object(at: IndexPath(row: 0, section: 0))
+        masterViewController.park = park
 
         if let currentRideId = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int,
             let currentRide = ParkOld.shared.rides.first(where: { (ride) -> Bool in

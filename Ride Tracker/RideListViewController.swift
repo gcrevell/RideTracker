@@ -19,7 +19,11 @@ protocol ParkSelectionDelegate {
 
 class RideListViewController: UITableViewController {
     
-    var park: Park? = nil
+    var park: Park? = nil {
+        didSet {
+            self.loadRides()
+        }
+    }
     weak var delegate: RideSelectionDelegate?
     let locationManager = CLLocationManager()
 
@@ -72,10 +76,18 @@ class RideListViewController: UITableViewController {
             dest.delegate = self
         }
     }
+
+    func loadRides() {
+        self.park?.loadRides {
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        }
+    }
 }
 
 extension RideListViewController: ParkSelectionDelegate {
     func parkSelected(_ park: Park) {
         self.park = park
+
+        self.loadRides()
     }
 }
