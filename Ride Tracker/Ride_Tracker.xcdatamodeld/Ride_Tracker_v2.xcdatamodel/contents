@@ -39,6 +39,7 @@
         <attribute name="maximumHeight" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="minimumHeight" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="photoData" transient="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="photoUrl" attributeType="URI" syncable="YES"/>
         <attribute name="rideDescription" attributeType="String" syncable="YES"/>
         <attribute name="type" attributeType="String" syncable="YES"/>
@@ -62,7 +63,7 @@
         <element name="GyroscopeData" positionX="-223.69921875" positionY="166.57421875" width="128" height="118"/>
         <element name="LocationData" positionX="-392.53515625" positionY="106.5" width="128" height="133"/>
         <element name="Park" positionX="-813.53125" positionY="40.40625" width="128" height="88"/>
-        <element name="Ride" positionX="-605.91796875" positionY="-8.36328125" width="128" height="223"/>
+        <element name="Ride" positionX="-605.91796875" positionY="-8.36328125" width="128" height="238"/>
         <element name="RideRecord" positionX="-419.359375" positionY="-107.421875" width="155.2890625" height="178"/>
     </elements>
 </model>

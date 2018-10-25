@@ -6,7 +6,7 @@
 //  Copyright © 2018 Gabriel Revells. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 func getJson(from url:URL, onCompletion handler: @escaping (Any?) -> Void) {
     URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) -> Void in
@@ -14,4 +14,17 @@ func getJson(from url:URL, onCompletion handler: @escaping (Any?) -> Void) {
             handler(jsonObj)
         }
     }).resume()
+}
+
+func getImage(from url:URL, onCompletion handler: @escaping (UIImage?) -> Void) {
+    do {
+        let data = try Data(contentsOf: url)
+        if let image = UIImage(data: data) {
+            handler(image)
+        } else {
+            handler(nil)
+        }
+    } catch {
+        handler(nil)
+    }
 }

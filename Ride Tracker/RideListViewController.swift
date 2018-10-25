@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 protocol RideSelectionDelegate: class {
     func rideSelected(_ ride: RideOld)
@@ -18,9 +19,11 @@ protocol ParkSelectionDelegate {
 }
 
 class RideListViewController: UITableViewController {
-    
+
+    var fetch: NSFetchedResultsController<Ride>? = nil
     var park: Park? = nil {
         didSet {
+            print("test")
             self.loadRides()
         }
     }
@@ -44,24 +47,25 @@ class RideListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return ParkOld.shared.rides.count
+        return fetch?.fetchedObjects?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RIDE_TABLE_VIEW_CELL, for: indexPath) as! RideTableViewCell
+        print(cell.reuseIdentifier)
 
         // Configure the cell...
-        cell.ride = ParkOld.shared.rides[indexPath.row]
+        cell.ride = fetch?.fetchedObjects?[indexPath.row]
 
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.rideSelected(ParkOld.shared.rides[indexPath.row])
-        tableView.deselectRow(at: indexPath, animated: true)
-        if let detailViewController = delegate as? RideDetailViewController {
-            splitViewController?.showDetailViewController(detailViewController, sender: nil)
-        }
+//        delegate?.rideSelected(ParkOld.shared.rides[indexPath.row])
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        if let detailViewController = delegate as? RideDetailViewController {
+//            splitViewController?.showDetailViewController(detailViewController, sender: nil)
+//        }
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -79,7 +83,32 @@ class RideListViewController: UITableViewController {
 
     func loadRides() {
         self.park?.loadRides {
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            DispatchQueue.main.async {
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                self.updateFetch()
+            }
+        }
+    }
+
+    func updateFetch(reload: Bool = true) {
+        guard let park = self.park else {
+            self.fetch = nil
+            return
+        }
+
+        let request = NSFetchRequest<Ride>(entityName: "Ride")
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        let id = park.id
+        request.predicate = NSPredicate(format: "park.id == %@", "\(id)")
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        let fetch = NSFetchedResultsController<Ride>(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+
+        try! fetch.performFetch()
+        self.fetch = fetch
+
+        if reload {
+            tableView.reloadData()
         }
     }
 }
@@ -87,7 +116,5 @@ class RideListViewController: UITableViewController {
 extension RideListViewController: ParkSelectionDelegate {
     func parkSelected(_ park: Park) {
         self.park = park
-
-        self.loadRides()
     }
 }

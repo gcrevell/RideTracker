@@ -172,24 +172,26 @@ extension Park {
         // than a site with a self signed cert.
         let url = URL(string: "http://ridetracker.revoltapplications.com/rides.php?parkId=\(self.id)")!
         getJson(from: url) { (json) in
-            guard let rides = json as? [[String : String]] else { return }
-            for ride in rides {
-                if let rideJson = RideJson.create(from: ride) {
-                    if let rideEntity = self.getRide(by: rideJson.id) {
-                        if rideEntity.lastUpdated != rideJson.updatedTime {
-                            // Update the existing entity
-                            update(ride: rideEntity, from: rideJson)
+            DispatchQueue.main.async {
+                guard let rides = json as? [[String : String]] else { return }
+                for ride in rides {
+                    if let rideJson = RideJson.create(from: ride) {
+                        if let rideEntity = self.getRide(by: rideJson.id) {
+                            if rideEntity.lastUpdated != rideJson.updatedTime {
+                                // Update the existing entity
+                                update(ride: rideEntity, from: rideJson)
+                            }
+                        } else {
+                            // Create a new entity
+                            let newRide = Ride(context: CONTEXT)
+                            newRide.id = rideJson.id
+                            newRide.park = self
+                            update(ride: newRide, from: rideJson)
                         }
-                    } else {
-                        // Create a new entity
-                        let newRide = Ride(context: CONTEXT)
-                        newRide.id = rideJson.id
-                        newRide.park = self
-                        update(ride: newRide, from: rideJson)
                     }
                 }
+                handler()
             }
-            handler()
         }
     }
 

@@ -8,11 +8,23 @@
 
 import UIKit
 
+final class RefBool { var val: Bool; init(_ boolean: Bool) { val = boolean } }
+
 class RideTableViewCell: UITableViewCell {
 
-    var ride: RideOld! {
+    var shouldUpdateImage: RefBool?
+    var ride: Ride? {
         didSet {
-            self.icon.image = ride.photo
+            guard let ride = ride else { return }
+//            let newIconView = UIImageView(frame: icon.frame)
+//            icon.removeFromSuperview()
+//            self.addSubview(newIconView)
+//            icon = newIconView
+            self.icon.image = nil
+            shouldUpdateImage?.val = false
+            let shouldUpdate = RefBool(true)
+            shouldUpdateImage = shouldUpdate
+            ride.set(imageView: self.icon, shouldUpdateImage: shouldUpdate)
             self.icon.clipsToBounds = true
 
             self.rideNameLabel.text = ride.name
