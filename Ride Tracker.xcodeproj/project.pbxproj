@@ -14,10 +14,8 @@
 		00498CD0215D0DD80020FCA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00498CCE215D0DD80020FCA6 /* LaunchScreen.storyboard */; };
 		00498CDB215D0DD80020FCA6 /* Ride_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CDA215D0DD80020FCA6 /* Ride_TrackerTests.swift */; };
 		00498CE6215D0DD80020FCA6 /* Ride_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CE5215D0DD80020FCA6 /* Ride_TrackerUITests.swift */; };
-		00498CF4215D10BF0020FCA6 /* RideOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CF3215D10BF0020FCA6 /* RideOld.swift */; };
 		00498CF6215D117F0020FCA6 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CF5215D117F0020FCA6 /* RideType.swift */; };
 		00498CF8215D14EE0020FCA6 /* RideListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CF7215D14EE0020FCA6 /* RideListViewController.swift */; };
-		00498CFA215D16530020FCA6 /* ParkOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CF9215D16530020FCA6 /* ParkOld.swift */; };
 		00498CFE215D31490020FCA6 /* photos in Resources */ = {isa = PBXBuildFile; fileRef = 00498CFD215D31490020FCA6 /* photos */; };
 		00498D00215D32DD0020FCA6 /* RideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CFF215D32DD0020FCA6 /* RideTableViewCell.swift */; };
 		00498D02215D53B00020FCA6 /* RideListSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */; };
@@ -69,10 +67,8 @@
 		00498CE1215D0DD80020FCA6 /* Ride TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ride TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00498CE5215D0DD80020FCA6 /* Ride_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_TrackerUITests.swift; sourceTree = "<group>"; };
 		00498CE7215D0DD80020FCA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00498CF3215D10BF0020FCA6 /* RideOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOld.swift; sourceTree = "<group>"; };
 		00498CF5215D117F0020FCA6 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		00498CF7215D14EE0020FCA6 /* RideListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListViewController.swift; sourceTree = "<group>"; };
-		00498CF9215D16530020FCA6 /* ParkOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkOld.swift; sourceTree = "<group>"; };
 		00498CFD215D31490020FCA6 /* photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = photos; sourceTree = "<group>"; };
 		00498CFF215D32DD0020FCA6 /* RideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTableViewCell.swift; sourceTree = "<group>"; };
 		00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListSplitViewController.swift; sourceTree = "<group>"; };
@@ -143,16 +139,14 @@
 				00D87C8F21795D5400680B3D /* Network */,
 				00498CC2215D0DD60020FCA6 /* AppDelegate.swift */,
 				00498CC6215D0DD60020FCA6 /* Main.storyboard */,
-				004B1AB3216FDAC5002D7847 /* EditRideLogViewController.swift */,
+				0096C4AD218DDF8500F280EC /* Ride Recording */,
 				00F2FC75216E6C7B003E52D7 /* Ride Detail */,
 				00F2FC7221698FE1003E52D7 /* UIImageColors.swift */,
 				00498D05215D98BD0020FCA6 /* Constants.swift */,
-				00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */,
 				00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */,
 				00498CF7215D14EE0020FCA6 /* RideListViewController.swift */,
 				00D87C8921792A8A00680B3D /* ParkTableViewController.swift */,
 				00498CFF215D32DD0020FCA6 /* RideTableViewCell.swift */,
-				00498D07215D9D590020FCA6 /* RecordRideViewController.swift */,
 				00E2F91A215E856E007F6177 /* Ride classes */,
 				00498CCC215D0DD80020FCA6 /* Assets.xcassets */,
 				00498CCE215D0DD80020FCA6 /* LaunchScreen.storyboard */,
@@ -183,6 +177,16 @@
 			path = "Ride TrackerUITests";
 			sourceTree = "<group>";
 		};
+		0096C4AD218DDF8500F280EC /* Ride Recording */ = {
+			isa = PBXGroup;
+			children = (
+				004B1AB3216FDAC5002D7847 /* EditRideLogViewController.swift */,
+				00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */,
+				00498D07215D9D590020FCA6 /* RecordRideViewController.swift */,
+			);
+			path = "Ride Recording";
+			sourceTree = "<group>";
+		};
 		00D87C8F21795D5400680B3D /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,8 +198,6 @@
 		00E2F91A215E856E007F6177 /* Ride classes */ = {
 			isa = PBXGroup;
 			children = (
-				00498CF9215D16530020FCA6 /* ParkOld.swift */,
-				00498CF3215D10BF0020FCA6 /* RideOld.swift */,
 				00498CF5215D117F0020FCA6 /* RideType.swift */,
 				00D87C8B21792AB800680B3D /* Park.swift */,
 				00D87C92217978FD00680B3D /* Ride.swift */,
@@ -365,7 +367,6 @@
 				00F2FC6E216957C8003E52D7 /* RideDetailHeaderView.swift in Sources */,
 				00498CF6215D117F0020FCA6 /* RideType.swift in Sources */,
 				00498D04215D56030020FCA6 /* RideWaitTimeCounterViewController.swift in Sources */,
-				00498CF4215D10BF0020FCA6 /* RideOld.swift in Sources */,
 				00498CCB215D0DD60020FCA6 /* Ride_Tracker.xcdatamodeld in Sources */,
 				00D87C8C21792AB800680B3D /* Park.swift in Sources */,
 				00498CF8215D14EE0020FCA6 /* RideListViewController.swift in Sources */,
@@ -379,7 +380,6 @@
 				00D87C9121795D6C00680B3D /* Network.swift in Sources */,
 				00D87C8A21792A8A00680B3D /* ParkTableViewController.swift in Sources */,
 				00498CC3215D0DD60020FCA6 /* AppDelegate.swift in Sources */,
-				00498CFA215D16530020FCA6 /* ParkOld.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
