@@ -261,68 +261,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQs-xF-6gT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736.8" y="-1022.3388305847077"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="xLm-Hp-efm">
-            <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="7aY-Qj-don" customClass="RideListViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="27A-UG-tTZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RIDE_TABLE_VIEW_CELL" rowHeight="96" id="Ytn-8N-xtZ" customClass="RideTableViewCell" customModule="Ride_Tracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="96"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ytn-8N-xtZ" id="PRE-Be-IRE">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="etB-dc-ZG9">
-                                            <rect key="frame" x="8" y="8" width="80" height="80"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="3vQ-Ud-zGZ"/>
-                                                <constraint firstAttribute="height" constant="80" id="NMt-h6-J3g"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7r-YD-CoN">
-                                            <rect key="frame" x="96" y="11" width="263" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="WKb-ou-I2E"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="n7r-YD-CoN" firstAttribute="top" secondItem="PRE-Be-IRE" secondAttribute="topMargin" id="BT7-Gb-cY1"/>
-                                        <constraint firstItem="etB-dc-ZG9" firstAttribute="leading" secondItem="PRE-Be-IRE" secondAttribute="leading" constant="8" id="TZr-h0-HR1"/>
-                                        <constraint firstItem="n7r-YD-CoN" firstAttribute="leading" secondItem="etB-dc-ZG9" secondAttribute="trailing" constant="8" id="enn-Rf-8eB"/>
-                                        <constraint firstItem="etB-dc-ZG9" firstAttribute="top" secondItem="PRE-Be-IRE" secondAttribute="top" constant="8" id="wrg-hg-deg"/>
-                                        <constraint firstItem="n7r-YD-CoN" firstAttribute="trailing" secondItem="PRE-Be-IRE" secondAttribute="trailingMargin" id="z6l-VP-IbN"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="icon" destination="etB-dc-ZG9" id="OuD-7M-4UU"/>
-                                    <outlet property="rideNameLabel" destination="n7r-YD-CoN" id="iNK-2G-9Gt"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="7aY-Qj-don" id="ZHB-UT-vab"/>
-                            <outlet property="delegate" destination="7aY-Qj-don" id="wLo-Ay-XkF"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="pMc-vj-H7J"/>
-                    <connections>
-                        <segue destination="DkG-47-drN" kind="show" identifier="SHOW_PARK_LIST_VIEW" animates="NO" id="gjz-U2-AgJ"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MlG-qg-0HN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1600.8" y="-365.66716641679164"/>
+            <point key="canvasLocation" x="1634" y="-367"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GAA-81-93R">
@@ -642,7 +581,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uoY-3E-FIw">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UNUSED" id="uoY-3E-FIw">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uoY-3E-FIw" id="l3h-lM-GKz">
@@ -667,7 +606,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gjz-U2-AgJ"/>
         <segue reference="ank-hC-qdi"/>
     </inferredMetricsTieBreakers>
 </document>

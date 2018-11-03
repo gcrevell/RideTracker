@@ -9,6 +9,14 @@
 import UIKit
 import CoreData
 
+protocol RideSelectionDelegate: class {
+    func rideSelected(_ ride: Ride)
+}
+
+protocol ParkSelectionDelegate {
+    func parkSelected(_ park: Park)
+}
+
 private let reuseIdentifier = RIDE_COLLECTION_VIEW_CELL
 
 private let CELL_MIN_WIDTH = CGFloat(150)
