@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cba-pD-cqU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cba-pD-cqU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -153,6 +153,116 @@
             </objects>
             <point key="canvasLocation" x="2553" y="304"/>
         </scene>
+        <!--Ride List Collection View Controller-->
+        <scene sceneID="ZSB-UP-Tqn">
+            <objects>
+                <collectionViewController id="2FU-UY-fcv" customClass="RideListCollectionViewController" customModule="Ride_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Zbd-X2-so0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FMF-Ye-dBc">
+                            <size key="itemSize" width="188" height="188"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RIDE_COLLECTION_VIEW_CELL" id="enH-ES-8Zg" customClass="RideCollectionViewCell" customModule="Ride_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="93.5" y="0.0" width="188" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ian-Vc-d5R">
+                                            <rect key="frame" x="8" y="8" width="172" height="172"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWK-zd-wBW">
+                                            <rect key="frame" x="8" y="8" width="172" height="172"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aay-5L-wgr">
+                                                    <rect key="frame" x="0.0" y="135" width="172" height="37"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdB-au-Dke" customClass="MarqueeLabel" customModule="Ride_Tracker" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="156" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="holdScrolling" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="scrollRate">
+                                                                    <real key="value" value="30"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                                                    <real key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="hdB-au-Dke" firstAttribute="top" secondItem="Aay-5L-wgr" secondAttribute="top" constant="8" id="Alb-8s-Lpo"/>
+                                                        <constraint firstAttribute="bottom" secondItem="hdB-au-Dke" secondAttribute="bottom" constant="8" id="H9n-aq-VBF"/>
+                                                        <constraint firstItem="hdB-au-Dke" firstAttribute="leading" secondItem="Aay-5L-wgr" secondAttribute="leading" constant="8" id="anZ-wJ-KPZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hdB-au-Dke" secondAttribute="trailing" constant="8" id="fYf-sb-pu1"/>
+                                                    </constraints>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gxh-tQ-6B3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="135"/>
+                                                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="gxh-tQ-6B3" firstAttribute="leading" secondItem="gWK-zd-wBW" secondAttribute="leading" id="5LR-or-zOD"/>
+                                                <constraint firstItem="gxh-tQ-6B3" firstAttribute="top" secondItem="gWK-zd-wBW" secondAttribute="top" id="GOt-j3-lus"/>
+                                                <constraint firstAttribute="bottom" secondItem="Aay-5L-wgr" secondAttribute="bottom" id="HRn-5k-OYm"/>
+                                                <constraint firstItem="Aay-5L-wgr" firstAttribute="top" secondItem="gxh-tQ-6B3" secondAttribute="bottom" id="UrP-nr-IPc"/>
+                                                <constraint firstAttribute="trailing" secondItem="gxh-tQ-6B3" secondAttribute="trailing" id="ckr-CG-yx7"/>
+                                                <constraint firstAttribute="trailing" secondItem="Aay-5L-wgr" secondAttribute="trailing" id="gPh-dJ-4ol"/>
+                                                <constraint firstItem="Aay-5L-wgr" firstAttribute="leading" secondItem="gWK-zd-wBW" secondAttribute="leading" id="kMM-lN-G5X"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="ian-Vc-d5R" firstAttribute="top" secondItem="gWK-zd-wBW" secondAttribute="top" id="2Ek-MK-hZ0"/>
+                                    <constraint firstItem="ian-Vc-d5R" firstAttribute="width" secondItem="gWK-zd-wBW" secondAttribute="width" id="ChY-af-nin"/>
+                                    <constraint firstItem="gWK-zd-wBW" firstAttribute="leading" secondItem="enH-ES-8Zg" secondAttribute="leading" constant="8" id="Ilr-Gf-e6L"/>
+                                    <constraint firstItem="ian-Vc-d5R" firstAttribute="height" secondItem="gWK-zd-wBW" secondAttribute="height" id="JRV-60-I7a"/>
+                                    <constraint firstItem="ian-Vc-d5R" firstAttribute="leading" secondItem="gWK-zd-wBW" secondAttribute="leading" id="aGe-dL-eOo"/>
+                                    <constraint firstAttribute="bottom" secondItem="gWK-zd-wBW" secondAttribute="bottom" constant="8" id="c9R-2o-Yyp"/>
+                                    <constraint firstItem="gWK-zd-wBW" firstAttribute="top" secondItem="enH-ES-8Zg" secondAttribute="top" constant="8" id="dAC-rr-YpU"/>
+                                    <constraint firstAttribute="trailing" secondItem="gWK-zd-wBW" secondAttribute="trailing" constant="8" id="lhO-Oz-Efq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="gxh-tQ-6B3" id="zQW-kK-h1D"/>
+                                    <outlet property="outerContainerView" destination="gWK-zd-wBW" id="Zm2-2T-7qh"/>
+                                    <outlet property="rideNameLabel" destination="hdB-au-Dke" id="Zk3-bJ-sUk"/>
+                                    <outlet property="shadowView" destination="ian-Vc-d5R" id="gPD-Mf-sPx"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="2FU-UY-fcv" id="saP-eb-GCD"/>
+                            <outlet property="delegate" destination="2FU-UY-fcv" id="J9f-an-km9"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="6bl-bt-He8"/>
+                    <connections>
+                        <segue destination="DkG-47-drN" kind="show" identifier="SHOW_PARK_LIST_VIEW" id="Oew-Yt-Ry7"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQs-xF-6gT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736.8" y="-1022.3388305847077"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="xLm-Hp-efm">
             <objects>
@@ -223,7 +333,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="7aY-Qj-don" kind="relationship" relationship="rootViewController" id="swR-8n-6lc"/>
+                        <segue destination="2FU-UY-fcv" kind="relationship" relationship="rootViewController" id="k2X-fF-JAh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0e-OQ-gog" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -557,6 +667,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="gjz-U2-AgJ"/>
         <segue reference="ank-hC-qdi"/>
     </inferredMetricsTieBreakers>
 </document>

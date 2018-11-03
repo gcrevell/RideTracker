@@ -17,7 +17,7 @@ class RideListSplitViewController: UISplitViewController, UISplitViewControllerD
         self.delegate = self
 
         let leftNavController = self.viewControllers.first as! UINavigationController
-        let masterViewController = leftNavController.topViewController as! RideListViewController
+        let masterViewController = leftNavController.topViewController as! RideListCollectionViewController
         let detailViewController = self.viewControllers.last as! RideDetailViewController
         let defaults = UserDefaults()
 
