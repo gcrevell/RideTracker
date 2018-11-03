@@ -11,7 +11,7 @@ import CoreLocation
 import CoreData
 
 protocol RideSelectionDelegate: class {
-    func rideSelected(_ ride: RideOld)
+    func rideSelected(_ ride: Ride)
 }
 
 protocol ParkSelectionDelegate {
@@ -52,7 +52,6 @@ class RideListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RIDE_TABLE_VIEW_CELL, for: indexPath) as! RideTableViewCell
-        print(cell.reuseIdentifier)
 
         // Configure the cell...
         cell.ride = fetch?.fetchedObjects?[indexPath.row]
@@ -61,11 +60,13 @@ class RideListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        delegate?.rideSelected(ParkOld.shared.rides[indexPath.row])
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        if let detailViewController = delegate as? RideDetailViewController {
-//            splitViewController?.showDetailViewController(detailViewController, sender: nil)
-//        }
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        guard let selectedRide = fetch?.fetchedObjects?[indexPath.row] else { return }
+        delegate?.rideSelected(selectedRide)
+        if let detailViewController = delegate as? RideDetailViewController {
+            splitViewController?.showDetailViewController(detailViewController, sender: nil)
+        }
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

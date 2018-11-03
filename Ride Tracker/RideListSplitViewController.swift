@@ -40,14 +40,14 @@ class RideListSplitViewController: UISplitViewController, UISplitViewControllerD
         let park = fetch.object(at: IndexPath(row: 0, section: 0))
         masterViewController.park = park
 
-        if let currentRideId = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int,
-            let currentRide = ParkOld.shared.rides.first(where: { (ride) -> Bool in
-                return ride.id == currentRideId
-            }) {
-            detailViewController.ride = currentRide
-
-            return
-        }
+//        if let currentRideId = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int,
+//            let currentRide = ParkOld.shared.rides.first(where: { (ride) -> Bool in
+//                return ride.id == currentRideId
+//            }) {
+//            detailViewController.ride = currentRide
+//
+//            return
+//        }
     }
 
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {

@@ -23,7 +23,8 @@ class RideDetailViewController: UITableViewController {
 
     var fetch: NSFetchedResultsController<RideRecord>? = nil
     var sectionTitles = SECTION_TITLES_WITH_HEIGHT_REQUIREMENTS
-    var ride: RideOld? = nil {
+    var shouldContinueUpdate: RefBool?
+    var ride: Ride? = nil {
         didSet {
             if ride?.minimumHeight != nil || ride?.maximumHeight != nil {
                 sectionTitles = SECTION_TITLES_WITH_HEIGHT_REQUIREMENTS
@@ -39,16 +40,26 @@ class RideDetailViewController: UITableViewController {
                 sectionTitles = SECTION_TITLES_NO_HEIGHT_REQUIREMENTS
             }
 
-            sectionTitles[0].1 = [ride?.description ?? "Description"]
+            sectionTitles[0].1 = [ride?.rideDescription ?? ""]
 
-            headerView.imageView.image = ride?.photo
+            self.shouldContinueUpdate?.val = false
+            let shouldContinueUpdate = RefBool(true)
+            self.shouldContinueUpdate = shouldContinueUpdate
+
+            headerView.imageView.image = nil
+            ride?.set(imageView: headerView.imageView, shouldUpdateImage: shouldContinueUpdate)
+            // These need to have default values because without them, the height
+            // of the text fields goes to 0 and when they are set the height of
+            // their superview animates changing the height.
             headerView.nameLabel.text = ride?.name ?? " "
-            headerView.rideTypeLabel.text = ride?.type.rawValue ?? " "
+            headerView.rideTypeLabel.text = ride?.type ?? " "
 
             headerView.colors = nil
-            ride?.photo.getColors({ (colors) in
-                self.headerView.colors = colors
-                self.updateHeaderView()
+            ride?.getPhoto(handler: { (photo) in
+                photo?.getColors({ (colors) in
+                    self.headerView.colors = colors
+                    self.updateHeaderView()
+                })
             })
 
             updateHeaderView()
@@ -102,7 +113,7 @@ class RideDetailViewController: UITableViewController {
         let request = NSFetchRequest<RideRecord>(entityName: "RideRecord")
         request.sortDescriptors = [NSSortDescriptor(key: "ridden", ascending: false)]
         let id = ride.id
-        request.predicate = NSPredicate(format: "rideId == %@", "\(id)")
+        request.predicate = NSPredicate(format: "ride.id == %@", "\(id)")
         let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
         let fetch = NSFetchedResultsController<RideRecord>(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
@@ -289,6 +300,7 @@ class RideDetailViewController: UITableViewController {
             record.ridden = Date()
             record.recorded = Date()
             record.waitTime = 0
+            record.ride = ride
 //            record.rideId = Int64(ride.id)
 
             dest.rideRecord = record
@@ -301,7 +313,7 @@ class RideDetailViewController: UITableViewController {
 }
 
 extension RideDetailViewController: RideSelectionDelegate {
-    func rideSelected(_ ride: RideOld) {
+    func rideSelected(_ ride: Ride) {
         self.ride = ride
     }
 }

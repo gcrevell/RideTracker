@@ -34,7 +34,7 @@ class EditRideLogViewController: UITableViewController, UITextViewDelegate {
     @IBOutlet weak var riddenDateTimePicker: UIDatePicker!
     @IBOutlet weak var notesTextView: UITextView!
 
-    var ride: RideOld?
+    var ride: Ride?
     var rideRecord: RideRecord?
 
     var selectedSection: SelectedSection? = nil
@@ -42,7 +42,7 @@ class EditRideLogViewController: UITableViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        rideImageView.image = ride?.photo
+        ride?.set(imageView: rideImageView, shouldUpdateImage: RefBool(true))
         rideNameLabel.text = ride?.name
         waitTimeLabel.text = rideRecord?.waitTime.description
 

@@ -16,10 +16,6 @@ class RideTableViewCell: UITableViewCell {
     var ride: Ride? {
         didSet {
             guard let ride = ride else { return }
-//            let newIconView = UIImageView(frame: icon.frame)
-//            icon.removeFromSuperview()
-//            self.addSubview(newIconView)
-//            icon = newIconView
             self.icon.image = nil
             shouldUpdateImage?.val = false
             let shouldUpdate = RefBool(true)

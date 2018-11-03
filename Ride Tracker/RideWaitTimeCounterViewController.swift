@@ -11,14 +11,14 @@ import UIKit
 class RideWaitTimeCounterViewController: UIViewController {
 
     var timer: Timer?
-    var ride: RideOld? = nil {
+    var ride: Ride? = nil {
         didSet {
             timer?.invalidate()
             timer = nil
             let defaults = UserDefaults()
 
             if let ride = ride {
-                if defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int != ride.id {
+                if defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int64 != ride.id {
                     defaults.set(ride.id, forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID)
                     defaults.set(Date(), forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME)
 
@@ -91,7 +91,7 @@ class RideWaitTimeCounterViewController: UIViewController {
             record.ridden = Date()
             record.recorded = Date()
             record.waitTime = elapsedTime
-//            record.rideId = Int64(ride.id)
+            record.ride = ride
 
             dest.rideRecord = record
         }

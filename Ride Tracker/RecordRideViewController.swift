@@ -14,7 +14,7 @@ import CoreLocation
 class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
 
     var waittime: TimeInterval = 0
-    var ride: RideOld?
+    var ride: Ride?
 
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var finishRecordingButton: UIButton!
@@ -40,7 +40,7 @@ class RecordRideViewController: UIViewController, CLLocationManagerDelegate {
         self.record.waitTime = self.waittime
         self.record.recorded = Date()
         self.record.ridden = Date()
-//        self.record.rideId = Int64(self.ride!.id)
+        self.record.ride = self.ride
 
         var countdownTime = 5
 
