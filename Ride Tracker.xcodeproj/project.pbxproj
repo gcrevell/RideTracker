@@ -15,7 +15,6 @@
 		00498CDB215D0DD80020FCA6 /* Ride_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CDA215D0DD80020FCA6 /* Ride_TrackerTests.swift */; };
 		00498CE6215D0DD80020FCA6 /* Ride_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CE5215D0DD80020FCA6 /* Ride_TrackerUITests.swift */; };
 		00498CF6215D117F0020FCA6 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498CF5215D117F0020FCA6 /* RideType.swift */; };
-		00498CFE215D31490020FCA6 /* photos in Resources */ = {isa = PBXBuildFile; fileRef = 00498CFD215D31490020FCA6 /* photos */; };
 		00498D02215D53B00020FCA6 /* RideListSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */; };
 		00498D04215D56030020FCA6 /* RideWaitTimeCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */; };
 		00498D06215D98BD0020FCA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D05215D98BD0020FCA6 /* Constants.swift */; };
@@ -70,7 +69,6 @@
 		00498CE5215D0DD80020FCA6 /* Ride_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride_TrackerUITests.swift; sourceTree = "<group>"; };
 		00498CE7215D0DD80020FCA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00498CF5215D117F0020FCA6 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
-		00498CFD215D31490020FCA6 /* photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = photos; sourceTree = "<group>"; };
 		00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListSplitViewController.swift; sourceTree = "<group>"; };
 		00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideWaitTimeCounterViewController.swift; sourceTree = "<group>"; };
 		00498D05215D98BD0020FCA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				00498CC9215D0DD60020FCA6 /* Ride_Tracker.xcdatamodeld */,
 				002BAEF121669592000B73AA /* Cedar-Point-rides.json */,
 				00D87C8D21792BB300680B3D /* parks.json */,
-				00498CFD215D31490020FCA6 /* photos */,
 			);
 			path = "Ride Tracker";
 			sourceTree = "<group>";
@@ -347,7 +344,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0074914A216696050041BDCF /* Cedar-Point-rides.json in Resources */,
-				00498CFE215D31490020FCA6 /* photos in Resources */,
 				00498CD0215D0DD80020FCA6 /* LaunchScreen.storyboard in Resources */,
 				00498CCD215D0DD80020FCA6 /* Assets.xcassets in Resources */,
 				00F2FC70216959EA003E52D7 /* RideDetailHeaderView.xib in Resources */,
