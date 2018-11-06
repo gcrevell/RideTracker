@@ -110,4 +110,18 @@ class RideListCollectionViewController: UICollectionViewController, UICollection
             collectionView.reloadData()
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SHOW_PARK_LIST_VIEW, let dest = segue.destination as? ParkTableViewController {
+            dest.delegate = self
+        }
+    }
+
+    @IBAction func unwindToRideListView(segue:UIStoryboardSegue) { }
+}
+
+extension RideListCollectionViewController: ParkSelectionDelegate {
+    func parkSelected(_ park: Park) {
+        self.park = park
+    }
 }
