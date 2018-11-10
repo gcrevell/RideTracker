@@ -243,9 +243,54 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="gxh-tQ-6B3" id="zQW-kK-h1D"/>
-                                    <outlet property="outerContainerView" destination="gWK-zd-wBW" id="Zm2-2T-7qh"/>
+                                    <outlet property="outerContainerView" destination="gWK-zd-wBW" id="8aC-vT-lRF"/>
                                     <outlet property="rideNameLabel" destination="hdB-au-Dke" id="Zk3-bJ-sUk"/>
-                                    <outlet property="shadowView" destination="ian-Vc-d5R" id="gPD-Mf-sPx"/>
+                                    <outlet property="shadowView" destination="ian-Vc-d5R" id="chu-rt-RQZ"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RIDE_MAP_COLLECTION_VIEW_CELL" id="Iql-Rv-68g" customClass="RideMapCollectionViewCell" customModule="Ride_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="51" y="198" width="273" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="273" height="273"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61w-CC-lce">
+                                            <rect key="frame" x="8" y="8" width="257" height="257"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmc-dW-08S">
+                                            <rect key="frame" x="8" y="8" width="257" height="257"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oDe-1i-Mnp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="257" height="257"/>
+                                                </mapView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="oDe-1i-Mnp" firstAttribute="leading" secondItem="rmc-dW-08S" secondAttribute="leading" id="7UE-f7-Wb8"/>
+                                                <constraint firstAttribute="bottom" secondItem="oDe-1i-Mnp" secondAttribute="bottom" id="UCV-lw-vFM"/>
+                                                <constraint firstAttribute="trailing" secondItem="oDe-1i-Mnp" secondAttribute="trailing" id="lSl-eo-pn9"/>
+                                                <constraint firstItem="oDe-1i-Mnp" firstAttribute="top" secondItem="rmc-dW-08S" secondAttribute="top" id="qAK-g5-Xq6"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="61w-CC-lce" firstAttribute="width" secondItem="rmc-dW-08S" secondAttribute="width" id="0jt-Ah-zk7"/>
+                                    <constraint firstAttribute="bottom" secondItem="rmc-dW-08S" secondAttribute="bottom" constant="8" id="C5e-JD-WoY"/>
+                                    <constraint firstItem="rmc-dW-08S" firstAttribute="top" secondItem="Iql-Rv-68g" secondAttribute="top" constant="8" id="DCI-jf-cfJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="rmc-dW-08S" secondAttribute="trailing" constant="8" id="EwM-ZS-qoE"/>
+                                    <constraint firstItem="61w-CC-lce" firstAttribute="top" secondItem="rmc-dW-08S" secondAttribute="top" id="T3B-O4-uet"/>
+                                    <constraint firstItem="rmc-dW-08S" firstAttribute="leading" secondItem="Iql-Rv-68g" secondAttribute="leading" constant="8" id="wiD-N2-PG5"/>
+                                    <constraint firstItem="61w-CC-lce" firstAttribute="height" secondItem="rmc-dW-08S" secondAttribute="height" id="x5M-kQ-EWT"/>
+                                    <constraint firstItem="61w-CC-lce" firstAttribute="leading" secondItem="rmc-dW-08S" secondAttribute="leading" id="xaO-pE-0gj"/>
+                                </constraints>
+                                <size key="customSize" width="273" height="273"/>
+                                <connections>
+                                    <outlet property="mapView" destination="oDe-1i-Mnp" id="dQI-Kg-tea"/>
+                                    <outlet property="outerContainerView" destination="rmc-dW-08S" id="WgE-ph-SKg"/>
+                                    <outlet property="shadowView" destination="61w-CC-lce" id="g8F-EZ-PTl"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -261,7 +306,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQs-xF-6gT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634" y="-367"/>
+            <point key="canvasLocation" x="1632.8" y="-367.46626686656674"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GAA-81-93R">

@@ -49,18 +49,36 @@ class RideListCollectionViewController: UICollectionViewController, UICollection
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fetch?.fetchedObjects?.count ?? 0
+        if let itemCount = fetch?.fetchedObjects?.count {
+            return itemCount + 1
+        }
+
+        return 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RIDE_MAP_COLLECTION_VIEW_CELL, for: indexPath) as! RideMapCollectionViewCell
+
+            cell.rides = fetch?.fetchedObjects
+
+            return cell
+        }
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! RideCollectionViewCell
 
-        cell.ride = fetch?.fetchedObjects?[indexPath.row]
+        cell.ride = fetch?.fetchedObjects?[indexPath.row - 1]
     
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.row == 0 {
+            let size = collectionView.frame.width
+
+            return CGSize(width: size, height: size)
+        }
+
         let frameWidth = collectionView.frame.width
         let count: Int = Int(frameWidth / CELL_MIN_WIDTH)
         let size: CGFloat = frameWidth / CGFloat(count)
@@ -73,7 +91,11 @@ class RideListCollectionViewController: UICollectionViewController, UICollection
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let selectedRide = fetch?.fetchedObjects?[indexPath.row] else { return }
+        if indexPath.row == 0 {
+            return
+        }
+
+        guard let selectedRide = fetch?.fetchedObjects?[indexPath.row - 1] else { return }
         delegate?.rideSelected(selectedRide)
         if let detailViewController = delegate as? RideDetailViewController {
             splitViewController?.showDetailViewController(detailViewController, sender: nil)
@@ -108,6 +130,7 @@ class RideListCollectionViewController: UICollectionViewController, UICollection
 
         if reload {
             collectionView.reloadData()
+            self.collectionView.scrollToItem(at: IndexPath(row: 1, section: 0), at: .top, animated: false)
         }
     }
 

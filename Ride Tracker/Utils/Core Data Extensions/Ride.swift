@@ -15,6 +15,15 @@ extension Ride {
         }
     }
 
+    var rideType: RideType? {
+        get {
+            if let type = self.type {
+                return RideType(rawValue: type)
+            }
+            return nil
+        }
+    }
+
     func getPhoto(handler: @escaping (UIImage?) -> Void) {
         DispatchQueue.global(qos: .userInitiated).async {
             if let photo = self.getPhotoFromMemory() {

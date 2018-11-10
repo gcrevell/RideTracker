@@ -38,16 +38,16 @@ class RideListSplitViewController: UISplitViewController, UISplitViewControllerD
 
         try! fetch.performFetch()
         let park = fetch.object(at: IndexPath(row: 0, section: 0))
-        masterViewController.park = park
+        masterViewController.parkSelected(park)
 
-//        if let currentRideId = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int,
-//            let currentRide = ParkOld.shared.rides.first(where: { (ride) -> Bool in
-//                return ride.id == currentRideId
-//            }) {
-//            detailViewController.ride = currentRide
-//
-//            return
-//        }
+        if let currentRideId = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_RIDE_ID) as? Int,
+            let currentRide = (park.rides as? Set<Ride>)?.first(where: { (ride) -> Bool in
+                return ride.id == currentRideId
+            }) {
+            detailViewController.ride = currentRide
+
+            return
+        }
     }
 
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {

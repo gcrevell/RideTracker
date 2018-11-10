@@ -25,6 +25,9 @@
 		0096C4B1218DE23200F280EC /* RideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096C4B0218DE23200F280EC /* RideCollectionViewCell.swift */; };
 		0096C4B3218E08B500F280EC /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096C4B2218E08B500F280EC /* MarqueeLabel.swift */; };
 		0096C4B5218E5CCB00F280EC /* RefBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096C4B4218E5CCB00F280EC /* RefBool.swift */; };
+		0096C4BA2195BCAB00F280EC /* FloatingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096C4B92195BCAB00F280EC /* FloatingCollectionViewCell.swift */; };
+		0096C4BC2195BE3200F280EC /* RideMapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096C4BB2195BE3200F280EC /* RideMapCollectionViewCell.swift */; };
+		0096C4BE2195C25300F280EC /* RideAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096C4BD2195C25300F280EC /* RideAnnotation.swift */; };
 		00D87C8A21792A8A00680B3D /* ParkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D87C8921792A8A00680B3D /* ParkTableViewController.swift */; };
 		00D87C8C21792AB800680B3D /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D87C8B21792AB800680B3D /* Park.swift */; };
 		00D87C8E21792BB300680B3D /* parks.json in Resources */ = {isa = PBXBuildFile; fileRef = 00D87C8D21792BB300680B3D /* parks.json */; };
@@ -79,6 +82,9 @@
 		0096C4B0218DE23200F280EC /* RideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideCollectionViewCell.swift; sourceTree = "<group>"; };
 		0096C4B2218E08B500F280EC /* MarqueeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
 		0096C4B4218E5CCB00F280EC /* RefBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefBool.swift; sourceTree = "<group>"; };
+		0096C4B92195BCAB00F280EC /* FloatingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingCollectionViewCell.swift; sourceTree = "<group>"; };
+		0096C4BB2195BE3200F280EC /* RideMapCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideMapCollectionViewCell.swift; sourceTree = "<group>"; };
+		0096C4BD2195C25300F280EC /* RideAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAnnotation.swift; sourceTree = "<group>"; };
 		00C13D5A217646D400AC712C /* Ride_Tracker_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ride_Tracker_v2.xcdatamodel; sourceTree = "<group>"; };
 		00D87C8921792A8A00680B3D /* ParkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewController.swift; sourceTree = "<group>"; };
 		00D87C8B21792AB800680B3D /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
@@ -141,8 +147,7 @@
 				0096C4B6218E5D3F00F280EC /* Utils */,
 				00498CC2215D0DD60020FCA6 /* AppDelegate.swift */,
 				00498CC6215D0DD60020FCA6 /* Main.storyboard */,
-				0096C4AE218DE1FC00F280EC /* RideListCollectionViewController.swift */,
-				0096C4B0218DE23200F280EC /* RideCollectionViewCell.swift */,
+				0096C4BF21979E3D00F280EC /* Ride List View */,
 				0096C4AD218DDF8500F280EC /* Ride Recording */,
 				00F2FC75216E6C7B003E52D7 /* Ride Detail */,
 				00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */,
@@ -196,6 +201,34 @@
 				0096C4B4218E5CCB00F280EC /* RefBool.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		0096C4BF21979E3D00F280EC /* Ride List View */ = {
+			isa = PBXGroup;
+			children = (
+				0096C4C021979E5800F280EC /* Cells */,
+				0096C4AE218DE1FC00F280EC /* RideListCollectionViewController.swift */,
+			);
+			path = "Ride List View";
+			sourceTree = "<group>";
+		};
+		0096C4C021979E5800F280EC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0096C4C121979E7000F280EC /* Maps cell */,
+				0096C4B0218DE23200F280EC /* RideCollectionViewCell.swift */,
+				0096C4B92195BCAB00F280EC /* FloatingCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0096C4C121979E7000F280EC /* Maps cell */ = {
+			isa = PBXGroup;
+			children = (
+				0096C4BB2195BE3200F280EC /* RideMapCollectionViewCell.swift */,
+				0096C4BD2195C25300F280EC /* RideAnnotation.swift */,
+			);
+			path = "Maps cell";
 			sourceTree = "<group>";
 		};
 		00D87C8F21795D5400680B3D /* Network */ = {
@@ -383,12 +416,15 @@
 				00498D06215D98BD0020FCA6 /* Constants.swift in Sources */,
 				004B1AB4216FDAC5002D7847 /* EditRideLogViewController.swift in Sources */,
 				00498D02215D53B00020FCA6 /* RideListSplitViewController.swift in Sources */,
+				0096C4BE2195C25300F280EC /* RideAnnotation.swift in Sources */,
 				00498D08215D9D590020FCA6 /* RecordRideViewController.swift in Sources */,
+				0096C4BC2195BE3200F280EC /* RideMapCollectionViewCell.swift in Sources */,
 				00D87C93217978FD00680B3D /* Ride.swift in Sources */,
 				00F2FC7321698FE1003E52D7 /* UIImageColors.swift in Sources */,
 				0096C4AF218DE1FC00F280EC /* RideListCollectionViewController.swift in Sources */,
 				00D87C9121795D6C00680B3D /* Network.swift in Sources */,
 				00D87C8A21792A8A00680B3D /* ParkTableViewController.swift in Sources */,
+				0096C4BA2195BCAB00F280EC /* FloatingCollectionViewCell.swift in Sources */,
 				0096C4B3218E08B500F280EC /* MarqueeLabel.swift in Sources */,
 				00498CC3215D0DD60020FCA6 /* AppDelegate.swift in Sources */,
 				0096C4B1218DE23200F280EC /* RideCollectionViewCell.swift in Sources */,
