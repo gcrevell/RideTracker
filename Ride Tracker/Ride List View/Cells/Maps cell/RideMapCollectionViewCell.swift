@@ -35,6 +35,7 @@ class RideMapCollectionViewCell: FloatingCollectionViewCell, MKMapViewDelegate {
         mapView.showsPointsOfInterest = false
         mapView.showsUserLocation = true
         mapView.delegate = self
+        mapView.mapType = .standard
     }
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -52,6 +53,12 @@ class RideMapCollectionViewCell: FloatingCollectionViewCell, MKMapViewDelegate {
         if let annotation = annotation as? RideAnnotation {
             marker.glyphImage = annotation.ride.rideType?.getIcon()
             marker.markerTintColor = annotation.ride.rideType?.getMapPinColor()
+            marker.canShowCallout = true
+            let view = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+            view.image = annotation.ride.rideType?.getIcon()?.withRenderingMode(.alwaysTemplate)
+            view.backgroundColor = annotation.ride.rideType?.getMapPinColor()
+            view.tintColor = UIColor.white
+            marker.leftCalloutAccessoryView = view
         }
 
         return marker

@@ -24,4 +24,8 @@ class RideAnnotation: NSObject, MKAnnotation {
     var title: String? {
         return ride.name
     }
+
+    var subtitle: String? {
+        return ride.type
+    }
 }
