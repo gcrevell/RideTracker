@@ -10,8 +10,6 @@ import UIKit
 
 class RideCollectionViewCell: FloatingCollectionViewCell {
 
-//    @IBOutlet weak var shadowView: UIView!
-//    @IBOutlet weak var outerContainerView: UIView!
     @IBOutlet weak var rideNameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
 
@@ -29,18 +27,4 @@ class RideCollectionViewCell: FloatingCollectionViewCell {
             rideNameLabel.text = ride.name ?? ""
         }
     }
-
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//
-//        outerContainerView.layer.cornerRadius = 6
-//        shadowView.layer.cornerRadius = 6
-//
-//        shadowView.layer.shadowColor = UIColor.shadow.cgColor
-//        shadowView.layer.shadowOpacity = 1
-//        shadowView.layer.shadowRadius = 4
-//        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
-//
-//        self.clipsToBounds = false
-//    }
 }
