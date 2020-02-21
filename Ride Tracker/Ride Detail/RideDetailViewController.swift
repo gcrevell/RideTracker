@@ -68,12 +68,14 @@ class RideDetailViewController: UITableViewController {
             tableView.reloadData()
         }
     }
-    var headerView: RideDetailHeaderView!
+    lazy var headerView: RideDetailHeaderView = {
+        return Bundle.main.loadNibNamed("RideDetailHeaderView", owner: self, options: nil)!.first as! RideDetailHeaderView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.headerView = (Bundle.main.loadNibNamed("RideDetailHeaderView", owner: self, options: nil)!.first as! RideDetailHeaderView)
+//        self.headerView = (Bundle.main.loadNibNamed("RideDetailHeaderView", owner: self, options: nil)!.first as! RideDetailHeaderView)
         headerView.layer.zPosition = 2
         tableView.tableHeaderView = nil
 

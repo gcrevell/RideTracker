@@ -33,6 +33,8 @@ class RideListCollectionViewController: UICollectionViewController, UICollection
         }
     }
 
+    var mapCell: RideMapCollectionViewCell?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,9 +60,11 @@ class RideListCollectionViewController: UICollectionViewController, UICollection
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RIDE_MAP_COLLECTION_VIEW_CELL, for: indexPath) as! RideMapCollectionViewCell
+            let cell = mapCell ?? collectionView.dequeueReusableCell(withReuseIdentifier: RIDE_MAP_COLLECTION_VIEW_CELL, for: indexPath) as! RideMapCollectionViewCell
 
             cell.rides = fetch?.fetchedObjects
+
+            mapCell = cell
 
             return cell
         }
@@ -92,6 +96,9 @@ class RideListCollectionViewController: UICollectionViewController, UICollection
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
+            if let mapCell = self.mapCell {
+                self.performSegue(withIdentifier: SHOW_RIDE_MAP_VIEW_CONTROLLER, sender: self)
+            }
             return
         }
 

@@ -73,12 +73,6 @@ class RideWaitTimeCounterViewController: UIViewController {
         let startdate = defaults.object(forKey: USER_DEFAULTS_CURRENT_WAIT_START_TIME) as? Date ?? Date()
         let elapsedTime = Date().timeIntervalSince(startdate)
 
-        if let dest = segue.destination as? RecordRideViewController {
-            dest.waittime = elapsedTime
-            dest.ride = self.ride
-            self.ride = nil
-        }
-
         if segue.identifier == SHOW_EDIT_RIDE_LOG,
             let dest = segue.destination as? EditRideLogViewController {
             guard let ride = self.ride else { return }

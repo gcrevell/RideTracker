@@ -18,9 +18,9 @@
 		00498D02215D53B00020FCA6 /* RideListSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */; };
 		00498D04215D56030020FCA6 /* RideWaitTimeCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */; };
 		00498D06215D98BD0020FCA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D05215D98BD0020FCA6 /* Constants.swift */; };
-		00498D08215D9D590020FCA6 /* RecordRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00498D07215D9D590020FCA6 /* RecordRideViewController.swift */; };
 		004B1AB4216FDAC5002D7847 /* EditRideLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B1AB3216FDAC5002D7847 /* EditRideLogViewController.swift */; };
 		0074914A216696050041BDCF /* Cedar-Point-rides.json in Resources */ = {isa = PBXBuildFile; fileRef = 002BAEF121669592000B73AA /* Cedar-Point-rides.json */; };
+		00828A22219CDA75008F7ECD /* RideMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00828A21219CDA75008F7ECD /* RideMapViewController.swift */; };
 		0096C4AF218DE1FC00F280EC /* RideListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096C4AE218DE1FC00F280EC /* RideListCollectionViewController.swift */; };
 		0096C4B1218DE23200F280EC /* RideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096C4B0218DE23200F280EC /* RideCollectionViewCell.swift */; };
 		0096C4B3218E08B500F280EC /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096C4B2218E08B500F280EC /* MarqueeLabel.swift */; };
@@ -75,9 +75,9 @@
 		00498D01215D53B00020FCA6 /* RideListSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListSplitViewController.swift; sourceTree = "<group>"; };
 		00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideWaitTimeCounterViewController.swift; sourceTree = "<group>"; };
 		00498D05215D98BD0020FCA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		00498D07215D9D590020FCA6 /* RecordRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRideViewController.swift; sourceTree = "<group>"; };
 		004B1AB3216FDAC5002D7847 /* EditRideLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRideLogViewController.swift; sourceTree = "<group>"; };
 		0074914B2167C7330041BDCF /* RideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailViewController.swift; sourceTree = "<group>"; };
+		00828A21219CDA75008F7ECD /* RideMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideMapViewController.swift; sourceTree = "<group>"; };
 		0096C4AE218DE1FC00F280EC /* RideListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListCollectionViewController.swift; sourceTree = "<group>"; };
 		0096C4B0218DE23200F280EC /* RideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideCollectionViewCell.swift; sourceTree = "<group>"; };
 		0096C4B2218E08B500F280EC /* MarqueeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
@@ -185,7 +185,6 @@
 			children = (
 				004B1AB3216FDAC5002D7847 /* EditRideLogViewController.swift */,
 				00498D03215D56030020FCA6 /* RideWaitTimeCounterViewController.swift */,
-				00498D07215D9D590020FCA6 /* RecordRideViewController.swift */,
 			);
 			path = "Ride Recording";
 			sourceTree = "<group>";
@@ -225,6 +224,7 @@
 		0096C4C121979E7000F280EC /* Maps cell */ = {
 			isa = PBXGroup;
 			children = (
+				00828A21219CDA75008F7ECD /* RideMapViewController.swift */,
 				0096C4BB2195BE3200F280EC /* RideMapCollectionViewCell.swift */,
 				0096C4BD2195C25300F280EC /* RideAnnotation.swift */,
 			);
@@ -335,6 +335,7 @@
 				TargetAttributes = {
 					00498CBE215D0DD60020FCA6 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -343,10 +344,12 @@
 					};
 					00498CD5215D0DD80020FCA6 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						TestTargetID = 00498CBE215D0DD60020FCA6;
 					};
 					00498CE0215D0DD80020FCA6 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						TestTargetID = 00498CBE215D0DD60020FCA6;
 					};
 				};
@@ -416,8 +419,8 @@
 				00498D06215D98BD0020FCA6 /* Constants.swift in Sources */,
 				004B1AB4216FDAC5002D7847 /* EditRideLogViewController.swift in Sources */,
 				00498D02215D53B00020FCA6 /* RideListSplitViewController.swift in Sources */,
+				00828A22219CDA75008F7ECD /* RideMapViewController.swift in Sources */,
 				0096C4BE2195C25300F280EC /* RideAnnotation.swift in Sources */,
-				00498D08215D9D590020FCA6 /* RecordRideViewController.swift in Sources */,
 				0096C4BC2195BE3200F280EC /* RideMapCollectionViewCell.swift in Sources */,
 				00D87C93217978FD00680B3D /* Ride.swift in Sources */,
 				00F2FC7321698FE1003E52D7 /* UIImageColors.swift in Sources */,
@@ -611,7 +614,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.revoltapplications.Ride-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -629,7 +632,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.revoltapplications.Ride-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -649,7 +652,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.revoltapplications.Ride-TrackerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ride Tracker.app/Ride Tracker";
 			};
@@ -670,7 +673,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.revoltapplications.Ride-TrackerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ride Tracker.app/Ride Tracker";
 			};
@@ -690,7 +693,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.revoltapplications.Ride-TrackerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Ride Tracker";
 			};
@@ -710,7 +713,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.revoltapplications.Ride-TrackerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Ride Tracker";
 			};

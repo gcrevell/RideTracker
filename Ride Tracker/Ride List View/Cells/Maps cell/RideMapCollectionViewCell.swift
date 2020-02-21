@@ -36,6 +36,7 @@ class RideMapCollectionViewCell: FloatingCollectionViewCell, MKMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.delegate = self
         mapView.mapType = .standard
+        mapView.isUserInteractionEnabled = false
     }
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
